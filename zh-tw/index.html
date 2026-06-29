@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IP / DNS 洩漏檢測 - 檢視公網 IP、地理位置、時區與 WebRTC 暴露</title>
+<meta name="description" content="免費線上 IP/DNS 洩漏檢測：一鍵檢視你當前的公網 IP、地理位置、時區，並檢測瀏覽器 WebRTC 是否洩漏本地或真實 IP。純本地執行、資料不上傳。連上 VPN 後用它複驗真實 IP 是否已被隱藏。">
+<meta name="author" content="李航">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://tobithan.github.io/zh-tw/">
+<meta property="og:type" content="website"><meta property="og:title" content="IP / DNS 洩漏檢測 - 檢視公網 IP、地理位置、時區與 WebRTC 暴露">
+<meta property="og:description" content="免費線上 IP/DNS 洩漏檢測：一鍵檢視你當前的公網 IP、地理位置、時區，並檢測瀏覽器 WebRTC 是否洩漏本地或真實 IP。純本地執行、資料不上傳。連上 VPN 後用它複驗真實 IP 是否已被隱藏。"><meta property="og:locale" content="zh_TW">
+<meta property="og:url" content="https://tobithan.github.io/zh-tw/"><meta property="og:image" content="https://tobithan.github.io/img/cover_tw.png">
+<meta property="og:image:width" content="1120"><meta property="og:image:height" content="746">
+<link rel="alternate" hreflang="zh-Hans" href="https://tobithan.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://tobithan.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://tobithan.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://tobithan.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://tobithan.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://tobithan.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://tobithan.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://tobithan.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://tobithan.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://tobithan.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://tobithan.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://tobithan.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://tobithan.github.io/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "IP / DNS 洩漏檢測與地理位置檢視器",
+   "url": "https://tobithan.github.io/zh-tw/",
+   "applicationCategory": "SecurityApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "zh-Hant",
+   "description": "免費線上 IP/DNS 洩漏檢測：一鍵檢視你當前的公網 IP、地理位置、時區，並檢測瀏覽器 WebRTC 是否洩漏本地或真實 IP。純本地執行、資料不上傳。連上 VPN 後用它複驗真實 IP 是否已被隱藏。",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "李航",
+    "jobTitle": "評測編輯",
+    "url": "https://tobithan.github.io/about-editor/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "zh-Hant",
+   "url": "https://tobithan.github.io/zh-tw/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "用 VPN 之後我的真實 IP 還會被網站看到嗎？會 DNS 洩漏嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "正常情況下，連上 VPN 後網站看到的是節點 IP 而非你的真實 IP。但要誠實提醒：有獨立評測指出快連存在 DNS 洩漏風險、且切換伺服器後 IP 未必成功更換——這屬單一且時間較早的社群評測，未經官方或第二來源證實。若你很在意隱私，務實做法是連上後用本頁這類 IP／DNS 洩漏檢測實測一次，確認真實 IP 與 DNS 沒外露；若發現洩漏，可換節點、換協議再驗證。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "連上 VPN 後 IP 顯示在哪？真的有隱藏我真實位置嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "連上後你對外顯示的是所選節點所在地的 IP，例如選香港節點就顯示香港位置，這是 VPN 隱藏真實位置的基本原理。你可以在客戶端切換不同地區節點來改變對外 IP。要提醒的是：有獨立評測反映快連切伺服器後 IP 未必都成功更換、且存在 DNS 洩漏風險（單一較早期評測、未經多源證實），所以連上後建議自行用 IP 檢測確認位置是否真的改變。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "VPN 連上後 IP 沒變、查詢還是本地，是沒連成功嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "是的，IP 沒變通常代表流量沒真正走 VPN。社群反映 LetsVPN 切換伺服器後 IP 未必更換成功，這正是這類情況。處理方式：先換一條不同地區的節點重連、再換協議試試；清快取後重新登入、更新到最新版或重灌；確認本機沒有其他 VPN/代理在搶流量。重連後再用本頁查一次 IP，顯示成你選的國家才算成功。安卓也要確認沒被系統殺後臺。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "什麼是 WebRTC 洩漏？為什麼連了 VPN 還可能暴露真實 IP？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "WebRTC 是瀏覽器內建的點對點通訊能力。網頁只要用幾行 JS 建立 RTCPeerConnection，瀏覽器就會透過 ICE 收集網路地址，其中經 STUN 伺服器反射得到的公網 IP 可能就是你的真實 IP，即使你掛著 VPN，網頁也能靜默讀取、無任何許可權彈窗。自 2020 年起 Chrome/Edge 以 MDNS 遮蔽本地 IP，但公網 IP 仍可能漏。用本頁上方的 WebRTC 檢測即可看到你當前瀏覽器會暴露哪些地址。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "LetsVPN 的隱私政策寫什麼？真的不留記錄還是嘴上說說？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "老實說，現有公開素材沒有快連隱私政策原文或可驗證的「不留記錄（no-log）」內容，無法替它背書，需以官方政策原文與第三方審計確認。客觀參考：有獨立評測對它提出 DNS 洩漏疑慮（單源、較早、未經多源證實），這與「嚴格不留記錄」相左。務實判斷：把它當切區／一般用途工具，高敏感操作另選有公開審計報告的服務，並連上後自行做洩漏檢測驗證實際表現，而非只信宣傳語。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="stylesheet" href="/style.css"></head>
+<body><div class="wrap"><main>
+<nav class="lvlang">語言: <a href="/">简体中文</a> · <strong>繁體中文</strong> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/th/">ไทย</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>IP / DNS 洩漏檢測與地理位置檢視器</h1>
+<p class="lvby"><a rel="author" href="/about-editor/">作者 李航</a> · 評測編輯 · 釋出於 2025-04-08 · 更新於 2026-06-30</p>
+<figure class="lvpng"><picture><source type="image/webp" srcset="/img/cover_tw.webp"><img src="/img/cover_tw.png" alt="IP/DNS 洩漏檢測與地理位置檢視器示意圖" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e7ecf5"></picture><figcaption>圖：IP / DNS 洩漏檢測（公網 IP · 地理位置 · 時區 · WebRTC 暴露）</figcaption></figure>
+<p class="lvlead">這是一個純客戶端線上工具：開啟即在你的瀏覽器本地讀取並顯示你對外暴露的公網 IP、地理位置、時區，以及瀏覽器 WebRTC 是否把本地或真實 IP 洩漏給網頁。所有檢測都在本地完成、不上傳伺服器。連上 LetsVPN 這類 VPN 後，再用它複驗一次——確認網站看到的是節點 IP，而不是你的真實 IP。</p>
+<h2>實時檢測結果</h2>
+<p class="lvtoolnote">以下資料在你的瀏覽器本地讀取，不上傳、不留存。</p>
+<div class="lvtool" id="lvtool">
+<div class="lvrow"><span class="lvk">公網 IP</span><span class="lvval" id="lv-ip">檢測中…</span></div><div class="lvrow"><span class="lvk">地理位置</span><span class="lvval" id="lv-geo">檢測中…</span></div><div class="lvrow"><span class="lvk">網路服務商</span><span class="lvval" id="lv-isp">檢測中…</span></div><div class="lvrow"><span class="lvk">瀏覽器時區</span><span class="lvval" id="lv-tzb">檢測中…</span></div><div class="lvrow"><span class="lvk">IP 推斷時區</span><span class="lvval" id="lv-tzi">檢測中…</span> <small id="lv-tzhint" class="lvhint"></small></div><div class="lvrow"><span class="lvk">WebRTC 暴露</span><span class="lvval" id="lv-webrtc-verdict">檢測中…</span></div>
+<div class="lvwebrtc" id="lv-webrtc"></div>
+<button id="lv-rerun" type="button">重新檢測</button>
+<p class="lvnote">本工具純本地執行，不收集、不上傳任何資料。</p>
+</div>
+<figure class="lvsvg"><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="圖1：不掛 VPN 時網站直接看到你的真實 IP；掛 VPN 後看到節點 IP，但 WebRTC 可能繞過隧道暴露真實 IP。" style="width:100%;height:auto"><rect width="720" height="300" rx="14" fill="#f3f7ff"/><rect x="24" y="34" width="120" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="84" y="60" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">你</text><text x="84" y="80" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#64748b">瀏覽器</text><rect x="560" y="34" width="136" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="628" y="60" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">網站</text><text x="628" y="80" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#e11d48">真實 IP</text><line x1="144" y1="62" x2="560" y2="62" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><text x="352" y="26" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#94a3b8">✗ VPN 隧道 ✗</text><rect x="24" y="150" width="120" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="84" y="176" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">你</text><rect x="300" y="150" width="120" height="56" rx="10" fill="#e8f0ff" stroke="#1a73e8"/><text x="360" y="182" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#1a73e8">VPN 隧道</text><rect x="560" y="150" width="136" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="628" y="176" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">網站</text><text x="628" y="196" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#16a34a">節點 IP</text><line x1="144" y1="178" x2="300" y2="178" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><line x1="420" y1="178" x2="560" y2="178" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><text x="222" y="168" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#16a34a">節點 IP</text><path d="M84 206 C84 250 660 250 628 208" fill="none" stroke="#e11d48" stroke-width="2.2" stroke-dasharray="6 5" marker-end="url(#arr)"/><text x="356" y="278" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#e11d48">WebRTC → 洩漏 (真實 IP)</text><defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#1a73e8"/></marker><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e11d48"/></marker></defs></svg><figcaption>圖1：不掛 VPN 時網站直接看到你的真實 IP；掛 VPN 後看到節點 IP，但 WebRTC 可能繞過隧道暴露真實 IP。</figcaption></figure>
+<h2>你的公網 IP 與地理位置說明</h2>
+<p>公網 IP 是你在網際網路上的對外地址，網站和 App 都能看到它，並據此推斷你的大致地理位置、網路服務商與時區。上方位置來自對你公網 IP 的地理庫查詢，屬城市級估算，未必精確到街道。若你已連 VPN，這裡應顯示你所選節點所在地，而不是你的真實城市。</p>
+<h2>什麼是 DNS 洩漏？為什麼純網頁測不全</h2>
+<p>DNS 把域名解析成 IP。若你連了 VPN，DNS 查詢卻仍走本地 ISP 的解析器，你訪問了哪些網站就會暴露給 ISP，這就是 DNS 洩漏。需誠實說明：真正的 DNS 洩漏檢測要伺服器側配合（讓裝置解析一個唯一子域、再回看是哪臺解析器查的），純瀏覽器端無法完整測出。務實做法是連上 VPN 後到專門的 DNS 洩漏檢測網站實測一次。</p>
+<h2>什麼是 WebRTC 洩漏？它如何繞過 VPN</h2>
+<p>WebRTC 是瀏覽器內建的實時通訊能力。網頁 JS 可建立 RTCPeerConnection，瀏覽器為打通 P2P 會透過 ICE 收集你的各種網路地址（本地區域網 IP、以及經 STUN 伺服器反射得到的公網 IP），網頁能讀取這些候選——這就是 WebRTC 洩漏，全程靜默、無許可權彈窗。自 2020 年起 Chrome 與 Edge 用 MDNS 把本地 IP 換成隨機 .local 主機名來遮蔽，但公網 IP 仍可能經 STUN 反射暴露，即使你掛著 VPN。上方檢測就是實測你當前瀏覽器會暴露哪些地址。</p>
+<figure class="lvsvg"><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="圖2：你的連線裡可能洩漏 IP/位置的幾個層級——瀏覽器（WebRTC、時區）、系統 DNS 解析、VPN 隧道、ISP。" style="width:100%;height:auto"><rect width="720" height="300" rx="14" fill="#0a1629"/><text x="40" y="26" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#9db8e8">圖2：你的連線裡可能洩漏 IP/位置的幾個層級——瀏覽器（WebRTC、時區）、系統 DNS</text><rect x="40" y="40" width="640" height="52" rx="10" fill="#fff" stroke="#e11d48" stroke-width="1.6"/><text x="60" y="71" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#e11d48">瀏覽器 — WebRTC · TZ</text><text x="660" y="71" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#e11d48">洩漏</text><rect x="54" y="100" width="612" height="52" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="1.6"/><text x="74" y="131" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#f59e0b">DNS 解析</text><text x="646" y="131" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#f59e0b">洩漏</text><rect x="68" y="160" width="584" height="52" rx="10" fill="#fff" stroke="#16a34a" stroke-width="1.6"/><text x="88" y="191" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#16a34a">VPN 隧道</text><text x="632" y="191" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#16a34a">OK</text><rect x="82" y="220" width="556" height="52" rx="10" fill="#fff" stroke="#64748b" stroke-width="1.6"/><text x="102" y="251" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#64748b">ISP</text></svg><figcaption>圖2：你的連線裡可能洩漏 IP/位置的幾個層級——瀏覽器（WebRTC、時區）、系統 DNS 解析、VPN 隧道、ISP。</figcaption></figure>
+<figure class="lvpng"><picture><source type="image/webp" srcset="/img/board_tw.webp"><img src="/img/board_tw.png" alt="VPN 連線後用 IP 檢測複驗真實 IP 是否隱藏示意圖" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e7ecf5"></picture><figcaption>圖：連上 VPN 後複驗——網站應看到節點 IP 而非真實 IP</figcaption></figure>
+<h2>怎麼讀這些結果：連 VPN 後該看到什麼</h2>
+<p>理想狀態：公網 IP 與地理位置顯示為你所選 VPN 節點所在地、WebRTC 不暴露你的真實公網 IP、瀏覽器時區也與節點地區一致。若公網 IP 仍是你的真實位置，或 WebRTC 暴露了真實公網 IP，說明流量沒真正走 VPN 或存在洩漏——可嘗試換節點、換協議後重測。還沒安裝、想換一個連線更穩的客戶端，可前往 <a href="https://letsvpnshield.com/download/">LetsVPN 官方下載頁</a>。</p>
+<section id="lv-data2026" class="lvdata"><h2>2026 估算：VPN 使用與 WebRTC 洩漏面（估算·非一手實測）</h2>
+<p>下列帶 ★ 為引用公開統計，其餘為本站據公開資料的推算，均非一手實測：</p>
+<ul><li>★ 據 Security.org 等統計，2022–2025 年間全球約 22–25% 的 16 歲以上網民經常使用 VPN，市場趨於成熟。</li><li>★ 至 2025 年約有 17.5 億 VPN 使用者，約佔全球網民的三分之一。</li><li>★ 區域差異顯著：印尼約 55%、印度約 43%、泰國與馬來西亞各約 38%，東南亞是 VPN 使用率最高的地區之一。</li><li>主流桌面瀏覽器（Chrome / Edge / Firefox / Safari）預設全部啟用 WebRTC；據此本站估算，2026 年仍有相當比例的 VPN 使用者在未關閉 WebRTC 時，存在公網 IP 經 STUN 反射洩漏的風險（估算區間、非實測）。</li></ul>
+<p class="lvnote">口徑：標 ★ 為引用公開統計（來源見下方），其餘為本站據公開資料與 WebRTC 預設啟用這一事實的推算，標註「估算·非一手實測」，不冒充一手資料。</p></section>
+<h2>FAQ</h2>
+<div class="lvfaqs"><details class="lvfaq"><summary>用 VPN 之後我的真實 IP 還會被網站看到嗎？會 DNS 洩漏嗎？</summary><p>正常情況下，連上 VPN 後網站看到的是節點 IP 而非你的真實 IP。但要誠實提醒：有獨立評測指出快連存在 DNS 洩漏風險、且切換伺服器後 IP 未必成功更換——這屬單一且時間較早的社群評測，未經官方或第二來源證實。若你很在意隱私，務實做法是連上後用本頁這類 IP／DNS 洩漏檢測實測一次，確認真實 IP 與 DNS 沒外露；若發現洩漏，可換節點、換協議再驗證。</p></details>
+<details class="lvfaq"><summary>連上 VPN 後 IP 顯示在哪？真的有隱藏我真實位置嗎？</summary><p>連上後你對外顯示的是所選節點所在地的 IP，例如選香港節點就顯示香港位置，這是 VPN 隱藏真實位置的基本原理。你可以在客戶端切換不同地區節點來改變對外 IP。要提醒的是：有獨立評測反映快連切伺服器後 IP 未必都成功更換、且存在 DNS 洩漏風險（單一較早期評測、未經多源證實），所以連上後建議自行用 IP 檢測確認位置是否真的改變。</p></details>
+<details class="lvfaq"><summary>VPN 連上後 IP 沒變、查詢還是本地，是沒連成功嗎？</summary><p>是的，IP 沒變通常代表流量沒真正走 VPN。社群反映 LetsVPN 切換伺服器後 IP 未必更換成功，這正是這類情況。處理方式：先換一條不同地區的節點重連、再換協議試試；清快取後重新登入、更新到最新版或重灌；確認本機沒有其他 VPN/代理在搶流量。重連後再用本頁查一次 IP，顯示成你選的國家才算成功。安卓也要確認沒被系統殺後臺。</p></details>
+<details class="lvfaq"><summary>什麼是 WebRTC 洩漏？為什麼連了 VPN 還可能暴露真實 IP？</summary><p>WebRTC 是瀏覽器內建的點對點通訊能力。網頁只要用幾行 JS 建立 RTCPeerConnection，瀏覽器就會透過 ICE 收集網路地址，其中經 STUN 伺服器反射得到的公網 IP 可能就是你的真實 IP，即使你掛著 VPN，網頁也能靜默讀取、無任何許可權彈窗。自 2020 年起 Chrome/Edge 以 MDNS 遮蔽本地 IP，但公網 IP 仍可能漏。用本頁上方的 WebRTC 檢測即可看到你當前瀏覽器會暴露哪些地址。</p></details>
+<details class="lvfaq"><summary>LetsVPN 的隱私政策寫什麼？真的不留記錄還是嘴上說說？</summary><p>老實說，現有公開素材沒有快連隱私政策原文或可驗證的「不留記錄（no-log）」內容，無法替它背書，需以官方政策原文與第三方審計確認。客觀參考：有獨立評測對它提出 DNS 洩漏疑慮（單源、較早、未經多源證實），這與「嚴格不留記錄」相左。務實判斷：把它當切區／一般用途工具，高敏感操作另選有公開審計報告的服務，並連上後自行做洩漏檢測驗證實際表現，而非只信宣傳語。</p></details>
+</div>
+<div class="related"><h2>資料來源</h2><p>本頁技術說明與資料來源（外部連結均為 nofollow）：</p><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection" rel="nofollow noopener" target="_blank">MDN — RTCPeerConnection API</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API" rel="nofollow noopener" target="_blank">MDN — WebRTC API</a></li><li><a href="https://browserleaks.com/webrtc" rel="nofollow noopener" target="_blank">BrowserLeaks — WebRTC Leak Test</a></li><li><a href="https://www.security.org/vpn/webrtc-leak/" rel="nofollow noopener" target="_blank">Security.org — WebRTC Leak Guide</a></li><li><a href="https://www.security.org/vpn/statistics/" rel="nofollow noopener" target="_blank">Security.org — VPN Statistics</a></li><li><a href="https://surfshark.com/blog/vpn-users" rel="nofollow noopener" target="_blank">Surfshark — VPN users</a></li><li><a href="https://cybernews.com/best-vpn/vpn-usage-by-country/" rel="nofollow noopener" target="_blank">Cybernews — VPN usage by country</a></li></ul></div>
+</main>
+<footer>本工具為純客戶端專案，所有檢測在你的瀏覽器本地完成，不收集任何資料。技術說明整理自 MDN、BrowserLeaks、Security.org 等公開資料；VPN 使用統計引用 Security.org / Surfshark / Cybernews，詳見資料來源。僅供參考。<br><a rel="author" href="/about-editor/">李航</a> · letsvpnshield.com</footer>
+</div>
+<script>window.LV_I18N={"checking": "檢測中…", "na": "不可用", "none_detected": "未發現", "leak_public": "檢測到公網 IP 經 WebRTC 暴露", "leak_local": "僅暴露本地/內網 IP（區域網）", "ok_safe": "未發現 WebRTC 公網 IP 洩漏", "mismatch_tz": "瀏覽器時區與 IP 時區不一致，可能暴露真實地區", "rerun": "重新檢測", "rtc_public": "公網", "rtc_local": "內網", "rtc_mdns": "MDNS 隱藏"};</script><script src="/tool.js"></script></body></html>
