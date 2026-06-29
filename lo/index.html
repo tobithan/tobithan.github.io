@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="lo"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ການທົດສອບການຮົ່ວໄຫຼ IP / DNS - ກວດເບິ່ງ IP ສາທາລະນະຂອງທ່ານ, ສະຖານທີ່, ເຂດເວລາແລະ WebRTC Exposure</title>
+<meta name="description" content="ການທົດສອບການຮົ່ວໄຫຼ IP/DNS ອອນໄລນ໌ຟຣີ: ເບິ່ງ IP ສາທາລະນະໃນປະຈຸບັນຂອງທ່ານ, ສະຖານທີ່ຕັ້ງພູມສາດ ແລະເຂດເວລາ, ແລະກວດສອບວ່າ WebRTC ຂອງຕົວທ່ອງເວັບຂອງທ່ານເປີດເຜີຍ IP ທ້ອງຖິ່ນ ຫຼືຕົວຈິງຂອງທ່ານ. ເຮັດວຽກຢ່າງເຕັມສ່ວນໃນຕົວທ່ອງເວັບຂອງທ່ານ, ບໍ່ມີຫຍັງຖືກອັບໂຫລດ. ຫຼັງຈາກເຊື່ອມຕໍ່ VPN, ໃຊ້ມັນເພື່ອກວດສອບ IP ທີ່ແທ້ຈິງຂອງເຈົ້າຖືກເຊື່ອງໄວ້.">
+<meta name="author" content="李航">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://tobithan.github.io/lo/">
+<meta property="og:type" content="website"><meta property="og:title" content="ການທົດສອບການຮົ່ວໄຫຼ IP / DNS - ກວດເບິ່ງ IP ສາທາລະນະຂອງທ່ານ, ສະຖານທີ່, ເຂດເວລາແລະ WebRTC Exposure">
+<meta property="og:description" content="ການທົດສອບການຮົ່ວໄຫຼ IP/DNS ອອນໄລນ໌ຟຣີ: ເບິ່ງ IP ສາທາລະນະໃນປະຈຸບັນຂອງທ່ານ, ສະຖານທີ່ຕັ້ງພູມສາດ ແລະເຂດເວລາ, ແລະກວດສອບວ່າ WebRTC ຂອງຕົວທ່ອງເວັບຂອງທ່ານເປີດເຜີຍ IP ທ້ອງຖິ່ນ ຫຼືຕົວຈິງຂອງທ່ານ. ເຮັດວຽກຢ່າງເຕັມສ່ວນໃນຕົວທ່ອງເວັບຂອງທ່ານ, ບໍ່ມີຫຍັງຖືກອັບໂຫລດ. ຫຼັງຈາກເຊື່ອມຕໍ່ VPN, ໃຊ້ມັນເພື່ອກວດສອບ IP ທີ່ແທ້ຈິງຂອງເຈົ້າຖືກເຊື່ອງໄວ້."><meta property="og:locale" content="lo_LA">
+<meta property="og:url" content="https://tobithan.github.io/lo/"><meta property="og:image" content="https://tobithan.github.io/img/cover_lo.png">
+<meta property="og:image:width" content="1120"><meta property="og:image:height" content="746">
+<link rel="alternate" hreflang="zh-Hans" href="https://tobithan.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://tobithan.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://tobithan.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://tobithan.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://tobithan.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://tobithan.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://tobithan.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://tobithan.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://tobithan.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://tobithan.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://tobithan.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://tobithan.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://tobithan.github.io/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "ການທົດສອບການຮົ່ວໄຫຼ IP / DNS ແລະຕົວເບິ່ງພູມສາດ",
+   "url": "https://tobithan.github.io/lo/",
+   "applicationCategory": "SecurityApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "lo",
+   "description": "ການທົດສອບການຮົ່ວໄຫຼ IP/DNS ອອນໄລນ໌ຟຣີ: ເບິ່ງ IP ສາທາລະນະໃນປະຈຸບັນຂອງທ່ານ, ສະຖານທີ່ຕັ້ງພູມສາດ ແລະເຂດເວລາ, ແລະກວດສອບວ່າ WebRTC ຂອງຕົວທ່ອງເວັບຂອງທ່ານເປີດເຜີຍ IP ທ້ອງຖິ່ນ ຫຼືຕົວຈິງຂອງທ່ານ. ເຮັດວຽກຢ່າງເຕັມສ່ວນໃນຕົວທ່ອງເວັບຂອງທ່ານ, ບໍ່ມີຫຍັງຖືກອັບໂຫລດ. ຫຼັງຈາກເຊື່ອມຕໍ່ VPN, ໃຊ້ມັນເພື່ອກວດສອບ IP ທີ່ແທ້ຈິງຂອງເຈົ້າຖືກເຊື່ອງໄວ້.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "李航",
+    "jobTitle": "ບັນນາທິການທົບທວນ",
+    "url": "https://tobithan.github.io/about-editor/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "lo",
+   "url": "https://tobithan.github.io/lo/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "ຫຼັງຈາກການເຊື່ອມຕໍ່ VPN, ເວັບໄຊທ໌ຍັງສາມາດເຫັນ IP ທີ່ແທ້ຈິງຂອງຂ້ອຍໄດ້ບໍ? DNS ສາມາດຮົ່ວໄດ້ບໍ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ໂດຍປົກກະຕິ, ເມື່ອ VPN ເຊື່ອມຕໍ່ເວັບໄຊທ໌ຈະເຫັນ node IP, ບໍ່ແມ່ນ IP ທີ່ແທ້ຈິງຂອງເຈົ້າ. ແຕ່ເພື່ອຄວາມຊື່ສັດ: ການທົບທວນຄືນເອກະລາດໄດ້ລາຍງານຄວາມສ່ຽງຕໍ່ການຮົ່ວໄຫລຂອງ DNS ໃນ LetsVPN ແລະວ່າ IP ບໍ່ໄດ້ປ່ຽນແປງສະເຫມີຫຼັງຈາກການປ່ຽນເຄື່ອງແມ່ຂ່າຍ - ນັ້ນແມ່ນການທົບທວນຊຸມຊົນທີ່ເກົ່າກວ່າ, ບໍ່ໄດ້ຮັບການຢືນຢັນຈາກຜູ້ຂາຍຫຼືແຫຼ່ງທີສອງ. ຖ້າຄວາມເປັນສ່ວນຕົວສໍາຄັນຕໍ່ກັບທ່ານ, ການປະຕິບັດຕົວຈິງແມ່ນເພື່ອດໍາເນີນການທົດສອບການຮົ່ວໄຫລ IP / DNS ເຊັ່ນນີ້ຫຼັງຈາກການເຊື່ອມຕໍ່ແລະຢືນຢັນວ່າ IP ທີ່ແທ້ຈິງຂອງທ່ານແລະ DNS ບໍ່ໄດ້ຖືກເປີດເຜີຍ; ຖ້າພວກເຂົາເປັນ, ສະຫຼັບ node ຫຼື protocol ແລະກວດສອບອີກເທື່ອຫນຶ່ງ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ຫຼັງຈາກການເຊື່ອມຕໍ່, IP ຂອງຂ້ອຍສະແດງຢູ່ໃສ? ມັນເຊື່ອງສະຖານທີ່ຂອງຂ້ອຍແທ້ໆບໍ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ເມື່ອເຊື່ອມຕໍ່ແລ້ວ, IP ພາຍນອກຂອງທ່ານແມ່ນສະຖານທີ່ຂອງ node ທີ່ທ່ານເລືອກ - ເລືອກ node ຮ່ອງກົງແລະທ່ານສະແດງສະຖານທີ່ຮ່ອງກົງ; ນັ້ນແມ່ນວິທີທີ່ VPN ເຊື່ອງສະຖານທີ່ທີ່ແທ້ຈິງຂອງເຈົ້າ. ທ່ານ​ສາ​ມາດ​ສະ​ຫຼັບ nodes ພາກ​ພື້ນ​ໃນ​ລູກ​ຄ້າ​ທີ່​ຈະ​ປ່ຽນ IP ພາຍ​ນອກ​ຂອງ​ທ່ານ​. ໃຫ້ສັງເກດວ່າການທົບທວນເອກະລາດໄດ້ລາຍງານວ່າ IP ບໍ່ໄດ້ປ່ຽນແປງສະເຫມີຫຼັງຈາກການປ່ຽນເຄື່ອງແມ່ຂ່າຍແລະເຫັນວ່າຄວາມສ່ຽງຕໍ່ການຮົ່ວໄຫລຂອງ DNS (ການທົບທວນທີ່ເກົ່າແກ່, ບໍ່ແມ່ນການຢືນຢັນຫຼາຍແຫຼ່ງ), ດັ່ງນັ້ນຫຼັງຈາກເຊື່ອມຕໍ່ມັນສະຫລາດທີ່ຈະກວດສອບດ້ວຍການທົດສອບ IP ວ່າສະຖານທີ່ຂອງເຈົ້າມີການປ່ຽນແປງແທ້ໆ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ຫຼັງຈາກການເຊື່ອມຕໍ່, IP ຂອງຂ້ອຍບໍ່ປ່ຽນແປງແລະການຊອກຫາຍັງຄົງສະແດງຢູ່ໃນທ້ອງຖິ່ນ - ມັນລົ້ມເຫລວບໍ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ແມ່ນແລ້ວ, IP ທີ່ບໍ່ປ່ຽນແປງໂດຍປົກກະຕິຫມາຍຄວາມວ່າການຈະລາຈອນບໍ່ໄດ້ຜ່ານ VPN. ຊຸມຊົນໄດ້ລາຍງານວ່າ IP ຂອງ LetsVPN ບໍ່ປ່ຽນແປງສະເຫມີຫຼັງຈາກການປ່ຽນເຄື່ອງແມ່ຂ່າຍ, ເຊິ່ງແນ່ນອນແມ່ນກໍລະນີນີ້. ການ​ແກ້​ໄຂ​: ເຊື່ອມ​ຕໍ່​ກັບ node ພາກ​ພື້ນ​ທີ່​ແຕກ​ຕ່າງ​ກັນ​, ຫຼັງ​ຈາກ​ນັ້ນ​ພະ​ຍາ​ຍາມ​ອະ​ນຸ​ຍາດ​ອື່ນ​; ລຶບ cache ແລະເຂົ້າສູ່ລະບົບອີກເທື່ອຫນຶ່ງ, ອັບເດດເປັນເວີຊັນຫຼ້າສຸດຫຼືຕິດຕັ້ງໃຫມ່; ໃຫ້ແນ່ໃຈວ່າບໍ່ມີ VPN/proxy ອື່ນໄດ້ຮັບການຈະລາຈອນ. ຫຼັງຈາກການເຊື່ອມຕໍ່ຄືນໃຫມ່, ໃຫ້ກວດເບິ່ງ IP ຂອງທ່ານອີກເທື່ອຫນຶ່ງທີ່ນີ້ - ມັນຖືວ່າເປັນຜົນສໍາເລັດພຽງແຕ່ເມື່ອມັນສະແດງໃຫ້ເຫັນປະເທດທີ່ທ່ານເລືອກ. ໃນ Android, ໃຫ້ແນ່ໃຈວ່າລະບົບບໍ່ໄດ້ຂ້າມັນຢູ່ໃນພື້ນຫລັງ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "WebRTC ຮົ່ວໄຫຼແມ່ນຫຍັງ, ແລະເປັນຫຍັງ IP ທີ່ແທ້ຈິງຂອງຂ້ອຍຍັງຮົ່ວຢູ່ໃນ VPN?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "WebRTC ແມ່ນ API ຂອງ peer-to-peer ໃນຕົວຂອງຕົວທ່ອງເວັບ. ມີພຽງແຕ່ສອງສາມແຖວຂອງ JavaScrIPt ຫນ້າເວັບສາມາດສ້າງ RTCPeerConnection, ແລະຕົວທ່ອງເວັບຈະລວບລວມທີ່ຢູ່ເຄືອຂ່າຍຜ່ານ ICE; IP ສາທາລະນະທີ່ສະທ້ອນໃຫ້ເຫັນໂດຍເຄື່ອງແມ່ຂ່າຍ STUN ສາມາດເປັນ IP ທີ່ແທ້ຈິງຂອງເຈົ້າ - ເຖິງແມ່ນວ່າຢູ່ໃນ VPN - ແລະຫນ້າເວັບຈະອ່ານມັນຢ່າງງຽບໆໂດຍບໍ່ມີການກະຕຸ້ນເຕືອນ. ຕັ້ງແຕ່ປີ 2020 Chrome/Edge ປິດບັງ IP ທ້ອງຖິ່ນຜ່ານ MDNS, ແຕ່ IP ສາທາລະນະຍັງສາມາດຮົ່ວໄດ້. ໃຊ້ການທົດສອບ WebRTC ຂ້າງເທິງເພື່ອເບິ່ງວ່າທີ່ຢູ່ໃດທີ່ຕົວທ່ອງເວັບຂອງທ່ານເປີດເຜີຍໃນປັດຈຸບັນ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວຂອງ LetsVPN ເວົ້າຫຍັງ - ມັນແມ່ນບໍ່ມີບັນທຶກຫຼືພຽງແຕ່ເວົ້າ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ດ້ວຍຄວາມຊື່ສັດ, ເອກະສານສາທາລະນະທີ່ມີຢູ່ບໍ່ມີຂໍ້ຄວາມນະໂຍບາຍຄວາມເປັນສ່ວນຕົວຂອງ LetsVPN ຫຼືເນື້ອໃນທີ່ບໍ່ມີບັນທຶກທີ່ສາມາດຢືນຢັນໄດ້, ດັ່ງນັ້ນມັນບໍ່ສາມາດຖືກຮັບຮອງ; ທີ່ຕ້ອງການຂໍ້ຄວາມນະໂຍບາຍຢ່າງເປັນທາງການແລະການກວດສອບພາກສ່ວນທີສາມ. ສໍາລັບສະພາບການ, ການທົບທວນຄືນເອກະລາດໄດ້ຍົກຄວາມກັງວົນກ່ຽວກັບການຮົ່ວໄຫລ DNS (ອັນດຽວ, ເກົ່າ, ບໍ່ແມ່ນແຫຼ່ງຫຼາຍທີ່ໄດ້ຮັບການຢືນຢັນ), ເຊິ່ງນັ່ງຢູ່ກົງກັນຂ້າມກັບການຫ້າມຢ່າງເຂັ້ມງວດ. ການໂທຫາການປະຕິບັດ: ປະຕິບັດມັນເປັນເຄື່ອງມືທີ່ໃຊ້ໃນພາກພື້ນ / ທົ່ວໄປ, ໃຊ້ບໍລິການກວດສອບສໍາລັບວຽກງານທີ່ມີຄວາມອ່ອນໄຫວສູງ, ແລະດໍາເນີນການທົດສອບການຮົ່ວໄຫຼດ້ວຍຕົວເອງຫຼັງຈາກການເຊື່ອມຕໍ່ແທນທີ່ຈະໄວ້ວາງໃຈກັບຄໍາຮ້ອງຂໍການຕະຫຼາດ."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="stylesheet" href="/style.css"></head>
+<body><div class="wrap"><main>
+<nav class="lvlang">ພາສາ: <a href="/">简体中文</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/th/">ไทย</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <strong>ພາສາລາວ</strong> · <a href="/my/">မြန်မာ</a></nav>
+<h1>ການທົດສອບການຮົ່ວໄຫຼ IP / DNS ແລະຕົວເບິ່ງພູມສາດ</h1>
+<p class="lvby"><a rel="author" href="/about-editor/">ໂດຍ 李航</a> · ບັນນາທິການທົບທວນ · ຈັດພີມມາ 2025-04-08 · ອັບເດດ 2026-06-30</p>
+<figure class="lvpng"><picture><source type="image/webp" srcset="/img/cover_lo.webp"><img src="/img/cover_lo.png" alt="ການທົດສອບການຮົ່ວໄຫຼ IP/DNS ແລະຮູບສະແດງຕົວເບິ່ງພູມສັນຖານ" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e7ecf5"></picture><figcaption>ຮູບ: ການທົດສອບການຮົ່ວໄຫຼ IP / DNS (IP ສາທາລະນະ, ສະຖານທີ່, ເຂດເວລາ, ການເປີດເຜີຍ WebRTC)</figcaption></figure>
+<p class="lvlead">ເຄື່ອງມືດ້ານລູກຄ້າທີ່ບໍລິສຸດ: ຢູ່ໃນຕົວທ່ອງເວັບຂອງທ່ານມັນອ່ານແລະສະແດງ IP ສາທາລະນະທີ່ທ່ານເປີດເຜີຍກັບອິນເຕີເນັດ, ສະຖານທີ່ຕັ້ງພູມສາດແລະເວລາຂອງທ່ານ, ບວກກັບວ່າ WebRTC ຂອງຕົວທ່ອງເວັບຂອງທ່ານຮົ່ວ IP ທ້ອງຖິ່ນຫຼືທີ່ແທ້ຈິງຂອງທ່ານໄປຫາຫນ້າເວັບຕ່າງໆ. ທຸກໆການກວດສອບແລ່ນຢູ່ໃນທ້ອງຖິ່ນ, ບໍ່ມີຫຍັງຖືກອັບໂຫລດ. ຫຼັງຈາກເຊື່ອມຕໍ່ VPN ເຊັ່ນ LetsVPN, ເປີດໃຊ້ມັນອີກຄັ້ງເພື່ອຢືນຢັນສະຖານທີ່ເບິ່ງ node IP, ບໍ່ແມ່ນອັນແທ້ຈິງຂອງເຈົ້າ.</p>
+<h2>ຜົນການທົດສອບສົດ</h2>
+<p class="lvtoolnote">ຂໍ້ມູນຂ້າງລຸ່ມນີ້ແມ່ນອ່ານຢູ່ໃນຕົວທ່ອງເວັບຂອງທ່ານ; ມັນບໍ່ໄດ້ຖືກອັບໂຫລດຫຼືເກັບຮັກສາໄວ້.</p>
+<div class="lvtool" id="lvtool">
+<div class="lvrow"><span class="lvk">IP ສາທາລະນະ</span><span class="lvval" id="lv-ip">ກຳລັງກວດສອບ...</span></div><div class="lvrow"><span class="lvk">ສະຖານທີ່</span><span class="lvval" id="lv-geo">ກຳລັງກວດສອບ...</span></div><div class="lvrow"><span class="lvk">ISP</span><span class="lvval" id="lv-isp">ກຳລັງກວດສອບ...</span></div><div class="lvrow"><span class="lvk">ເຂດເວລາຂອງຕົວທ່ອງເວັບ</span><span class="lvval" id="lv-tzb">ກຳລັງກວດສອບ...</span></div><div class="lvrow"><span class="lvk">ເຂດເວລາຕາມ IP</span><span class="lvval" id="lv-tzi">ກຳລັງກວດສອບ...</span> <small id="lv-tzhint" class="lvhint"></small></div><div class="lvrow"><span class="lvk">ການເປີດເຜີຍ WebRTC</span><span class="lvval" id="lv-webrtc-verdict">ກຳລັງກວດສອບ...</span></div>
+<div class="lvwebrtc" id="lv-webrtc"></div>
+<button id="lv-rerun" type="button">ແລ່ນອີກຄັ້ງ</button>
+<p class="lvnote">ເຄື່ອງມືນີ້ເຮັດວຽກທັງຫມົດໃນຕົວທ່ອງເວັບຂອງທ່ານແລະເກັບກໍາຫຼືອັບໂຫລດບໍ່ມີຫຍັງ.</p>
+</div>
+<figure class="lvsvg"><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fig 1: ໂດຍບໍ່ມີ VPN ເວັບໄຊທ໌ຈະເຫັນ IP ທີ່ແທ້ຈິງຂອງເຈົ້າໂດຍກົງ; ດ້ວຍ VPN ມັນເຫັນ node IP, ແຕ່ WebRTC ອາດຈະຂ້າມອຸໂມງແລະເປີດເຜີຍ IP ທີ່ແທ້ຈິງຂອງເຈົ້າ." style="width:100%;height:auto"><rect width="720" height="300" rx="14" fill="#f3f7ff"/><rect x="24" y="34" width="120" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="84" y="60" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">ເຈົ້າ</text><text x="84" y="80" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#64748b">ຕົວທ່ອງເວັບ</text><rect x="560" y="34" width="136" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="628" y="60" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">ເວັບໄຊທ໌</text><text x="628" y="80" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#e11d48">IP ທີ່ແທ້ຈິງ</text><line x1="144" y1="62" x2="560" y2="62" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><text x="352" y="26" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#94a3b8">✗ ອຸໂມງ VPN ✗</text><rect x="24" y="150" width="120" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="84" y="176" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">ເຈົ້າ</text><rect x="300" y="150" width="120" height="56" rx="10" fill="#e8f0ff" stroke="#1a73e8"/><text x="360" y="182" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#1a73e8">ອຸໂມງ VPN</text><rect x="560" y="150" width="136" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="628" y="176" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">ເວັບໄຊທ໌</text><text x="628" y="196" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#16a34a">Node IP</text><line x1="144" y1="178" x2="300" y2="178" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><line x1="420" y1="178" x2="560" y2="178" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><text x="222" y="168" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#16a34a">Node IP</text><path d="M84 206 C84 250 660 250 628 208" fill="none" stroke="#e11d48" stroke-width="2.2" stroke-dasharray="6 5" marker-end="url(#arr)"/><text x="356" y="278" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#e11d48">WebRTC → ຮົ່ວ (IP ທີ່ແທ້ຈິງ)</text><defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#1a73e8"/></marker><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e11d48"/></marker></defs></svg><figcaption>Fig 1: ໂດຍບໍ່ມີ VPN ເວັບໄຊທ໌ຈະເຫັນ IP ທີ່ແທ້ຈິງຂອງເຈົ້າໂດຍກົງ; ດ້ວຍ VPN ມັນເຫັນ node IP, ແຕ່ WebRTC ອາດຈະຂ້າມອຸໂມງແລະເປີດເຜີຍ IP ທີ່ແທ້ຈິງຂອງເຈົ້າ.</figcaption></figure>
+<h2>ກ່ຽວກັບ IP ແລະສະຖານທີ່ສາທາລະນະຂອງທ່ານ</h2>
+<p>IP ສາທາລະນະຂອງທ່ານແມ່ນທີ່ຢູ່ພາຍນອກຂອງທ່ານໃນອິນເຕີເນັດ. ເວັບໄຊທ໌ ແລະແອັບຯສາມາດເບິ່ງເຫັນມັນໄດ້ ແລະສະຫຼຸບສະຖານທີ່ໂດຍປະມານຂອງເຈົ້າ, ISP ແລະເຂດເວລາ. ສະຖານທີ່ຂ້າງເທິງແມ່ນມາຈາກການຊອກຫາທາງພູມສາດຂອງ IP ສາທາລະນະຂອງທ່ານ, ສະນັ້ນມັນເປັນການປະເມີນລະດັບເມືອງ, ບໍ່ແມ່ນທີ່ຢູ່ຕາມຖະຫນົນ. ຖ້າທ່ານຢູ່ໃນ VPN, ມັນຄວນຈະສະແດງສະຖານທີ່ຂອງ node ທີ່ທ່ານເລືອກ, ບໍ່ແມ່ນເມືອງທີ່ແທ້ຈິງຂອງທ່ານ.</p>
+<h2>DNS leak ແມ່ນຫຍັງ, ແລະເປັນຫຍັງຕົວທ່ອງເວັບດຽວບໍ່ສາມາດທົດສອບມັນໄດ້ຢ່າງເຕັມສ່ວນ</h2>
+<p>DNS ແກ້ໄຂຊື່ໂດເມນເຂົ້າໄປໃນ IPs. ຖ້າທ່ານຢູ່ໃນ VPN ແຕ່ການສອບຖາມ DNS ຍັງຄົງຜ່ານຕົວແກ້ໄຂ ISP ທ້ອງຖິ່ນຂອງທ່ານ, ສະຖານທີ່ທີ່ທ່ານໄປຢ້ຽມຢາມຈະຖືກເປີດເຜີຍກັບ ISP ຂອງທ່ານ; ນັ້ນແມ່ນການຮົ່ວໄຫລ DNS. ເພື່ອຄວາມຊື່ສັດ: ການທົດສອບການຮົ່ວໄຫລ DNS ທີ່ແທ້ຈິງຕ້ອງການອົງປະກອບຂ້າງເຊີຟເວີ (ອຸປະກອນຂອງທ່ານແກ້ໄຂໂດເມນຍ່ອຍທີ່ເປັນເອກະລັກແລະການທົດສອບເຫັນວ່າຕົວແກ້ໄຂທີ່ຖາມ), ເຊິ່ງຕົວທ່ອງເວັບດຽວບໍ່ສາມາດເຮັດໄດ້ຢ່າງເຕັມສ່ວນ. ວິທີການປະຕິບັດແມ່ນເພື່ອດໍາເນີນການສະຖານທີ່ທົດສອບການຮົ່ວໄຫລ DNS ສະເພາະເມື່ອທ່ານເຊື່ອມຕໍ່.</p>
+<h2>ການຮົ່ວໄຫຼ WebRTC ແມ່ນຫຍັງ, ແລະມັນຂ້າມ VPN ແນວໃດ</h2>
+<p>WebRTC ແມ່ນ API ການສື່ສານໃນເວລາຈິງຂອງຕົວທ່ອງເວັບ. ຫນ້າເວັບສາມາດສ້າງ RTCPeerConnection ໃນ JavaScrIPt; ເພື່ອຕັ້ງຄ່າ peer-to-peer ຕົວທ່ອງເວັບລວບລວມທີ່ຢູ່ເຄືອຂ່າຍຂອງທ່ານຜ່ານ ICE, ລວມທັງ IP LAN ທ້ອງຖິ່ນຂອງທ່ານແລະ IP ສາທາລະນະທີ່ສະທ້ອນໂດຍເຄື່ອງແມ່ຂ່າຍ STUN, ແລະຫນ້າສາມາດອ່ານຜູ້ສະຫມັກເຫຼົ່ານັ້ນ. ນັ້ນແມ່ນການຮົ່ວໄຫລຂອງ WebRTC, ແລະມັນເກີດຂຶ້ນຢ່າງງຽບໆໂດຍບໍ່ມີການເຕືອນການອະນຸຍາດ. ນັບຕັ້ງແຕ່ປີ 2020 Chrome ແລະ Edge ໃຊ້ MDNS ເພື່ອປິດບັງ IP ທ້ອງຖິ່ນທີ່ຢູ່ເບື້ອງຫຼັງ .local hostname ແບບສຸ່ມ, ແຕ່ IP ສາທາລະນະຍັງສາມາດຮົ່ວຜ່ານຜູ້ສະຫມັກ STUN reflexive ເຖິງແມ່ນວ່າໃນຂະນະທີ່ VPN ເປີດຢູ່. ການທົດສອບຂ້າງເທິງສະແດງໃຫ້ເຫັນແນ່ນອນວ່າທີ່ຢູ່ຂອງຕົວທ່ອງເວັບຂອງທ່ານເປີດເຜີຍໃນປັດຈຸບັນ.</p>
+<figure class="lvsvg"><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fig 2: ຊັ້ນທີ່ IP / ສະຖານທີ່ຂອງທ່ານສາມາດຮົ່ວ - ຕົວທ່ອງເວັບ (WebRTC, ເຂດເວລາ), ຕົວແກ້ໄຂ DNS ຂອງລະບົບ, ອຸໂມງ VPN ແລະ ISP." style="width:100%;height:auto"><rect width="720" height="300" rx="14" fill="#0a1629"/><text x="40" y="26" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#9db8e8">Fig 2: ຊັ້ນທີ່ IP / ສະຖານທີ່ຂອງທ່ານສາມາດຮົ່ວ -</text><rect x="40" y="40" width="640" height="52" rx="10" fill="#fff" stroke="#e11d48" stroke-width="1.6"/><text x="60" y="71" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#e11d48">ຕົວທ່ອງເວັບ — WebRTC · TZ</text><text x="660" y="71" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#e11d48">ຮົ່ວ</text><rect x="54" y="100" width="612" height="52" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="1.6"/><text x="74" y="131" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#f59e0b">DNS</text><text x="646" y="131" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#f59e0b">ຮົ່ວ</text><rect x="68" y="160" width="584" height="52" rx="10" fill="#fff" stroke="#16a34a" stroke-width="1.6"/><text x="88" y="191" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#16a34a">ອຸໂມງ VPN</text><text x="632" y="191" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#16a34a">OK</text><rect x="82" y="220" width="556" height="52" rx="10" fill="#fff" stroke="#64748b" stroke-width="1.6"/><text x="102" y="251" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#64748b">ISP</text></svg><figcaption>Fig 2: ຊັ້ນທີ່ IP / ສະຖານທີ່ຂອງທ່ານສາມາດຮົ່ວ - ຕົວທ່ອງເວັບ (WebRTC, ເຂດເວລາ), ຕົວແກ້ໄຂ DNS ຂອງລະບົບ, ອຸໂມງ VPN ແລະ ISP.</figcaption></figure>
+<figure class="lvpng"><picture><source type="image/webp" srcset="/img/board_lo.webp"><img src="/img/board_lo.png" alt="ຮູບປະກອບຂອງການຢືນຢັນຄືນໃຫມ່ດ້ວຍການທົດສອບ IP ວ່າ IP ທີ່ແທ້ຈິງຖືກເຊື່ອງໄວ້ຢູ່ໃນ VPN ຫຼືບໍ່" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e7ecf5"></picture><figcaption>Fig: ກວດເບິ່ງຄືນໃຫມ່ໃນ VPN - ເວັບໄຊທ໌ຄວນຈະເຫັນ node IP, ບໍ່ແມ່ນ IP ທີ່ແທ້ຈິງຂອງເຈົ້າ</figcaption></figure>
+<h2>ວິທີການອ່ານຜົນໄດ້ຮັບເຫຼົ່ານີ້: ສິ່ງທີ່ທ່ານຄວນເຫັນໃນ VPN</h2>
+<p>ສະຖານະທີ່ເຫມາະສົມ: IP ສາທາລະນະແລະສະຖານທີ່ສະແດງໃຫ້ເຫັນສະຖານທີ່ຂອງ node VPN ທີ່ທ່ານເລືອກ, WebRTC ບໍ່ໄດ້ເປີດເຜີຍ IP ສາທາລະນະທີ່ແທ້ຈິງຂອງທ່ານ, ແລະເຂດເວລາຂອງຕົວທ່ອງເວັບແມ່ນກົງກັບພາກພື້ນ node ເຊັ່ນກັນ. ຖ້າ IP ສາທາລະນະຍັງເປັນສະຖານທີ່ທີ່ແທ້ຈິງຂອງເຈົ້າ, ຫຼື WebRTC ເປີດເຜີຍ IP ສາທາລະນະທີ່ແທ້ຈິງຂອງເຈົ້າ, ການຈະລາຈອນບໍ່ໄດ້ຜ່ານ VPN ແທ້ໆຫຼືມີການຮົ່ວໄຫຼ; ລອງ node ຫຼື protocol ອື່ນ ແລະທົດສອບອີກຄັ້ງ. ຖ້າທ່ານຍັງບໍ່ໄດ້ຕິດຕັ້ງມັນເທື່ອແລະຕ້ອງການລູກຄ້າທີ່ມີການເຊື່ອມຕໍ່ທີ່ຫມັ້ນຄົງ, ໃຫ້ໄປທີ່ <a href="https://letsvpnshield.com/download/">ຫນ້າດາວໂຫລດ LetsVPN ຢ່າງເປັນທາງການ</a>.</p>
+<section id="lv-data2026" class="lvdata"><h2>2026 ການ​ຄາດ​ຄະ​ເນ​: ການ​ນໍາ​ໃຊ້ VPN ແລະ​ຫນ້າ​ຮົ່ວ WebRTC (ການ​ຄາດ​ຄະ​ເນ​, ບໍ່​ແມ່ນ​ພາກ​ສ່ວນ​ທໍາ​ອິດ​)</h2>
+<p>ລາຍການທີ່ໝາຍ ★ອ້າງອີງສະຖິຕິສາທາລະນະ; ສ່ວນທີ່ເຫຼືອແມ່ນການຄາດຄະເນຂອງເວັບໄຊທ໌ນີ້ຈາກຂໍ້ມູນສາທາລະນະ, ບໍ່ແມ່ນການວັດແທກຂອງບຸກຄົນທໍາອິດ:</p>
+<ul><li>★ ຕໍ່ Security.org ແລະອື່ນໆ, ປະມານ 22-25% ຂອງຜູ້ໃຊ້ອິນເຕີເນັດທີ່ມີອາຍຸ 16+ ໄດ້ໃຊ້ VPN ເປັນປະຈໍາຕະຫຼອດ 2022-2025; ຕະຫຼາດກໍາລັງເຕີບໃຫຍ່.</li><li>★ ໃນປີ 2025 ມີຜູ້ໃຊ້ VPN ປະມານ 1.75 ຕື້ຄົນ, ປະມານໜຶ່ງສ່ວນສາມຂອງຜູ້ໃຊ້ອິນເຕີເນັດທັງໝົດ.</li><li>★ ການແຜ່ກະຈາຍໃນພາກພື້ນແມ່ນກວ້າງ: ປະມານ 55% ໃນອິນໂດເນເຊຍ, 43% ໃນປະເທດອິນເດຍ, ແລະ 38% ແຕ່ລະຄົນໃນປະເທດໄທແລະມາເລເຊຍ; ອາຊີຕາເວັນອອກສ່ຽງໃຕ້ ແມ່ນໜຶ່ງໃນພາກພື້ນທີ່ມີຜູ້ລ້ຽງລູກສູງສຸດ.</li><li>ຕົວທ່ອງເວັບ desktop ຕົ້ນຕໍ (Chrome / Edge / Firefox / Safari) ທັງຫມົດເຮັດໃຫ້ WebRTC ເປັນຄ່າເລີ່ມຕົ້ນ; ຈາກນີ້ພວກເຮົາຄາດຄະເນວ່າໃນປີ 2026 ສ່ວນແບ່ງທີ່ສໍາຄັນຂອງຜູ້ໃຊ້ VPN ທີ່ບໍ່ໄດ້ປິດການໃຊ້ງານ WebRTC ຍັງຄົງມີຄວາມສ່ຽງຕໍ່ການຮົ່ວໄຫຼຂອງ IP ສາທາລະນະໂດຍຜ່ານການສະທ້ອນ STUN (ຂອບເຂດຄາດຄະເນ, ບໍ່ໄດ້ວັດແທກ).</li></ul>
+<p class="lvnote">ພື້ນຖານ: ★ລາຍການອ້າງເຖິງສະຖິຕິສາທາລະນະ (ແຫຼ່ງຂໍ້ມູນຂ້າງລຸ່ມນີ້); ສ່ວນທີ່ເຫຼືອແມ່ນການຄາດຄະເນຂອງເວັບໄຊທ໌ນີ້ຈາກຂໍ້ມູນສາທາລະນະບວກກັບຄວາມຈິງທີ່ວ່າ WebRTC ເປີດໃຊ້ໂດຍຄ່າເລີ່ມຕົ້ນ, ປ້າຍຊື່ "ການຄາດຄະເນ, ບໍ່ແມ່ນບຸກຄົນທໍາອິດ" ແລະບໍ່ໄດ້ນໍາສະເຫນີເປັນຂໍ້ມູນທີ່ວັດແທກ.</p></section>
+<h2>FAQ</h2>
+<div class="lvfaqs"><details class="lvfaq"><summary>ຫຼັງຈາກການເຊື່ອມຕໍ່ VPN, ເວັບໄຊທ໌ຍັງສາມາດເຫັນ IP ທີ່ແທ້ຈິງຂອງຂ້ອຍໄດ້ບໍ? DNS ສາມາດຮົ່ວໄດ້ບໍ?</summary><p>ໂດຍປົກກະຕິ, ເມື່ອ VPN ເຊື່ອມຕໍ່ເວັບໄຊທ໌ຈະເຫັນ node IP, ບໍ່ແມ່ນ IP ທີ່ແທ້ຈິງຂອງເຈົ້າ. ແຕ່ເພື່ອຄວາມຊື່ສັດ: ການທົບທວນຄືນເອກະລາດໄດ້ລາຍງານຄວາມສ່ຽງຕໍ່ການຮົ່ວໄຫລຂອງ DNS ໃນ LetsVPN ແລະວ່າ IP ບໍ່ໄດ້ປ່ຽນແປງສະເຫມີຫຼັງຈາກການປ່ຽນເຄື່ອງແມ່ຂ່າຍ - ນັ້ນແມ່ນການທົບທວນຊຸມຊົນທີ່ເກົ່າກວ່າ, ບໍ່ໄດ້ຮັບການຢືນຢັນຈາກຜູ້ຂາຍຫຼືແຫຼ່ງທີສອງ. ຖ້າຄວາມເປັນສ່ວນຕົວສໍາຄັນຕໍ່ກັບທ່ານ, ການປະຕິບັດຕົວຈິງແມ່ນເພື່ອດໍາເນີນການທົດສອບການຮົ່ວໄຫລ IP / DNS ເຊັ່ນນີ້ຫຼັງຈາກການເຊື່ອມຕໍ່ແລະຢືນຢັນວ່າ IP ທີ່ແທ້ຈິງຂອງທ່ານແລະ DNS ບໍ່ໄດ້ຖືກເປີດເຜີຍ; ຖ້າພວກເຂົາເປັນ, ສະຫຼັບ node ຫຼື protocol ແລະກວດສອບອີກເທື່ອຫນຶ່ງ.</p></details>
+<details class="lvfaq"><summary>ຫຼັງຈາກການເຊື່ອມຕໍ່, IP ຂອງຂ້ອຍສະແດງຢູ່ໃສ? ມັນເຊື່ອງສະຖານທີ່ຂອງຂ້ອຍແທ້ໆບໍ?</summary><p>ເມື່ອເຊື່ອມຕໍ່ແລ້ວ, IP ພາຍນອກຂອງທ່ານແມ່ນສະຖານທີ່ຂອງ node ທີ່ທ່ານເລືອກ - ເລືອກ node ຮ່ອງກົງແລະທ່ານສະແດງສະຖານທີ່ຮ່ອງກົງ; ນັ້ນແມ່ນວິທີທີ່ VPN ເຊື່ອງສະຖານທີ່ທີ່ແທ້ຈິງຂອງເຈົ້າ. ທ່ານ​ສາ​ມາດ​ສະ​ຫຼັບ nodes ພາກ​ພື້ນ​ໃນ​ລູກ​ຄ້າ​ທີ່​ຈະ​ປ່ຽນ IP ພາຍ​ນອກ​ຂອງ​ທ່ານ​. ໃຫ້ສັງເກດວ່າການທົບທວນເອກະລາດໄດ້ລາຍງານວ່າ IP ບໍ່ໄດ້ປ່ຽນແປງສະເຫມີຫຼັງຈາກການປ່ຽນເຄື່ອງແມ່ຂ່າຍແລະເຫັນວ່າຄວາມສ່ຽງຕໍ່ການຮົ່ວໄຫລຂອງ DNS (ການທົບທວນທີ່ເກົ່າແກ່, ບໍ່ແມ່ນການຢືນຢັນຫຼາຍແຫຼ່ງ), ດັ່ງນັ້ນຫຼັງຈາກເຊື່ອມຕໍ່ມັນສະຫລາດທີ່ຈະກວດສອບດ້ວຍການທົດສອບ IP ວ່າສະຖານທີ່ຂອງເຈົ້າມີການປ່ຽນແປງແທ້ໆ.</p></details>
+<details class="lvfaq"><summary>ຫຼັງຈາກການເຊື່ອມຕໍ່, IP ຂອງຂ້ອຍບໍ່ປ່ຽນແປງແລະການຊອກຫາຍັງຄົງສະແດງຢູ່ໃນທ້ອງຖິ່ນ - ມັນລົ້ມເຫລວບໍ?</summary><p>ແມ່ນແລ້ວ, IP ທີ່ບໍ່ປ່ຽນແປງໂດຍປົກກະຕິຫມາຍຄວາມວ່າການຈະລາຈອນບໍ່ໄດ້ຜ່ານ VPN. ຊຸມຊົນໄດ້ລາຍງານວ່າ IP ຂອງ LetsVPN ບໍ່ປ່ຽນແປງສະເຫມີຫຼັງຈາກການປ່ຽນເຄື່ອງແມ່ຂ່າຍ, ເຊິ່ງແນ່ນອນແມ່ນກໍລະນີນີ້. ການ​ແກ້​ໄຂ​: ເຊື່ອມ​ຕໍ່​ກັບ node ພາກ​ພື້ນ​ທີ່​ແຕກ​ຕ່າງ​ກັນ​, ຫຼັງ​ຈາກ​ນັ້ນ​ພະ​ຍາ​ຍາມ​ອະ​ນຸ​ຍາດ​ອື່ນ​; ລຶບ cache ແລະເຂົ້າສູ່ລະບົບອີກເທື່ອຫນຶ່ງ, ອັບເດດເປັນເວີຊັນຫຼ້າສຸດຫຼືຕິດຕັ້ງໃຫມ່; ໃຫ້ແນ່ໃຈວ່າບໍ່ມີ VPN/proxy ອື່ນໄດ້ຮັບການຈະລາຈອນ. ຫຼັງຈາກການເຊື່ອມຕໍ່ຄືນໃຫມ່, ໃຫ້ກວດເບິ່ງ IP ຂອງທ່ານອີກເທື່ອຫນຶ່ງທີ່ນີ້ - ມັນຖືວ່າເປັນຜົນສໍາເລັດພຽງແຕ່ເມື່ອມັນສະແດງໃຫ້ເຫັນປະເທດທີ່ທ່ານເລືອກ. ໃນ Android, ໃຫ້ແນ່ໃຈວ່າລະບົບບໍ່ໄດ້ຂ້າມັນຢູ່ໃນພື້ນຫລັງ.</p></details>
+<details class="lvfaq"><summary>WebRTC ຮົ່ວໄຫຼແມ່ນຫຍັງ, ແລະເປັນຫຍັງ IP ທີ່ແທ້ຈິງຂອງຂ້ອຍຍັງຮົ່ວຢູ່ໃນ VPN?</summary><p>WebRTC ແມ່ນ API ຂອງ peer-to-peer ໃນຕົວຂອງຕົວທ່ອງເວັບ. ມີພຽງແຕ່ສອງສາມແຖວຂອງ JavaScrIPt ຫນ້າເວັບສາມາດສ້າງ RTCPeerConnection, ແລະຕົວທ່ອງເວັບຈະລວບລວມທີ່ຢູ່ເຄືອຂ່າຍຜ່ານ ICE; IP ສາທາລະນະທີ່ສະທ້ອນໃຫ້ເຫັນໂດຍເຄື່ອງແມ່ຂ່າຍ STUN ສາມາດເປັນ IP ທີ່ແທ້ຈິງຂອງເຈົ້າ - ເຖິງແມ່ນວ່າຢູ່ໃນ VPN - ແລະຫນ້າເວັບຈະອ່ານມັນຢ່າງງຽບໆໂດຍບໍ່ມີການກະຕຸ້ນເຕືອນ. ຕັ້ງແຕ່ປີ 2020 Chrome/Edge ປິດບັງ IP ທ້ອງຖິ່ນຜ່ານ MDNS, ແຕ່ IP ສາທາລະນະຍັງສາມາດຮົ່ວໄດ້. ໃຊ້ການທົດສອບ WebRTC ຂ້າງເທິງເພື່ອເບິ່ງວ່າທີ່ຢູ່ໃດທີ່ຕົວທ່ອງເວັບຂອງທ່ານເປີດເຜີຍໃນປັດຈຸບັນ.</p></details>
+<details class="lvfaq"><summary>ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວຂອງ LetsVPN ເວົ້າຫຍັງ - ມັນແມ່ນບໍ່ມີບັນທຶກຫຼືພຽງແຕ່ເວົ້າ?</summary><p>ດ້ວຍຄວາມຊື່ສັດ, ເອກະສານສາທາລະນະທີ່ມີຢູ່ບໍ່ມີຂໍ້ຄວາມນະໂຍບາຍຄວາມເປັນສ່ວນຕົວຂອງ LetsVPN ຫຼືເນື້ອໃນທີ່ບໍ່ມີບັນທຶກທີ່ສາມາດຢືນຢັນໄດ້, ດັ່ງນັ້ນມັນບໍ່ສາມາດຖືກຮັບຮອງ; ທີ່ຕ້ອງການຂໍ້ຄວາມນະໂຍບາຍຢ່າງເປັນທາງການແລະການກວດສອບພາກສ່ວນທີສາມ. ສໍາລັບສະພາບການ, ການທົບທວນຄືນເອກະລາດໄດ້ຍົກຄວາມກັງວົນກ່ຽວກັບການຮົ່ວໄຫລ DNS (ອັນດຽວ, ເກົ່າ, ບໍ່ແມ່ນແຫຼ່ງຫຼາຍທີ່ໄດ້ຮັບການຢືນຢັນ), ເຊິ່ງນັ່ງຢູ່ກົງກັນຂ້າມກັບການຫ້າມຢ່າງເຂັ້ມງວດ. ການໂທຫາການປະຕິບັດ: ປະຕິບັດມັນເປັນເຄື່ອງມືທີ່ໃຊ້ໃນພາກພື້ນ / ທົ່ວໄປ, ໃຊ້ບໍລິການກວດສອບສໍາລັບວຽກງານທີ່ມີຄວາມອ່ອນໄຫວສູງ, ແລະດໍາເນີນການທົດສອບການຮົ່ວໄຫຼດ້ວຍຕົວເອງຫຼັງຈາກການເຊື່ອມຕໍ່ແທນທີ່ຈະໄວ້ວາງໃຈກັບຄໍາຮ້ອງຂໍການຕະຫຼາດ.</p></details>
+</div>
+<div class="related"><h2>ແຫຼ່ງຂໍ້ມູນ</h2><p>ບັນທຶກດ້ານວິຊາການ ແລະຂໍ້ມູນໃນໜ້ານີ້ (ການເຊື່ອມຕໍ່ພາຍນອກແມ່ນ nofollow):</p><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection" rel="nofollow noopener" target="_blank">MDN — RTCPeerConnection API</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API" rel="nofollow noopener" target="_blank">MDN — WebRTC API</a></li><li><a href="https://browserleaks.com/webrtc" rel="nofollow noopener" target="_blank">BrowserLeaks — WebRTC Leak Test</a></li><li><a href="https://www.security.org/vpn/webrtc-leak/" rel="nofollow noopener" target="_blank">Security.org — WebRTC Leak Guide</a></li><li><a href="https://www.security.org/vpn/statistics/" rel="nofollow noopener" target="_blank">Security.org — VPN Statistics</a></li><li><a href="https://surfshark.com/blog/vpn-users" rel="nofollow noopener" target="_blank">Surfshark — VPN users</a></li><li><a href="https://cybernews.com/best-vpn/vpn-usage-by-country/" rel="nofollow noopener" target="_blank">Cybernews — VPN usage by country</a></li></ul></div>
+</main>
+<footer>ນີ້ແມ່ນເຄື່ອງມືດ້ານລູກຄ້າທີ່ບໍລິສຸດ; ທຸກໆການກວດສອບຈະດໍາເນີນການຢູ່ໃນຕົວທ່ອງເວັບຂອງທ່ານແລະບໍ່ມີການເກັບຂໍ້ມູນໃດໆ. ບັນທຶກດ້ານວິຊາການແມ່ນລວບລວມຈາກເອກະສານສາທາລະນະໂດຍ MDN, BrowserLeaks ແລະ Security.org; ຕົວເລກການນໍາໃຊ້ VPN ອ້າງເຖິງ Security.org / Surfshark / Cybernews (ເບິ່ງແຫຼ່ງຂໍ້ມູນ). ສໍາລັບການອ້າງອີງເທົ່ານັ້ນ.<br><a rel="author" href="/about-editor/">李航</a> · letsvpnshield.com</footer>
+</div>
+<script>window.LV_I18N={"checking": "ກຳລັງກວດສອບ...", "na": "ບໍ່ສາມາດໃຊ້ໄດ້", "none_detected": "ບໍ່ພົບ", "leak_public": "IP ສາທາລະນະເປີດເຜີຍຜ່ານ WebRTC", "leak_local": "ເປີດເຜີຍສະເພາະ IP ທ້ອງຖິ່ນ/LAN", "ok_safe": "ບໍ່ພົບ WebRTC public-IP ຮົ່ວໄຫຼ", "mismatch_tz": "ເຂດເວລາຂອງຕົວທ່ອງເວັບແຕກຕ່າງຈາກເຂດເວລາ IP; ນີ້ອາດຈະເປີດເຜີຍພາກພື້ນທີ່ແທ້ຈິງຂອງທ່ານ", "rerun": "ແລ່ນອີກຄັ້ງ", "rtc_public": "ສາທາລະນະ", "rtc_local": "ທ້ອງຖິ່ນ", "rtc_mdns": "MDNS-ເຊື່ອງ"};</script><script src="/tool.js"></script></body></html>
