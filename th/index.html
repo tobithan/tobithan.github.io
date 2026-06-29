@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>การทดสอบการรั่วไหลของ IP / DNS - ตรวจสอบ IP สาธารณะ ตำแหน่ง เขตเวลา และการเปิดเผย WebRTC ของคุณ</title>
+<meta name="description" content="การทดสอบการรั่วไหลของ IP/DNS ออนไลน์ฟรี: ดู IP สาธารณะปัจจุบัน ตำแหน่งทางภูมิศาสตร์ และเขตเวลาของคุณได้ทันที และตรวจสอบว่า WebRTC ของเบราว์เซอร์ของคุณเปิดเผย IP ท้องถิ่นหรือ IP จริงของคุณหรือไม่ ทำงานได้อย่างสมบูรณ์ในเบราว์เซอร์ของคุณ ไม่มีการอัปโหลดอะไรเลย หลังจากเชื่อมต่อ VPN แล้ว ให้ใช้เพื่อตรวจสอบว่า IP จริงของคุณถูกซ่อนอยู่">
+<meta name="author" content="李航">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://tobithan.github.io/th/">
+<meta property="og:type" content="website"><meta property="og:title" content="การทดสอบการรั่วไหลของ IP / DNS - ตรวจสอบ IP สาธารณะ ตำแหน่ง เขตเวลา และการเปิดเผย WebRTC ของคุณ">
+<meta property="og:description" content="การทดสอบการรั่วไหลของ IP/DNS ออนไลน์ฟรี: ดู IP สาธารณะปัจจุบัน ตำแหน่งทางภูมิศาสตร์ และเขตเวลาของคุณได้ทันที และตรวจสอบว่า WebRTC ของเบราว์เซอร์ของคุณเปิดเผย IP ท้องถิ่นหรือ IP จริงของคุณหรือไม่ ทำงานได้อย่างสมบูรณ์ในเบราว์เซอร์ของคุณ ไม่มีการอัปโหลดอะไรเลย หลังจากเชื่อมต่อ VPN แล้ว ให้ใช้เพื่อตรวจสอบว่า IP จริงของคุณถูกซ่อนอยู่"><meta property="og:locale" content="th_TH">
+<meta property="og:url" content="https://tobithan.github.io/th/"><meta property="og:image" content="https://tobithan.github.io/img/cover_th.png">
+<meta property="og:image:width" content="1120"><meta property="og:image:height" content="746">
+<link rel="alternate" hreflang="zh-Hans" href="https://tobithan.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://tobithan.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://tobithan.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://tobithan.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://tobithan.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://tobithan.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://tobithan.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://tobithan.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://tobithan.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://tobithan.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://tobithan.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://tobithan.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://tobithan.github.io/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "การทดสอบการรั่วไหลของ IP / DNS และโปรแกรมดูตำแหน่งทางภูมิศาสตร์",
+   "url": "https://tobithan.github.io/th/",
+   "applicationCategory": "SecurityApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "th",
+   "description": "การทดสอบการรั่วไหลของ IP/DNS ออนไลน์ฟรี: ดู IP สาธารณะปัจจุบัน ตำแหน่งทางภูมิศาสตร์ และเขตเวลาของคุณได้ทันที และตรวจสอบว่า WebRTC ของเบราว์เซอร์ของคุณเปิดเผย IP ท้องถิ่นหรือ IP จริงของคุณหรือไม่ ทำงานได้อย่างสมบูรณ์ในเบราว์เซอร์ของคุณ ไม่มีการอัปโหลดอะไรเลย หลังจากเชื่อมต่อ VPN แล้ว ให้ใช้เพื่อตรวจสอบว่า IP จริงของคุณถูกซ่อนอยู่",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "李航",
+    "jobTitle": "บรรณาธิการตรวจสอบ",
+    "url": "https://tobithan.github.io/about-editor/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "th",
+   "url": "https://tobithan.github.io/th/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "หลังจากเชื่อมต่อ VPN แล้ว เว็บไซต์ยังสามารถเห็น IP จริงของฉันได้หรือไม่ DNS สามารถรั่วไหลได้หรือไม่?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "โดยปกติ เมื่อเชื่อมต่อ VPN แล้ว ไซต์จะเห็น IP ของโหนด ไม่ใช่ IP จริงของคุณ แต่พูดตามตรง: การตรวจสอบอิสระทำเครื่องหมายความเสี่ยงการรั่วไหลของ DNS บน LetsVPN และ IP ไม่ได้เปลี่ยนแปลงเสมอไปหลังจากเปลี่ยนเซิร์ฟเวอร์ - นั่นคือการตรวจสอบชุมชนเก่าเพียงครั้งเดียว ไม่ได้รับการยืนยันจากผู้ขายหรือแหล่งที่มาที่สอง หากความเป็นส่วนตัวมีความสำคัญต่อคุณ การดำเนินการในทางปฏิบัติคือการทดสอบการรั่วไหลของ IP/DNS เช่นนี้หลังจากเชื่อมต่อและยืนยันว่า IP และ DNS จริงของคุณไม่ถูกเปิดเผย หากเป็นเช่นนั้น ให้สลับโหนดหรือโปรโตคอลและตรวจสอบอีกครั้ง"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "หลังจากเชื่อมต่อแล้ว IP ของฉันจะแสดงที่ไหน? มันซ่อนตำแหน่งของฉันจริงๆเหรอ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "เมื่อเชื่อมต่อแล้ว IP ภายนอกของคุณจะเป็นตำแหน่งโหนดที่คุณเลือก - เลือกโหนดฮ่องกงแล้วคุณแสดงตำแหน่งของฮ่องกง นั่นคือวิธีที่ VPN ซ่อนตำแหน่งจริงของคุณ คุณสามารถสลับโหนดภูมิภาคในไคลเอนต์เพื่อเปลี่ยน IP ภายนอกของคุณได้ โปรดทราบว่าการตรวจสอบโดยหน่วยงานอิสระรายงานว่า IP ไม่ได้เปลี่ยนแปลงเสมอไปหลังจากเปลี่ยนเซิร์ฟเวอร์และพบว่ามีความเสี่ยงการรั่วไหลของ DNS (การตรวจสอบแบบเก่าและแบบเดี่ยว ไม่ใช่การยืนยันจากหลายแหล่ง) ดังนั้นหลังจากเชื่อมต่อแล้ว ก็ควรตรวจสอบด้วยการทดสอบ IP ว่าตำแหน่งของคุณเปลี่ยนแปลงจริง ๆ"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "หลังจากเชื่อมต่อแล้ว IP ของฉันไม่เปลี่ยนแปลงและการค้นหายังคงแสดงอยู่ในเครื่อง - ล้มเหลวหรือไม่",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ใช่ IP ที่ไม่เปลี่ยนแปลงมักจะหมายความว่าการรับส่งข้อมูลไม่ได้ผ่าน VPN จริงๆ ชุมชนรายงานว่า IP ของ LetsVPN ไม่ได้เปลี่ยนแปลงเสมอไปหลังจากเปลี่ยนเซิร์ฟเวอร์ ซึ่งก็คือกรณีนี้นั่นเอง การแก้ไข: เชื่อมต่อใหม่กับโหนดภูมิภาคอื่น จากนั้นลองใช้โปรโตคอลอื่น ล้างแคชแล้วเข้าสู่ระบบอีกครั้ง อัปเดตเป็นเวอร์ชันล่าสุดหรือติดตั้งใหม่ ตรวจสอบให้แน่ใจว่าไม่มี VPN/พร็อกซีอื่นรับส่งข้อมูล หลังจากเชื่อมต่อใหม่แล้ว ให้ตรวจสอบ IP ของคุณอีกครั้งที่นี่ - จะนับว่าสำเร็จก็ต่อเมื่อแสดงประเทศที่คุณเลือกเท่านั้น บน Android ตรวจสอบให้แน่ใจว่าระบบไม่ได้ปิดการทำงานในเบื้องหลัง"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "WebRTC รั่วไหลคืออะไร และเหตุใด IP จริงของฉันจึงยังรั่วไหลบน VPN ได้",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "WebRTC เป็น API แบบเพียร์ทูเพียร์ในตัวของเบราว์เซอร์ ด้วย JavaScrIPt เพียงไม่กี่บรรทัด เพจก็สามารถสร้าง RTCPeerConnection และเบราว์เซอร์จะรวบรวมที่อยู่เครือข่ายผ่าน ICE IP สาธารณะที่สะท้อนโดยเซิร์ฟเวอร์ STUN อาจเป็น IP จริงของคุณ - แม้แต่บน VPN - และเพจจะอ่านโดยไม่ต้องแจ้งให้ทราบโดยไม่มีการอนุญาต ตั้งแต่ปี 2020 Chrome/Edge ปิดบัง IP ในเครื่องผ่าน MDNS แต่ IP สาธารณะยังคงรั่วไหลได้ ใช้การทดสอบ WebRTC ด้านบนเพื่อดูว่าเบราว์เซอร์ของคุณเปิดเผยที่อยู่ใดในปัจจุบัน"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "นโยบายความเป็นส่วนตัวของ LetsVPN กล่าวไว้ว่าอย่างไร - ไม่มีการเข้าสู่ระบบจริงๆ หรือแค่พูดคุย?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "สื่อสาธารณะที่มีอยู่ไม่มีข้อความนโยบายความเป็นส่วนตัวของ LetsVPN หรือเนื้อหาที่ไม่มีบันทึกที่ตรวจสอบได้ ดังนั้นจึงไม่สามารถรับรองได้ ที่ต้องการข้อความนโยบายอย่างเป็นทางการและการตรวจสอบจากบุคคลที่สาม สำหรับบริบท การตรวจสอบโดยหน่วยงานอิสระทำให้เกิดข้อกังวลเกี่ยวกับการรั่วไหลของ DNS (รายการเดียว เก่ากว่า และไม่ได้ยืนยันจากหลายแหล่ง) ซึ่งขัดแย้งกับการไม่มีการบันทึกที่เข้มงวด แนวทางปฏิบัติ: ถือเป็นเครื่องมือสลับภูมิภาค/ใช้งานทั่วไป ใช้บริการที่ได้รับการตรวจสอบสำหรับงานที่มีความละเอียดอ่อนสูง และดำเนินการทดสอบการรั่วไหลด้วยตัวเองหลังจากเชื่อมต่อ แทนที่จะเชื่อถือคำกล่าวอ้างทางการตลาด"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="stylesheet" href="/style.css"></head>
+<body><div class="wrap"><main>
+<nav class="lvlang">ภาษา: <a href="/">简体中文</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/id/">Bahasa Indonesia</a> · <strong>ไทย</strong> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>การทดสอบการรั่วไหลของ IP / DNS และโปรแกรมดูตำแหน่งทางภูมิศาสตร์</h1>
+<p class="lvby"><a rel="author" href="/about-editor/">โดย 李航</a> · บรรณาธิการตรวจสอบ · เผยแพร่แล้ว 2025-04-08 · อัปเดตแล้ว 2026-06-30</p>
+<figure class="lvpng"><picture><source type="image/webp" srcset="/img/cover_th.webp"><img src="/img/cover_th.png" alt="การทดสอบการรั่วไหลของ IP/DNS และภาพประกอบของโปรแกรมดูตำแหน่งทางภูมิศาสตร์" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e7ecf5"></picture><figcaption>รูป: การทดสอบการรั่วไหลของ IP / DNS (IP สาธารณะ, ตำแหน่ง, เขตเวลา, การเปิดเผย WebRTC)</figcaption></figure>
+<p class="lvlead">เครื่องมือฝั่งไคลเอ็นต์อย่างแท้จริง: เครื่องมือจะอ่านและแสดง IP สาธารณะที่คุณเปิดเผยทางอินเทอร์เน็ตในเบราว์เซอร์ของคุณโดยตรง ตำแหน่งทางภูมิศาสตร์และเขตเวลาของคุณ รวมถึง WebRTC ของเบราว์เซอร์ของคุณจะทำให้ IP ท้องถิ่นหรือ IP จริงของคุณรั่วไหลไปยังหน้าเว็บหรือไม่ การตรวจสอบทุกครั้งจะทำงานภายในเครื่อง โดยไม่มีการอัปโหลดอะไรเลย หลังจากเชื่อมต่อ VPN เช่น LetsVPN แล้ว ให้รันอีกครั้งเพื่อยืนยันว่าไซต์เห็น IP ของโหนด ไม่ใช่ IP จริงของคุณ</p>
+<h2>ผลการทดสอบสด</h2>
+<p class="lvtoolnote">ข้อมูลด้านล่างถูกอ่านในเบราว์เซอร์ของคุณ มันไม่ได้อัพโหลดหรือจัดเก็บ</p>
+<div class="lvtool" id="lvtool">
+<div class="lvrow"><span class="lvk">ไอพีสาธารณะ</span><span class="lvval" id="lv-ip">กำลังตรวจสอบ...</span></div><div class="lvrow"><span class="lvk">ที่ตั้ง</span><span class="lvval" id="lv-geo">กำลังตรวจสอบ...</span></div><div class="lvrow"><span class="lvk">ผู้ให้บริการอินเทอร์เน็ต</span><span class="lvval" id="lv-isp">กำลังตรวจสอบ...</span></div><div class="lvrow"><span class="lvk">เขตเวลาของเบราว์เซอร์</span><span class="lvval" id="lv-tzb">กำลังตรวจสอบ...</span></div><div class="lvrow"><span class="lvk">เขตเวลาตาม IP</span><span class="lvval" id="lv-tzi">กำลังตรวจสอบ...</span> <small id="lv-tzhint" class="lvhint"></small></div><div class="lvrow"><span class="lvk">การเปิดเผย WebRTC</span><span class="lvval" id="lv-webrtc-verdict">กำลังตรวจสอบ...</span></div>
+<div class="lvwebrtc" id="lv-webrtc"></div>
+<button id="lv-rerun" type="button">วิ่งอีกครั้ง</button>
+<p class="lvnote">เครื่องมือนี้ทำงานในเบราว์เซอร์ของคุณโดยสิ้นเชิงและไม่รวบรวมหรืออัปโหลดอะไรเลย</p>
+</div>
+<figure class="lvsvg"><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="รูปที่ 1: หากไม่มี VPN ไซต์จะเห็น IP จริงของคุณโดยตรง ด้วย VPN จะเห็น IP ของโหนด แต่ WebRTC อาจข้ามอุโมงค์และเปิดเผย IP จริงของคุณ" style="width:100%;height:auto"><rect width="720" height="300" rx="14" fill="#f3f7ff"/><rect x="24" y="34" width="120" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="84" y="60" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">คุณ</text><text x="84" y="80" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#64748b">เบราว์เซอร์</text><rect x="560" y="34" width="136" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="628" y="60" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">เว็บไซต์</text><text x="628" y="80" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#e11d48">ไอพีจริง</text><line x1="144" y1="62" x2="560" y2="62" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><text x="352" y="26" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#94a3b8">✗ อุโมงค์ VPN ✗</text><rect x="24" y="150" width="120" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="84" y="176" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">คุณ</text><rect x="300" y="150" width="120" height="56" rx="10" fill="#e8f0ff" stroke="#1a73e8"/><text x="360" y="182" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#1a73e8">อุโมงค์ VPN</text><rect x="560" y="150" width="136" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="628" y="176" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">เว็บไซต์</text><text x="628" y="196" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#16a34a">โหนดไอพี</text><line x1="144" y1="178" x2="300" y2="178" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><line x1="420" y1="178" x2="560" y2="178" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><text x="222" y="168" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#16a34a">โหนดไอพี</text><path d="M84 206 C84 250 660 250 628 208" fill="none" stroke="#e11d48" stroke-width="2.2" stroke-dasharray="6 5" marker-end="url(#arr)"/><text x="356" y="278" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#e11d48">เว็บRTC → รั่วไหล (ไอพีจริง)</text><defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#1a73e8"/></marker><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e11d48"/></marker></defs></svg><figcaption>รูปที่ 1: หากไม่มี VPN ไซต์จะเห็น IP จริงของคุณโดยตรง ด้วย VPN จะเห็น IP ของโหนด แต่ WebRTC อาจข้ามอุโมงค์และเปิดเผย IP จริงของคุณ</figcaption></figure>
+<h2>เกี่ยวกับ IP สาธารณะและตำแหน่งของคุณ</h2>
+<p>IP สาธารณะของคุณคือที่อยู่ภายนอกของคุณบนอินเทอร์เน็ต เว็บไซต์และแอปสามารถดูและอนุมานตำแหน่งโดยประมาณ, ISP และเขตเวลาของคุณได้ ตำแหน่งด้านบนมาจากการค้นหาทางภูมิศาสตร์ของ IP สาธารณะของคุณ ดังนั้นจึงเป็นการประมาณการระดับเมือง ไม่ใช่ที่อยู่ หากคุณใช้ VPN ควรแสดงตำแหน่งของโหนดที่คุณเลือก ไม่ใช่เมืองจริงของคุณ</p>
+<h2>DNS รั่วไหลคืออะไร และเหตุใดเบราว์เซอร์เพียงอย่างเดียวจึงไม่สามารถทดสอบได้อย่างสมบูรณ์</h2>
+<p>DNS แก้ไขชื่อโดเมนเป็น IP หากคุณใช้ VPN แต่การสืบค้น DNS ยังคงผ่านตัวแก้ไข ISP ในพื้นที่ของคุณ เว็บไซต์ที่คุณเยี่ยมชมจะถูกเปิดเผยต่อ ISP ของคุณ นั่นคือการรั่วไหลของ DNS พูดตามตรง: การทดสอบการรั่วไหลของ DNS ที่แท้จริงจำเป็นต้องมีส่วนประกอบฝั่งเซิร์ฟเวอร์ (อุปกรณ์ของคุณแก้ไขโดเมนย่อยที่ไม่ซ้ำกันและการทดสอบจะดูว่าตัวแก้ไขตัวใดถาม) ซึ่งเบราว์เซอร์เพียงอย่างเดียวไม่สามารถทำได้เต็มที่ แนวทางปฏิบัติคือการเรียกใช้ไซต์ทดสอบการรั่วไหลของ DNS โดยเฉพาะเมื่อคุณเชื่อมต่อแล้ว</p>
+<h2>WebRTC รั่วไหลคืออะไร และจะข้าม VPN ได้อย่างไร</h2>
+<p>WebRTC คือ API การสื่อสารแบบเรียลไทม์ในตัวของเบราว์เซอร์ หน้าเว็บสามารถสร้าง RTCPeerConnection ใน JavaScrIPt; ในการตั้งค่าเพียร์ทูเพียร์ เบราว์เซอร์จะรวบรวมที่อยู่เครือข่ายของคุณผ่าน ICE รวมถึง LAN IP ในพื้นที่ของคุณและ IP สาธารณะที่แสดงโดยเซิร์ฟเวอร์ STUN และเพจสามารถอ่านผู้สมัครเหล่านั้นได้ นั่นคือการรั่วไหลของ WebRTC และเกิดขึ้นอย่างเงียบๆ โดยไม่มีการแจ้งเตือน ตั้งแต่ปี 2020 Chrome และ Edge ใช้ MDNS เพื่อปกปิด IP ภายในเครื่องที่อยู่เบื้องหลังชื่อโฮสต์ .local แบบสุ่ม แต่ IP สาธารณะยังคงรั่วไหลผ่านตัวเลือกที่สะท้อนกลับของ STUN ได้ แม้ว่า VPN จะเปิดอยู่ก็ตาม การทดสอบข้างต้นแสดงให้เห็นว่าที่อยู่ใดที่เบราว์เซอร์ของคุณเปิดเผยอยู่ในปัจจุบัน</p>
+<figure class="lvsvg"><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="รูปที่ 2: เลเยอร์ที่ IP/ตำแหน่งของคุณอาจรั่วไหลได้ - เบราว์เซอร์ (WebRTC, เขตเวลา), ตัวแก้ไข DNS ของระบบ, อุโมงค์ VPN และ ISP" style="width:100%;height:auto"><rect width="720" height="300" rx="14" fill="#0a1629"/><text x="40" y="26" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#9db8e8">รูปที่ 2: เลเยอร์ที่ IP/ตำแหน่งของคุณอาจรั่วไห</text><rect x="40" y="40" width="640" height="52" rx="10" fill="#fff" stroke="#e11d48" stroke-width="1.6"/><text x="60" y="71" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#e11d48">เบราว์เซอร์ — เว็บRTC · TZ</text><text x="660" y="71" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#e11d48">รั่วไหล</text><rect x="54" y="100" width="612" height="52" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="1.6"/><text x="74" y="131" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#f59e0b">DNS</text><text x="646" y="131" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#f59e0b">รั่วไหล</text><rect x="68" y="160" width="584" height="52" rx="10" fill="#fff" stroke="#16a34a" stroke-width="1.6"/><text x="88" y="191" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#16a34a">อุโมงค์ VPN</text><text x="632" y="191" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#16a34a">OK</text><rect x="82" y="220" width="556" height="52" rx="10" fill="#fff" stroke="#64748b" stroke-width="1.6"/><text x="102" y="251" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#64748b">ผู้ให้บริการอินเทอร์เน็ต</text></svg><figcaption>รูปที่ 2: เลเยอร์ที่ IP/ตำแหน่งของคุณอาจรั่วไหลได้ - เบราว์เซอร์ (WebRTC, เขตเวลา), ตัวแก้ไข DNS ของระบบ, อุโมงค์ VPN และ ISP</figcaption></figure>
+<figure class="lvpng"><picture><source type="image/webp" srcset="/img/board_th.webp"><img src="/img/board_th.png" alt="ภาพประกอบของการยืนยันซ้ำด้วยการทดสอบ IP ว่า IP จริงถูกซ่อนอยู่ใน VPN หรือไม่" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e7ecf5"></picture><figcaption>รูป: ตรวจสอบ VPN อีกครั้ง - ไซต์ควรเห็น IP ของโหนด ไม่ใช่ IP จริงของคุณ</figcaption></figure>
+<h2>วิธีอ่านผลลัพธ์เหล่านี้: สิ่งที่คุณควรเห็นบน VPN</h2>
+<p>สถานะในอุดมคติ: IP สาธารณะและตำแหน่งจะแสดงตำแหน่งของโหนด VPN ที่คุณเลือก, WebRTC จะไม่เปิดเผย IP สาธารณะจริงของคุณ และเขตเวลาของเบราว์เซอร์ก็ตรงกับภูมิภาคของโหนดเช่นกัน หาก IP สาธารณะยังคงเป็นตำแหน่งจริงของคุณ หรือ WebRTC เปิดเผย IP สาธารณะจริงของคุณ การรับส่งข้อมูลจะไม่ผ่าน VPN หรือมีการรั่วไหล ลองใช้โหนดหรือโปรโตคอลอื่นแล้วทดสอบอีกครั้ง หากคุณยังไม่ได้ติดตั้งและต้องการไคลเอนต์ที่มีการเชื่อมต่อที่เสถียรยิ่งขึ้น ให้ไปที่ <a href="https://letsvpnshield.com/download/">หน้าดาวน์โหลด LetsVPN อย่างเป็นทางการ</a></p>
+<section id="lv-data2026" class="lvdata"><h2>การประมาณการปี 2026: การใช้งาน VPN และพื้นผิวการรั่วไหลของ WebRTC (ประมาณการ ไม่ใช่บุคคลที่หนึ่ง)</h2>
+<p>รายการที่ทำเครื่องหมาย ★ อ้างอิงสถิติสาธารณะ; ส่วนที่เหลือเป็นข้อมูลประมาณการของไซต์นี้จากข้อมูลสาธารณะ ไม่มีการวัดผลจากบุคคลที่หนึ่ง:</p>
+<ul><li>★ ตาม Security.org และอื่นๆ ประมาณ 22-25% ของผู้ใช้อินเทอร์เน็ตที่มีอายุ 16 ปีขึ้นไปใช้ VPN เป็นประจำตลอดปี 2022-2025 ตลาดกำลังเติบโตเต็มที่</li><li>★ ภายในปี 2568 มีผู้ใช้ VPN ประมาณ 1.75 พันล้านคน หรือประมาณหนึ่งในสามของผู้ใช้อินเทอร์เน็ตทั้งหมด</li><li>★ การแพร่กระจายในภูมิภาคกว้าง: ประมาณ 55% ในอินโดนีเซีย 43% ในอินเดีย และ 38% ในไทยและมาเลเซีย เอเชียตะวันออกเฉียงใต้เป็นหนึ่งในภูมิภาคที่มีการนำไปใช้มากที่สุด</li><li>เบราว์เซอร์เดสก์ท็อปทั่วไป (Chrome / Edge / Firefox / Safari) ทั้งหมดเปิดใช้งาน WebRTC ตามค่าเริ่มต้น จากนี้ เราประเมินว่าในปี 2026 ผู้ใช้ VPN จำนวนมากที่ไม่ได้ปิดการใช้งาน WebRTC ยังคงมีความเสี่ยงต่อการรั่วไหลของ IP สาธารณะผ่านการสะท้อน STUN (ช่วงโดยประมาณ ไม่ได้วัด)</li></ul>
+<p class="lvnote">พื้นฐาน: ★ รายการอ้างอิงสถิติสาธารณะ (ที่มาด้านล่าง); ส่วนที่เหลือเป็นการประมาณการของไซต์นี้จากข้อมูลสาธารณะ บวกกับข้อเท็จจริงที่ว่า WebRTC เปิดอยู่โดยค่าเริ่มต้น โดยมีป้ายกำกับว่า "ประมาณการ ไม่ใช่บุคคลที่หนึ่ง" และไม่แสดงเป็นข้อมูลที่วัดได้</p></section>
+<h2>FAQ</h2>
+<div class="lvfaqs"><details class="lvfaq"><summary>หลังจากเชื่อมต่อ VPN แล้ว เว็บไซต์ยังสามารถเห็น IP จริงของฉันได้หรือไม่ DNS สามารถรั่วไหลได้หรือไม่?</summary><p>โดยปกติ เมื่อเชื่อมต่อ VPN แล้ว ไซต์จะเห็น IP ของโหนด ไม่ใช่ IP จริงของคุณ แต่พูดตามตรง: การตรวจสอบอิสระทำเครื่องหมายความเสี่ยงการรั่วไหลของ DNS บน LetsVPN และ IP ไม่ได้เปลี่ยนแปลงเสมอไปหลังจากเปลี่ยนเซิร์ฟเวอร์ - นั่นคือการตรวจสอบชุมชนเก่าเพียงครั้งเดียว ไม่ได้รับการยืนยันจากผู้ขายหรือแหล่งที่มาที่สอง หากความเป็นส่วนตัวมีความสำคัญต่อคุณ การดำเนินการในทางปฏิบัติคือการทดสอบการรั่วไหลของ IP/DNS เช่นนี้หลังจากเชื่อมต่อและยืนยันว่า IP และ DNS จริงของคุณไม่ถูกเปิดเผย หากเป็นเช่นนั้น ให้สลับโหนดหรือโปรโตคอลและตรวจสอบอีกครั้ง</p></details>
+<details class="lvfaq"><summary>หลังจากเชื่อมต่อแล้ว IP ของฉันจะแสดงที่ไหน? มันซ่อนตำแหน่งของฉันจริงๆเหรอ?</summary><p>เมื่อเชื่อมต่อแล้ว IP ภายนอกของคุณจะเป็นตำแหน่งโหนดที่คุณเลือก - เลือกโหนดฮ่องกงแล้วคุณแสดงตำแหน่งของฮ่องกง นั่นคือวิธีที่ VPN ซ่อนตำแหน่งจริงของคุณ คุณสามารถสลับโหนดภูมิภาคในไคลเอนต์เพื่อเปลี่ยน IP ภายนอกของคุณได้ โปรดทราบว่าการตรวจสอบโดยหน่วยงานอิสระรายงานว่า IP ไม่ได้เปลี่ยนแปลงเสมอไปหลังจากเปลี่ยนเซิร์ฟเวอร์และพบว่ามีความเสี่ยงการรั่วไหลของ DNS (การตรวจสอบแบบเก่าและแบบเดี่ยว ไม่ใช่การยืนยันจากหลายแหล่ง) ดังนั้นหลังจากเชื่อมต่อแล้ว ก็ควรตรวจสอบด้วยการทดสอบ IP ว่าตำแหน่งของคุณเปลี่ยนแปลงจริง ๆ</p></details>
+<details class="lvfaq"><summary>หลังจากเชื่อมต่อแล้ว IP ของฉันไม่เปลี่ยนแปลงและการค้นหายังคงแสดงอยู่ในเครื่อง - ล้มเหลวหรือไม่</summary><p>ใช่ IP ที่ไม่เปลี่ยนแปลงมักจะหมายความว่าการรับส่งข้อมูลไม่ได้ผ่าน VPN จริงๆ ชุมชนรายงานว่า IP ของ LetsVPN ไม่ได้เปลี่ยนแปลงเสมอไปหลังจากเปลี่ยนเซิร์ฟเวอร์ ซึ่งก็คือกรณีนี้นั่นเอง การแก้ไข: เชื่อมต่อใหม่กับโหนดภูมิภาคอื่น จากนั้นลองใช้โปรโตคอลอื่น ล้างแคชแล้วเข้าสู่ระบบอีกครั้ง อัปเดตเป็นเวอร์ชันล่าสุดหรือติดตั้งใหม่ ตรวจสอบให้แน่ใจว่าไม่มี VPN/พร็อกซีอื่นรับส่งข้อมูล หลังจากเชื่อมต่อใหม่แล้ว ให้ตรวจสอบ IP ของคุณอีกครั้งที่นี่ - จะนับว่าสำเร็จก็ต่อเมื่อแสดงประเทศที่คุณเลือกเท่านั้น บน Android ตรวจสอบให้แน่ใจว่าระบบไม่ได้ปิดการทำงานในเบื้องหลัง</p></details>
+<details class="lvfaq"><summary>WebRTC รั่วไหลคืออะไร และเหตุใด IP จริงของฉันจึงยังรั่วไหลบน VPN ได้</summary><p>WebRTC เป็น API แบบเพียร์ทูเพียร์ในตัวของเบราว์เซอร์ ด้วย JavaScrIPt เพียงไม่กี่บรรทัด เพจก็สามารถสร้าง RTCPeerConnection และเบราว์เซอร์จะรวบรวมที่อยู่เครือข่ายผ่าน ICE IP สาธารณะที่สะท้อนโดยเซิร์ฟเวอร์ STUN อาจเป็น IP จริงของคุณ - แม้แต่บน VPN - และเพจจะอ่านโดยไม่ต้องแจ้งให้ทราบโดยไม่มีการอนุญาต ตั้งแต่ปี 2020 Chrome/Edge ปิดบัง IP ในเครื่องผ่าน MDNS แต่ IP สาธารณะยังคงรั่วไหลได้ ใช้การทดสอบ WebRTC ด้านบนเพื่อดูว่าเบราว์เซอร์ของคุณเปิดเผยที่อยู่ใดในปัจจุบัน</p></details>
+<details class="lvfaq"><summary>นโยบายความเป็นส่วนตัวของ LetsVPN กล่าวไว้ว่าอย่างไร - ไม่มีการเข้าสู่ระบบจริงๆ หรือแค่พูดคุย?</summary><p>สื่อสาธารณะที่มีอยู่ไม่มีข้อความนโยบายความเป็นส่วนตัวของ LetsVPN หรือเนื้อหาที่ไม่มีบันทึกที่ตรวจสอบได้ ดังนั้นจึงไม่สามารถรับรองได้ ที่ต้องการข้อความนโยบายอย่างเป็นทางการและการตรวจสอบจากบุคคลที่สาม สำหรับบริบท การตรวจสอบโดยหน่วยงานอิสระทำให้เกิดข้อกังวลเกี่ยวกับการรั่วไหลของ DNS (รายการเดียว เก่ากว่า และไม่ได้ยืนยันจากหลายแหล่ง) ซึ่งขัดแย้งกับการไม่มีการบันทึกที่เข้มงวด แนวทางปฏิบัติ: ถือเป็นเครื่องมือสลับภูมิภาค/ใช้งานทั่วไป ใช้บริการที่ได้รับการตรวจสอบสำหรับงานที่มีความละเอียดอ่อนสูง และดำเนินการทดสอบการรั่วไหลด้วยตัวเองหลังจากเชื่อมต่อ แทนที่จะเชื่อถือคำกล่าวอ้างทางการตลาด</p></details>
+</div>
+<div class="related"><h2>แหล่งที่มา</h2><p>หมายเหตุทางเทคนิคและข้อมูลในหน้านี้ (ลิงก์ภายนอกเป็นแบบ nofollow):</p><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection" rel="nofollow noopener" target="_blank">MDN — RTCPeerConnection API</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API" rel="nofollow noopener" target="_blank">MDN — WebRTC API</a></li><li><a href="https://browserleaks.com/webrtc" rel="nofollow noopener" target="_blank">BrowserLeaks — WebRTC Leak Test</a></li><li><a href="https://www.security.org/vpn/webrtc-leak/" rel="nofollow noopener" target="_blank">Security.org — WebRTC Leak Guide</a></li><li><a href="https://www.security.org/vpn/statistics/" rel="nofollow noopener" target="_blank">Security.org — VPN Statistics</a></li><li><a href="https://surfshark.com/blog/vpn-users" rel="nofollow noopener" target="_blank">Surfshark — VPN users</a></li><li><a href="https://cybernews.com/best-vpn/vpn-usage-by-country/" rel="nofollow noopener" target="_blank">Cybernews — VPN usage by country</a></li></ul></div>
+</main>
+<footer>นี่เป็นเครื่องมือฝั่งไคลเอ็นต์อย่างแท้จริง การตรวจสอบทุกครั้งจะทำงานภายในเบราว์เซอร์ของคุณ และไม่มีการรวบรวมข้อมูล หมายเหตุด้านเทคนิครวบรวมจากสื่อสาธารณะโดย MDN, BrowserLeaks และ Security.org; ตัวเลขการใช้งาน VPN อ้างอิงถึง Security.org / Surfshark / Cybernews (ดูแหล่งที่มา) สำหรับการอ้างอิงเท่านั้น<br><a rel="author" href="/about-editor/">李航</a> · letsvpnshield.com</footer>
+</div>
+<script>window.LV_I18N={"checking": "กำลังตรวจสอบ...", "na": "ไม่พร้อมใช้งาน", "none_detected": "ไม่พบเลย", "leak_public": "IP สาธารณะถูกเปิดเผยผ่าน WebRTC", "leak_local": "มีการเปิดเผยเฉพาะ IP ภายใน/LAN เท่านั้น", "ok_safe": "ไม่พบการรั่วไหลของ IP สาธารณะของ WebRTC", "mismatch_tz": "เขตเวลาของเบราว์เซอร์แตกต่างจากเขตเวลา IP นี่อาจเปิดเผยภูมิภาคที่แท้จริงของคุณ", "rerun": "วิ่งอีกครั้ง", "rtc_public": "สาธารณะ", "rtc_local": "ท้องถิ่น", "rtc_mdns": "MDNS ซ่อนอยู่"};</script><script src="/tool.js"></script></body></html>
