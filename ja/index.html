@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IP / DNS 漏れチェック - 公開 IP・位置情報・タイムゾーン・WebRTC 露出を確認</title>
+<meta name="description" content="無料のオンライン IP/DNS 漏れチェック。現在の公開 IP・位置情報・タイムゾーンをワンクリックで表示し、ブラウザの WebRTC がローカル IP や実 IP を漏らしていないか検出します。すべてブラウザ内で完結、データは送信しません。VPN 接続後に実 IP が隠れているか再確認できます。">
+<meta name="author" content="李航">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://tobithan.github.io/ja/">
+<meta property="og:type" content="website"><meta property="og:title" content="IP / DNS 漏れチェック - 公開 IP・位置情報・タイムゾーン・WebRTC 露出を確認">
+<meta property="og:description" content="無料のオンライン IP/DNS 漏れチェック。現在の公開 IP・位置情報・タイムゾーンをワンクリックで表示し、ブラウザの WebRTC がローカル IP や実 IP を漏らしていないか検出します。すべてブラウザ内で完結、データは送信しません。VPN 接続後に実 IP が隠れているか再確認できます。"><meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://tobithan.github.io/ja/"><meta property="og:image" content="https://tobithan.github.io/img/cover_ja.png">
+<meta property="og:image:width" content="1120"><meta property="og:image:height" content="746">
+<link rel="alternate" hreflang="zh-Hans" href="https://tobithan.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://tobithan.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://tobithan.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://tobithan.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://tobithan.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://tobithan.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://tobithan.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://tobithan.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://tobithan.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://tobithan.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://tobithan.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://tobithan.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://tobithan.github.io/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "IP / DNS 漏れチェックと位置情報ビューア",
+   "url": "https://tobithan.github.io/ja/",
+   "applicationCategory": "SecurityApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "ja",
+   "description": "無料のオンライン IP/DNS 漏れチェック。現在の公開 IP・位置情報・タイムゾーンをワンクリックで表示し、ブラウザの WebRTC がローカル IP や実 IP を漏らしていないか検出します。すべてブラウザ内で完結、データは送信しません。VPN 接続後に実 IP が隠れているか再確認できます。",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "李航",
+    "jobTitle": "レビュー編集者",
+    "url": "https://tobithan.github.io/about-editor/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "ja",
+   "url": "https://tobithan.github.io/ja/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "VPN 接続後も実 IP はサイトに見える？ DNS は漏れる？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "通常、VPN 接続後はサイトにはノード IP が見え、実 IP は見えません。ただ正直に言うと、ある独立レビューが LetsVPN の DNS 漏れリスクと、サーバー切替後に IP が変わらないことがある点を指摘しました。これは単一かつ古めのコミュニティ評価で、公式や第二の情報源では確認されていません。プライバシーを重視するなら、接続後に本ページのような IP/DNS 漏れチェックで実 IP と DNS が露出していないか確認し、漏れていればノードやプロトコルを変えて再検証するのが現実的です。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "接続後 IP はどこに表示される？ 本当に位置を隠せる？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "接続後の外向き IP は選んだノードの所在地のものになります。香港ノードなら香港の位置が表示され、これが VPN で実際の位置を隠す原理です。クライアントで地域ノードを切り替えれば外向き IP も変わります。注意点として、独立レビューはサーバー切替後に IP が変わらないことがある点と DNS 漏れリスク（単一・古め・多源未確認）を報告しているため、接続後は IP 検査で位置が実際に変わったか確認するのが安全です。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "接続後も IP が変わらず、ローカルのまま。失敗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "はい、IP が変わらないのは通常、通信が VPN を通っていないことを意味します。LetsVPN はサーバー切替後に IP が変わらないことがあるとコミュニティで報告されており、まさにこのケースです。対処：別地域のノードで再接続し、プロトコルも変更；キャッシュを消して再ログイン、最新版に更新または再インストール；他の VPN/プロキシが通信を奪っていないか確認。再接続後に本ページで IP を再確認し、選んだ国が表示されて初めて成功です。Android では OS にバックグラウンドで終了させられていないかも確認を。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "WebRTC 漏れとは？ VPN を使っても実 IP が漏れるのはなぜ？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "WebRTC はブラウザ内蔵の P2P 機能です。数行の JavaScript でページが RTCPeerConnection を作ると、ブラウザは ICE でネットワークアドレスを収集し、STUN サーバーで反射した公開 IP が VPN 接続中でも実 IP になり得て、許可ダイアログもなく静かにページに読み取られます。2020 年以降 Chrome/Edge は mDNS でローカル IP を隠しますが、公開 IP は依然漏れ得ます。上の WebRTC 検査で、今のブラウザがどのアドレスを露出するか確認できます。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "LetsVPN のプライバシーポリシーは？ 本当にノーログ？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "正直なところ、公開素材には LetsVPN のポリシー原文や検証可能なノーログの根拠がなく、保証はできません。公式ポリシー原文と第三者監査での確認が必要です。参考までに、独立レビューは DNS 漏れの懸念（単一・古め・多源未確認）を挙げており、厳格なノーログとは相容れません。現実的には、地域切替や一般用途のツールと位置づけ、機微な操作は監査済みサービスを使い、接続後は自分で漏れチェックを行って実際の挙動を確認するのが賢明です。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="stylesheet" href="/style.css"></head>
+<body><div class="wrap"><main>
+<nav class="lvlang">言語: <a href="/">简体中文</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/en/">English</a> · <strong>日本語</strong> · <a href="/id/">Bahasa Indonesia</a> · <a href="/th/">ไทย</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>IP / DNS 漏れチェックと位置情報ビューア</h1>
+<p class="lvby"><a rel="author" href="/about-editor/">著者 李航</a> · レビュー編集者 · 公開 2025-04-08 · 更新 2026-06-30</p>
+<figure class="lvpng"><picture><source type="image/webp" srcset="/img/cover_ja.webp"><img src="/img/cover_ja.png" alt="IP/DNS 漏れチェックと位置情報ビューアの図" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e7ecf5"></picture><figcaption>図：IP / DNS 漏れチェック（公開 IP・位置情報・タイムゾーン・WebRTC 露出）</figcaption></figure>
+<p class="lvlead">これは完全クライアントサイドのツールです。ブラウザ内で、あなたが外部に露出している公開 IP・位置情報・タイムゾーン、そしてブラウザの WebRTC がローカル IP や実 IP をページに漏らしていないかを読み取って表示します。すべての検査はローカルで実行され、送信は一切ありません。LetsVPN のような VPN に接続したあと、もう一度実行して、サイトに見えているのが実 IP ではなくノードの IP であることを確認しましょう。</p>
+<h2>リアルタイム検査結果</h2>
+<p class="lvtoolnote">以下のデータはブラウザ内でローカルに読み取ったもので、送信・保存はされません。</p>
+<div class="lvtool" id="lvtool">
+<div class="lvrow"><span class="lvk">公開 IP</span><span class="lvval" id="lv-ip">検査中…</span></div><div class="lvrow"><span class="lvk">位置情報</span><span class="lvval" id="lv-geo">検査中…</span></div><div class="lvrow"><span class="lvk">ISP</span><span class="lvval" id="lv-isp">検査中…</span></div><div class="lvrow"><span class="lvk">ブラウザのタイムゾーン</span><span class="lvval" id="lv-tzb">検査中…</span></div><div class="lvrow"><span class="lvk">IP 推定タイムゾーン</span><span class="lvval" id="lv-tzi">検査中…</span> <small id="lv-tzhint" class="lvhint"></small></div><div class="lvrow"><span class="lvk">WebRTC 露出</span><span class="lvval" id="lv-webrtc-verdict">検査中…</span></div>
+<div class="lvwebrtc" id="lv-webrtc"></div>
+<button id="lv-rerun" type="button">再検査</button>
+<p class="lvnote">本ツールは完全にブラウザ内で動作し、データの収集・送信は一切ありません。</p>
+</div>
+<figure class="lvsvg"><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図1：VPN なしではサイトが実 IP を直接見る。VPN ありではノード IP が見えるが、WebRTC がトンネルを迂回して実 IP を露出し得る。" style="width:100%;height:auto"><rect width="720" height="300" rx="14" fill="#f3f7ff"/><rect x="24" y="34" width="120" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="84" y="60" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">あなた</text><text x="84" y="80" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#64748b">ブラウザ</text><rect x="560" y="34" width="136" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="628" y="60" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">サイト</text><text x="628" y="80" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#e11d48">実 IP</text><line x1="144" y1="62" x2="560" y2="62" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><text x="352" y="26" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#94a3b8">✗ VPN トンネル ✗</text><rect x="24" y="150" width="120" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="84" y="176" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">あなた</text><rect x="300" y="150" width="120" height="56" rx="10" fill="#e8f0ff" stroke="#1a73e8"/><text x="360" y="182" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#1a73e8">VPN トンネル</text><rect x="560" y="150" width="136" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="628" y="176" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">サイト</text><text x="628" y="196" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#16a34a">ノード IP</text><line x1="144" y1="178" x2="300" y2="178" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><line x1="420" y1="178" x2="560" y2="178" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><text x="222" y="168" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#16a34a">ノード IP</text><path d="M84 206 C84 250 660 250 628 208" fill="none" stroke="#e11d48" stroke-width="2.2" stroke-dasharray="6 5" marker-end="url(#arr)"/><text x="356" y="278" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#e11d48">WebRTC → 漏れ (実 IP)</text><defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#1a73e8"/></marker><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e11d48"/></marker></defs></svg><figcaption>図1：VPN なしではサイトが実 IP を直接見る。VPN ありではノード IP が見えるが、WebRTC がトンネルを迂回して実 IP を露出し得る。</figcaption></figure>
+<h2>あなたの公開 IP と位置情報について</h2>
+<p>公開 IP はインターネット上での外向きアドレスで、サイトやアプリから見え、そこからおおよその位置・ISP・タイムゾーンが推定されます。上の位置は公開 IP のジオ照会によるもので、都市レベルの推定であり番地まで正確ではありません。VPN 接続中なら、実際の都市ではなく選んだノードの所在地が表示されるはずです。</p>
+<h2>DNS 漏れとは？ なぜブラウザだけでは完全に測れないのか</h2>
+<p>DNS はドメイン名を IP に変換します。VPN 接続中でも DNS 問い合わせがローカル ISP のリゾルバを通ると、訪問先が ISP に露出します。これが DNS 漏れです。正直に言うと、本当の DNS 漏れ検査にはサーバー側の仕組み（端末が一意のサブドメインを解決し、どのリゾルバが問い合わせたかを見る）が必要で、ブラウザ単体では完全には測れません。接続後に専用の DNS 漏れチェックサイトで一度実測するのが現実的です。</p>
+<h2>WebRTC 漏れとは？ どうやって VPN を迂回するのか</h2>
+<p>WebRTC はブラウザ内蔵のリアルタイム通信機能です。ページは JavaScript で RTCPeerConnection を作成でき、ブラウザは P2P 確立のため ICE で各種ネットワークアドレス（ローカル LAN の IP、STUN サーバーで反射した公開 IP）を収集し、ページはその候補を読み取れます。これが WebRTC 漏れで、許可ダイアログもなく静かに起こります。2020 年以降 Chrome と Edge は mDNS でローカル IP をランダムな .local ホスト名に隠しますが、公開 IP は VPN 接続中でも STUN 反射で漏れ得ます。上の検査は、今のブラウザがどのアドレスを露出するかを実測します。</p>
+<figure class="lvsvg"><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="図2：IP/位置が漏れ得る層 — ブラウザ（WebRTC、タイムゾーン）、システムの DNS リゾルバ、VPN トンネル、ISP。" style="width:100%;height:auto"><rect width="720" height="300" rx="14" fill="#0a1629"/><text x="40" y="26" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#9db8e8">図2：IP/位置が漏れ得る層 — ブラウザ（WebRTC、タイムゾーン）、システムの DNS</text><rect x="40" y="40" width="640" height="52" rx="10" fill="#fff" stroke="#e11d48" stroke-width="1.6"/><text x="60" y="71" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#e11d48">ブラウザ — WebRTC · TZ</text><text x="660" y="71" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#e11d48">漏れ</text><rect x="54" y="100" width="612" height="52" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="1.6"/><text x="74" y="131" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#f59e0b">DNS</text><text x="646" y="131" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#f59e0b">漏れ</text><rect x="68" y="160" width="584" height="52" rx="10" fill="#fff" stroke="#16a34a" stroke-width="1.6"/><text x="88" y="191" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#16a34a">VPN トンネル</text><text x="632" y="191" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#16a34a">OK</text><rect x="82" y="220" width="556" height="52" rx="10" fill="#fff" stroke="#64748b" stroke-width="1.6"/><text x="102" y="251" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#64748b">ISP</text></svg><figcaption>図2：IP/位置が漏れ得る層 — ブラウザ（WebRTC、タイムゾーン）、システムの DNS リゾルバ、VPN トンネル、ISP。</figcaption></figure>
+<figure class="lvpng"><picture><source type="image/webp" srcset="/img/board_ja.webp"><img src="/img/board_ja.png" alt="VPN 接続後に IP 検査で実 IP が隠れているか再確認する図" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e7ecf5"></picture><figcaption>図：VPN 接続後に再確認 — サイトにはノード IP が見えるべき</figcaption></figure>
+<h2>結果の読み方：VPN 接続時に見えるべき状態</h2>
+<p>理想は、公開 IP と位置が選んだ VPN ノードの所在地になり、WebRTC が実 IP を露出せず、ブラウザのタイムゾーンもノードの地域と一致している状態です。公開 IP が実際の位置のままだったり、WebRTC が実 IP を露出する場合は、通信が VPN を通っていないか漏れがあります。ノードやプロトコルを変えて再検査しましょう。未導入で、より安定して接続できるクライアントを探しているなら <a href="https://letsvpnshield.com/download/">LetsVPN 公式ダウンロードページ</a> へ。</p>
+<section id="lv-data2026" class="lvdata"><h2>2026 推計：VPN 利用と WebRTC 漏れの面（推計・一次実測ではない）</h2>
+<p>★ 印は公開統計の引用、それ以外は本サイトが公開資料から推計したもので、いずれも一次実測ではありません：</p>
+<ul><li>★ Security.org 等によると、2022〜2025 年で世界の 16 歳以上ネット利用者の約 22〜25% が日常的に VPN を利用。市場は成熟しつつある。</li><li>★ 2025 年時点で VPN 利用者は約 17.5 億人、全ネット利用者の約 3 分の 1。</li><li>★ 地域差は大きく、インドネシア約 55%、インド約 43%、タイとマレーシア各約 38%。東南アジアは利用率が最も高い地域の一つ。</li><li>主要なデスクトップブラウザ（Chrome / Edge / Firefox / Safari）はすべて既定で WebRTC を有効化。これを踏まえ、2026 年も WebRTC を無効化していない VPN 利用者の相当数が STUN 反射による公開 IP 漏れのリスクを抱えると本サイトは推計（推計レンジ・実測ではない）。</li></ul>
+<p class="lvnote">基準：★ は公開統計の引用（出典は下記）、それ以外は公開資料と「WebRTC が既定で有効」という事実からの本サイト推計で、「推計・一次実測ではない」と明記し、一次データとして提示しません。</p></section>
+<h2>FAQ</h2>
+<div class="lvfaqs"><details class="lvfaq"><summary>VPN 接続後も実 IP はサイトに見える？ DNS は漏れる？</summary><p>通常、VPN 接続後はサイトにはノード IP が見え、実 IP は見えません。ただ正直に言うと、ある独立レビューが LetsVPN の DNS 漏れリスクと、サーバー切替後に IP が変わらないことがある点を指摘しました。これは単一かつ古めのコミュニティ評価で、公式や第二の情報源では確認されていません。プライバシーを重視するなら、接続後に本ページのような IP/DNS 漏れチェックで実 IP と DNS が露出していないか確認し、漏れていればノードやプロトコルを変えて再検証するのが現実的です。</p></details>
+<details class="lvfaq"><summary>接続後 IP はどこに表示される？ 本当に位置を隠せる？</summary><p>接続後の外向き IP は選んだノードの所在地のものになります。香港ノードなら香港の位置が表示され、これが VPN で実際の位置を隠す原理です。クライアントで地域ノードを切り替えれば外向き IP も変わります。注意点として、独立レビューはサーバー切替後に IP が変わらないことがある点と DNS 漏れリスク（単一・古め・多源未確認）を報告しているため、接続後は IP 検査で位置が実際に変わったか確認するのが安全です。</p></details>
+<details class="lvfaq"><summary>接続後も IP が変わらず、ローカルのまま。失敗？</summary><p>はい、IP が変わらないのは通常、通信が VPN を通っていないことを意味します。LetsVPN はサーバー切替後に IP が変わらないことがあるとコミュニティで報告されており、まさにこのケースです。対処：別地域のノードで再接続し、プロトコルも変更；キャッシュを消して再ログイン、最新版に更新または再インストール；他の VPN/プロキシが通信を奪っていないか確認。再接続後に本ページで IP を再確認し、選んだ国が表示されて初めて成功です。Android では OS にバックグラウンドで終了させられていないかも確認を。</p></details>
+<details class="lvfaq"><summary>WebRTC 漏れとは？ VPN を使っても実 IP が漏れるのはなぜ？</summary><p>WebRTC はブラウザ内蔵の P2P 機能です。数行の JavaScript でページが RTCPeerConnection を作ると、ブラウザは ICE でネットワークアドレスを収集し、STUN サーバーで反射した公開 IP が VPN 接続中でも実 IP になり得て、許可ダイアログもなく静かにページに読み取られます。2020 年以降 Chrome/Edge は mDNS でローカル IP を隠しますが、公開 IP は依然漏れ得ます。上の WebRTC 検査で、今のブラウザがどのアドレスを露出するか確認できます。</p></details>
+<details class="lvfaq"><summary>LetsVPN のプライバシーポリシーは？ 本当にノーログ？</summary><p>正直なところ、公開素材には LetsVPN のポリシー原文や検証可能なノーログの根拠がなく、保証はできません。公式ポリシー原文と第三者監査での確認が必要です。参考までに、独立レビューは DNS 漏れの懸念（単一・古め・多源未確認）を挙げており、厳格なノーログとは相容れません。現実的には、地域切替や一般用途のツールと位置づけ、機微な操作は監査済みサービスを使い、接続後は自分で漏れチェックを行って実際の挙動を確認するのが賢明です。</p></details>
+</div>
+<div class="related"><h2>出典</h2><p>本ページの技術説明とデータの出典（外部リンクはすべて nofollow）：</p><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection" rel="nofollow noopener" target="_blank">MDN — RTCPeerConnection API</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API" rel="nofollow noopener" target="_blank">MDN — WebRTC API</a></li><li><a href="https://browserleaks.com/webrtc" rel="nofollow noopener" target="_blank">BrowserLeaks — WebRTC Leak Test</a></li><li><a href="https://www.security.org/vpn/webrtc-leak/" rel="nofollow noopener" target="_blank">Security.org — WebRTC Leak Guide</a></li><li><a href="https://www.security.org/vpn/statistics/" rel="nofollow noopener" target="_blank">Security.org — VPN Statistics</a></li><li><a href="https://surfshark.com/blog/vpn-users" rel="nofollow noopener" target="_blank">Surfshark — VPN users</a></li><li><a href="https://cybernews.com/best-vpn/vpn-usage-by-country/" rel="nofollow noopener" target="_blank">Cybernews — VPN usage by country</a></li></ul></div>
+</main>
+<footer>本ツールは完全クライアントサイドで、すべての検査はブラウザ内で完結し、データは収集しません。技術説明は MDN・BrowserLeaks・Security.org 等の公開資料を整理。VPN 利用統計は Security.org / Surfshark / Cybernews を引用（出典参照）。参考用です。<br><a rel="author" href="/about-editor/">李航</a> · letsvpnshield.com</footer>
+</div>
+<script>window.LV_I18N={"checking": "検査中…", "na": "利用不可", "none_detected": "検出なし", "leak_public": "WebRTC 経由で公開 IP が露出", "leak_local": "ローカル/LAN の IP のみ露出", "ok_safe": "WebRTC による公開 IP 漏れは検出されず", "mismatch_tz": "ブラウザと IP のタイムゾーンが不一致。実際の地域が露出する可能性", "rerun": "再検査", "rtc_public": "公開", "rtc_local": "ローカル", "rtc_mdns": "mDNS 秘匿"};</script><script src="/tool.js"></script></body></html>
