@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="fil"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IP / DNS Leak Test - Suriin ang Iyong Pampublikong IP, Lokasyon, Timezone at Exposure sa WebRTC</title>
+<meta name="description" content="Libreng online na IP/DNS leak test: agarang makita ang iyong kasalukuyang pampublikong IP, geolocation at timezone, at tuklasin kung ang WebRTC ng iyong browser ay naglalantad sa iyong lokal o totoong IP. Ganap na tumatakbo sa iyong browser, walang na-upload. Pagkatapos kumonekta sa isang VPN, gamitin ito upang i-verify na nakatago ang iyong totoong IP.">
+<meta name="author" content="李航">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://tobithan.github.io/fil/">
+<meta property="og:type" content="website"><meta property="og:title" content="IP / DNS Leak Test - Suriin ang Iyong Pampublikong IP, Lokasyon, Timezone at Exposure sa WebRTC">
+<meta property="og:description" content="Libreng online na IP/DNS leak test: agarang makita ang iyong kasalukuyang pampublikong IP, geolocation at timezone, at tuklasin kung ang WebRTC ng iyong browser ay naglalantad sa iyong lokal o totoong IP. Ganap na tumatakbo sa iyong browser, walang na-upload. Pagkatapos kumonekta sa isang VPN, gamitin ito upang i-verify na nakatago ang iyong totoong IP."><meta property="og:locale" content="fil_PH">
+<meta property="og:url" content="https://tobithan.github.io/fil/"><meta property="og:image" content="https://tobithan.github.io/img/cover_fil.png">
+<meta property="og:image:width" content="1120"><meta property="og:image:height" content="746">
+<link rel="alternate" hreflang="zh-Hans" href="https://tobithan.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://tobithan.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://tobithan.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://tobithan.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://tobithan.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://tobithan.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://tobithan.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://tobithan.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://tobithan.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://tobithan.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://tobithan.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://tobithan.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://tobithan.github.io/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "IP / DNS Leak Test at Geolocation Viewer",
+   "url": "https://tobithan.github.io/fil/",
+   "applicationCategory": "SecurityApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "fil",
+   "description": "Libreng online na IP/DNS leak test: agarang makita ang iyong kasalukuyang pampublikong IP, geolocation at timezone, at tuklasin kung ang WebRTC ng iyong browser ay naglalantad sa iyong lokal o totoong IP. Ganap na tumatakbo sa iyong browser, walang na-upload. Pagkatapos kumonekta sa isang VPN, gamitin ito upang i-verify na nakatago ang iyong totoong IP.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "李航",
+    "jobTitle": "Editor ng pagsusuri",
+    "url": "https://tobithan.github.io/about-editor/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "fil",
+   "url": "https://tobithan.github.io/fil/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Pagkatapos kumonekta sa isang VPN, makikita pa ba ng mga site ang aking tunay na IP? Maaari bang tumagas ang DNS?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Karaniwan, kapag ang isang VPN ay konektado sa mga site, makikita ang node IP, hindi ang iyong tunay na IP. Ngunit sa totoo lang: ang isang independiyenteng pagsusuri ay nag-flag ng panganib sa pagtagas ng DNS sa LetsVPN at na ang IP ay hindi palaging nagbabago pagkatapos lumIPat ng mga server - iyon ay isang solong mas lumang pagsusuri sa komunidad, na hindi kinumpirma ng vendor o ng pangalawang pinagmulan. Kung mahalaga sa iyo ang privacy, ang praktikal na hakbang ay ang magpatakbo ng IP/DNS leak test tulad nito pagkatapos kumonekta at kumpirmahin na hindi nalantad ang iyong totoong IP at DNS; kung oo, lumIPat ng node o protocol at i-verify muli."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pagkatapos kumonekta, saan IPinapakita ang aking IP? ItiNATago ba talaga nito ang aking lokasyon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kapag nakakonekta na, ang iyong panlabas na IP ay ang lokasyon ng node na iyong pinili - pumili ng Hong Kong node at magpapakita ka ng lokasyon sa Hong Kong; iyan ay kung paano itiNATago ng VPN ang iyong tunay na lokasyon. Maaari kang lumIPat ng mga node ng rehiyon sa kliyente upang baguhin ang iyong panlabas na IP. Tandaan na ang isang independiyenteng pagsusuri ay nag-ulat na ang IP ay hindi palaging nagbabago pagkatapos lumIPat ng mga server at nakita ang DNS leak na panganib (single, mas lumang pagsusuri, hindi multi-source na nakumpirma), kaya pagkatapos kumonekta ay matalinong i-verify gamit ang isang IP test na ang iyong lokasyon ay aktwal na nagbago."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pagkatapos kumonekta, hindi nagbago ang aking IP at nagpapakita pa rin ng lokal ang mga paghahanap - nabigo ba ito?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oo, ang isang hindi nabagong IP ay karaniwang nangangahulugan na ang trapiko ay hindi talaga dumadaan sa VPN. Iniulat ng komunidad na ang IP ng LetsVPN ay hindi palaging nagbabago pagkatapos lumIPat ng mga server, na eksakto sa kasong ito. Mga pag-aayos: muling kumonekta sa ibang node ng rehiyon, pagkatapos ay sumubok ng isa pang protocol; i-clear ang cache at mag-log in muli, i-update sa pinakabagong bersyon o muling i-install; siguraduhing walang ibang VPN/proxy ang kumukuha ng trapiko. Pagkatapos kumonekta muli, tingnan muli ang iyong IP dito - mabibilang lamang ito bilang tagumpay kapag IPinakita nito ang iyong napiling bansa. Sa Android, siguraduhin din na hindi ito piNATay ng system sa background."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ano ang isang pagtagas ng WebRTC, at bakit maaari pa ring tumagas ang aking tunay na IP sa isang VPN?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ang WebRTC ay ang built-in na peer-to-peer API ng browser. Sa ilang linya lamang ng JavaScrIPt, maaaring lumikha ang isang pahina ng RTCPeerConnection, at pagkatapos ay kumukuha ang browser ng mga address ng network sa pamamagitan ng ICE; ang pampublikong IP na makikita ng isang STUN server ay maaaring maging iyong tunay na IP - kahit na sa isang VPN - at binabasa ito ng pahina nang tahimik nang walang prompt ng pahintulot. Mula noong 2020, tinakpan ng Chrome/Edge ang lokal na IP sa pamamagitan ng MDNS, ngunit maaari pa ring tumagas ang pampublikong IP. Gamitin ang pagsubok sa WebRTC sa itaas upang makita kung aling mga address ang kasalukuyang inilalantad ng iyong browser."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ano ang sinasabi ng patakaran sa privacy ng LetsVPN - ito ba ay talagang walang log o usapan lang?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sa totoo lang, ang available na pampublikong materyal ay walang LetsVPN privacy-policy text o nabe-verify na walang-log na content, kaya hindi ito mapapatunayan; na nangangailangan ng opisyal na teksto ng patakaran at isang third-party na pag-audit. Para sa konteksto, ang isang independiyenteng pagsusuri ay nagbangon ng mga alalahanin sa pagtagas ng DNS (single, mas matanda, hindi multi-source na nakumpirma), na sumasalungat sa mahigpit na hindi pag-log. Ang praktikal na tawag: ituring ito bilang isang region-switch / general-use tool, gumamit ng isang na-audit na serbisyo para sa mga napakasensitibong gawain, at magpatakbo ng isang pagsubok sa pagtagas sa iyong sarili pagkatapos kumonekta sa halIP na magtiwala sa mga claim sa marketing."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="stylesheet" href="/style.css"></head>
+<body><div class="wrap"><main>
+<nav class="lvlang">Wika: <a href="/">简体中文</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/th/">ไทย</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <strong>Filipino</strong> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>IP / DNS Leak Test at Geolocation Viewer</h1>
+<p class="lvby"><a rel="author" href="/about-editor/">Sa pamamagitan ng 李航</a> · Editor ng pagsusuri · Nai-publish 2025-04-08 · Na-update 2026-06-30</p>
+<figure class="lvpng"><picture><source type="image/webp" srcset="/img/cover_fil.webp"><img src="/img/cover_fil.png" alt="IP/DNS leak test at geolocation viewer illustration" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e7ecf5"></picture><figcaption>Fig: IP / DNS leak test (pampublikong IP, lokasyon, timezone, pagkakalantad sa WebRTC)</figcaption></figure>
+<p class="lvlead">Isang purong tool sa panig ng kliyente: sa mismong browser mo, binabasa at IPinapakita nito ang pampublikong IP na inilantad mo sa internet, ang iyong geolocation at timezone, at kung ang WebRTC ng iyong browser ay naglalabas ng iyong lokal o totoong IP sa mga web page. Ang bawat tseke ay tumatakbo nang lokal, walang na-upload. Pagkatapos kumonekta sa isang VPN tulad ng LetsVPN, patakbuhin itong muli upang kumpirmahin na nakikita ng mga site ang node IP, hindi ang iyong tunay.</p>
+<h2>Live na resulta ng pagsubok</h2>
+<p class="lvtoolnote">Ang data sa ibaba ay binabasa nang lokal sa iyong browser; hindi ito ina-upload o iniimbak.</p>
+<div class="lvtool" id="lvtool">
+<div class="lvrow"><span class="lvk">Pampublikong IP</span><span class="lvval" id="lv-ip">Sinusuri...</span></div><div class="lvrow"><span class="lvk">Lokasyon</span><span class="lvval" id="lv-geo">Sinusuri...</span></div><div class="lvrow"><span class="lvk">ISP</span><span class="lvval" id="lv-isp">Sinusuri...</span></div><div class="lvrow"><span class="lvk">Timezone ng browser</span><span class="lvval" id="lv-tzb">Sinusuri...</span></div><div class="lvrow"><span class="lvk">IP-based na timezone</span><span class="lvval" id="lv-tzi">Sinusuri...</span> <small id="lv-tzhint" class="lvhint"></small></div><div class="lvrow"><span class="lvk">pagkakalantad sa WebRTC</span><span class="lvval" id="lv-webrtc-verdict">Sinusuri...</span></div>
+<div class="lvwebrtc" id="lv-webrtc"></div>
+<button id="lv-rerun" type="button">tumakbo ulit</button>
+<p class="lvnote">Ang tool na ito ay ganap na tumatakbo sa iyong browser at wala itong kinokolekta o ina-upload.</p>
+</div>
+<figure class="lvsvg"><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fig 1: nang walang VPN, direktang nakikita ng site ang iyong totoong IP; sa isang VPN nakikita nito ang node IP, ngunit maaaring i-bypass ng WebRTC ang tunnel at ilantad ang iyong totoong IP." style="width:100%;height:auto"><rect width="720" height="300" rx="14" fill="#f3f7ff"/><rect x="24" y="34" width="120" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="84" y="60" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">Ikaw</text><text x="84" y="80" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#64748b">Browser</text><rect x="560" y="34" width="136" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="628" y="60" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">Website</text><text x="628" y="80" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#e11d48">Tunay na IP</text><line x1="144" y1="62" x2="560" y2="62" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><text x="352" y="26" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#94a3b8">✗ VPN tunnel ✗</text><rect x="24" y="150" width="120" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="84" y="176" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">Ikaw</text><rect x="300" y="150" width="120" height="56" rx="10" fill="#e8f0ff" stroke="#1a73e8"/><text x="360" y="182" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#1a73e8">VPN tunnel</text><rect x="560" y="150" width="136" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="628" y="176" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">Website</text><text x="628" y="196" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#16a34a">Node IP</text><line x1="144" y1="178" x2="300" y2="178" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><line x1="420" y1="178" x2="560" y2="178" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><text x="222" y="168" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#16a34a">Node IP</text><path d="M84 206 C84 250 660 250 628 208" fill="none" stroke="#e11d48" stroke-width="2.2" stroke-dasharray="6 5" marker-end="url(#arr)"/><text x="356" y="278" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#e11d48">WebRTC → tumagas (Tunay na IP)</text><defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#1a73e8"/></marker><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e11d48"/></marker></defs></svg><figcaption>Fig 1: nang walang VPN, direktang nakikita ng site ang iyong totoong IP; sa isang VPN nakikita nito ang node IP, ngunit maaaring i-bypass ng WebRTC ang tunnel at ilantad ang iyong totoong IP.</figcaption></figure>
+<h2>Tungkol sa iyong pampublikong IP at lokasyon</h2>
+<p>Ang iyong pampublikong IP ay ang iyong panlabas na address sa internet. Makikita ito ng mga website at app at mahihinuha ang iyong tiNATayang lokasyon, ISP at timezone. Ang lokasyon sa itaas ay nagmula sa geo lookup ng iyong pampublikong IP, kaya ito ay isang pagtatantya sa antas ng lungsod, hindi isang address ng kalye. Kung ikaw ay nasa isang VPN, dapat nitong IPakita ang lokasyon ng node na iyong pinili, hindi ang iyong tunay na lungsod.</p>
+<h2>Ano ang DNS leak, at bakit hindi ito ganap na masubukan ng isang browser lamang</h2>
+<p>Niresolba ng DNS ang mga pangalan ng domain sa mga IP. Kung ikaw ay nasa isang VPN ngunit ang mga query sa DNS ay dumaan pa rin sa iyong lokal na ISP resolver, ang mga site na binibisita mo ay nakalantad sa iyong ISP; iyon ay isang DNS leak. Sa totoo lang: ang isang tunay na pagsubok sa pagtagas ng DNS ay nangangailangan ng bahagi sa panig ng server (ang iyong devICE ay nagresolba ng isang NATatanging subdomain at makikita ng pagsubok kung aling resolver ang nagtanong), na hindi ganap na magagawa ng isang browser lamang. Ang praktikal na diskarte ay ang magpatakbo ng nakalaang DNS leak test site kapag nakakonekta ka na.</p>
+<h2>Ano ang isang pagtagas ng WebRTC, at kung paano ito lumalampas sa isang VPN</h2>
+<p>Ang WebRTC ay ang built-in na real-time na API ng komunikasyon ng browser. Ang isang web page ay maaaring lumikha ng isang RTCPeerConnection sa JavaScrIPt; para mag-set up ng peer-to-peer, kinukuha ng browser ang iyong network address sa pamamagitan ng ICE, kasama ang iyong lokal na LAN IP at ang pampublikong IP na IPinapakita ng isang STUN server, at mababasa ng page ang mga kandidatong iyon. Iyon ay isang pagtagas ng WebRTC, at tahimik itong nangyayari nang walang prompt ng pahintulot. Mula noong 2020, ang Chrome at Edge ay gumagamit ng MDNS upang itago ang lokal na IP sa likod ng isang random na .local hostname, ngunit ang pampublikong IP ay maaari pa ring tumagas sa pamamagitan ng STUN reflexive na mga kandidato kahit na ang isang VPN ay naka-on. Ang pagsubok sa itaas ay eksaktong nagpapakita kung aling mga address ang kasalukuyang inilalantad ng iyong browser.</p>
+<figure class="lvsvg"><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fig 2: ang mga layer kung saan maaaring tumagas ang iyong IP/lokasyon - ang browser (WebRTC, timezone), ang system DNS resolver, ang VPN tunnel at ang ISP." style="width:100%;height:auto"><rect width="720" height="300" rx="14" fill="#0a1629"/><text x="40" y="26" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#9db8e8">Fig 2: ang mga layer kung saan maaaring tumaga</text><rect x="40" y="40" width="640" height="52" rx="10" fill="#fff" stroke="#e11d48" stroke-width="1.6"/><text x="60" y="71" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#e11d48">Browser — WebRTC · TZ</text><text x="660" y="71" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#e11d48">tumagas</text><rect x="54" y="100" width="612" height="52" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="1.6"/><text x="74" y="131" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#f59e0b">DNS</text><text x="646" y="131" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#f59e0b">tumagas</text><rect x="68" y="160" width="584" height="52" rx="10" fill="#fff" stroke="#16a34a" stroke-width="1.6"/><text x="88" y="191" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#16a34a">VPN tunnel</text><text x="632" y="191" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#16a34a">OK</text><rect x="82" y="220" width="556" height="52" rx="10" fill="#fff" stroke="#64748b" stroke-width="1.6"/><text x="102" y="251" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#64748b">ISP</text></svg><figcaption>Fig 2: ang mga layer kung saan maaaring tumagas ang iyong IP/lokasyon - ang browser (WebRTC, timezone), ang system DNS resolver, ang VPN tunnel at ang ISP.</figcaption></figure>
+<figure class="lvpng"><picture><source type="image/webp" srcset="/img/board_fil.webp"><img src="/img/board_fil.png" alt="Ilustrasyon ng muling pag-verify gamit ang isang IP test kung ang totoong IP ay nakatago sa isang VPN" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e7ecf5"></picture><figcaption>Fig: muling suriin ang isang VPN - dapat makita ng mga site ang node IP, hindi ang iyong tunay na IP</figcaption></figure>
+<h2>Paano basahin ang mga resultang ito: kung ano ang dapat mong makita sa isang VPN</h2>
+<p>Ideal na estado: IPinapakita ng pampublikong IP at lokasyon ang iyong napiling lokasyon ng VPN node, hindi inilalantad ng WebRTC ang iyong tunay na pampublikong IP, at ang timezone ng browser ay tumutugma din sa rehiyon ng node. Kung ang pampublikong IP pa rin ang iyong tunay na lokasyon, o inilantad ng WebRTC ang iyong tunay na pampublikong IP, hindi talaga dumadaan ang trapiko sa VPN o mayroong pagtagas; subukan ang isa pang node o protocol at muling subukan. Kung hindi mo pa ito na-install at gusto ng isang kliyente na may mas matatag na koneksyon, magtungo sa <a href="https://letsvpnshield.com/download/">ang opisyal na pahina ng pag-download ng LetsVPN</a>.</p>
+<section id="lv-data2026" class="lvdata"><h2>2026 na pagtatantya: Paggamit ng VPN at ang ibabaw ng pagtagas ng WebRTC (tantiya, hindi first-party)</h2>
+<p>Mga item na minarkahan ★ banggitin ang mga pampublikong istatistika; ang NATitira ay mga pagtatantya ng site na ito mula sa pampublikong data, walang mga pagsukat ng first-party:</p>
+<ul><li>★ Bawat Security.org at iba pa, humigit-kumulang 22-25% ng mga user ng internet na may edad 16+ ang regular na gumamit ng VPN sa buong 2022-2025; maturing na ang market.</li><li>★ Sa pamamagitan ng 2025 mayroong humigit-kumulang 1.75 bilyong gumagamit ng VPN, humigit-kumulang isang-katlo ng lahat ng mga gumagamit ng internet.</li><li>★ Malawak ang rehiyonal na pagkalat: humigit-kumulang 55% sa Indonesia, 43% sa India, at 38% bawat isa sa Thailand at Malaysia; Ang Timog Silangang Asya ay kabilang sa mga rehiyon na may pinakamataas na pag-aampon.</li><li>Ang mga mainstream na desktop browser (Chrome / Edge / Firefox / Safari) ay pinapagana ang WebRTC bilang default; mula dito, tiNATantya namin na sa 2026 isang malaking bahagi ng mga user ng VPN na hindi na-disable ang WebRTC ay nanaNATiling nasa panganib ng pagtagas ng public-IP sa pamamagitan ng STUN reflection (tinantyang saklaw, hindi nasusukat).</li></ul>
+<p class="lvnote">Batayan: ★ ang mga item ay nagbabanggit ng mga pampublikong istatistika (mga mapagkukunan sa ibaba); ang iba ay ang mga pagtatantya ng site na ito mula sa pampublikong data at ang katotohanang naka-on ang WebRTC bilang default, na may label na "estimate, not first-party" at hindi IPinakita bilang sinusukat na data.</p></section>
+<h2>FAQ</h2>
+<div class="lvfaqs"><details class="lvfaq"><summary>Pagkatapos kumonekta sa isang VPN, makikita pa ba ng mga site ang aking tunay na IP? Maaari bang tumagas ang DNS?</summary><p>Karaniwan, kapag ang isang VPN ay konektado sa mga site, makikita ang node IP, hindi ang iyong tunay na IP. Ngunit sa totoo lang: ang isang independiyenteng pagsusuri ay nag-flag ng panganib sa pagtagas ng DNS sa LetsVPN at na ang IP ay hindi palaging nagbabago pagkatapos lumIPat ng mga server - iyon ay isang solong mas lumang pagsusuri sa komunidad, na hindi kinumpirma ng vendor o ng pangalawang pinagmulan. Kung mahalaga sa iyo ang privacy, ang praktikal na hakbang ay ang magpatakbo ng IP/DNS leak test tulad nito pagkatapos kumonekta at kumpirmahin na hindi nalantad ang iyong totoong IP at DNS; kung oo, lumIPat ng node o protocol at i-verify muli.</p></details>
+<details class="lvfaq"><summary>Pagkatapos kumonekta, saan IPinapakita ang aking IP? ItiNATago ba talaga nito ang aking lokasyon?</summary><p>Kapag nakakonekta na, ang iyong panlabas na IP ay ang lokasyon ng node na iyong pinili - pumili ng Hong Kong node at magpapakita ka ng lokasyon sa Hong Kong; iyan ay kung paano itiNATago ng VPN ang iyong tunay na lokasyon. Maaari kang lumIPat ng mga node ng rehiyon sa kliyente upang baguhin ang iyong panlabas na IP. Tandaan na ang isang independiyenteng pagsusuri ay nag-ulat na ang IP ay hindi palaging nagbabago pagkatapos lumIPat ng mga server at nakita ang DNS leak na panganib (single, mas lumang pagsusuri, hindi multi-source na nakumpirma), kaya pagkatapos kumonekta ay matalinong i-verify gamit ang isang IP test na ang iyong lokasyon ay aktwal na nagbago.</p></details>
+<details class="lvfaq"><summary>Pagkatapos kumonekta, hindi nagbago ang aking IP at nagpapakita pa rin ng lokal ang mga paghahanap - nabigo ba ito?</summary><p>Oo, ang isang hindi nabagong IP ay karaniwang nangangahulugan na ang trapiko ay hindi talaga dumadaan sa VPN. Iniulat ng komunidad na ang IP ng LetsVPN ay hindi palaging nagbabago pagkatapos lumIPat ng mga server, na eksakto sa kasong ito. Mga pag-aayos: muling kumonekta sa ibang node ng rehiyon, pagkatapos ay sumubok ng isa pang protocol; i-clear ang cache at mag-log in muli, i-update sa pinakabagong bersyon o muling i-install; siguraduhing walang ibang VPN/proxy ang kumukuha ng trapiko. Pagkatapos kumonekta muli, tingnan muli ang iyong IP dito - mabibilang lamang ito bilang tagumpay kapag IPinakita nito ang iyong napiling bansa. Sa Android, siguraduhin din na hindi ito piNATay ng system sa background.</p></details>
+<details class="lvfaq"><summary>Ano ang isang pagtagas ng WebRTC, at bakit maaari pa ring tumagas ang aking tunay na IP sa isang VPN?</summary><p>Ang WebRTC ay ang built-in na peer-to-peer API ng browser. Sa ilang linya lamang ng JavaScrIPt, maaaring lumikha ang isang pahina ng RTCPeerConnection, at pagkatapos ay kumukuha ang browser ng mga address ng network sa pamamagitan ng ICE; ang pampublikong IP na makikita ng isang STUN server ay maaaring maging iyong tunay na IP - kahit na sa isang VPN - at binabasa ito ng pahina nang tahimik nang walang prompt ng pahintulot. Mula noong 2020, tinakpan ng Chrome/Edge ang lokal na IP sa pamamagitan ng MDNS, ngunit maaari pa ring tumagas ang pampublikong IP. Gamitin ang pagsubok sa WebRTC sa itaas upang makita kung aling mga address ang kasalukuyang inilalantad ng iyong browser.</p></details>
+<details class="lvfaq"><summary>Ano ang sinasabi ng patakaran sa privacy ng LetsVPN - ito ba ay talagang walang log o usapan lang?</summary><p>Sa totoo lang, ang available na pampublikong materyal ay walang LetsVPN privacy-policy text o nabe-verify na walang-log na content, kaya hindi ito mapapatunayan; na nangangailangan ng opisyal na teksto ng patakaran at isang third-party na pag-audit. Para sa konteksto, ang isang independiyenteng pagsusuri ay nagbangon ng mga alalahanin sa pagtagas ng DNS (single, mas matanda, hindi multi-source na nakumpirma), na sumasalungat sa mahigpit na hindi pag-log. Ang praktikal na tawag: ituring ito bilang isang region-switch / general-use tool, gumamit ng isang na-audit na serbisyo para sa mga napakasensitibong gawain, at magpatakbo ng isang pagsubok sa pagtagas sa iyong sarili pagkatapos kumonekta sa halIP na magtiwala sa mga claim sa marketing.</p></details>
+</div>
+<div class="related"><h2>Mga pinagmumulan</h2><p>Mga teknikal na tala at data sa pahinang ito (ang mga panlabas na link ay nofollow):</p><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection" rel="nofollow noopener" target="_blank">MDN — RTCPeerConnection API</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API" rel="nofollow noopener" target="_blank">MDN — WebRTC API</a></li><li><a href="https://browserleaks.com/webrtc" rel="nofollow noopener" target="_blank">BrowserLeaks — WebRTC Leak Test</a></li><li><a href="https://www.security.org/vpn/webrtc-leak/" rel="nofollow noopener" target="_blank">Security.org — WebRTC Leak Guide</a></li><li><a href="https://www.security.org/vpn/statistics/" rel="nofollow noopener" target="_blank">Security.org — VPN Statistics</a></li><li><a href="https://surfshark.com/blog/vpn-users" rel="nofollow noopener" target="_blank">Surfshark — VPN users</a></li><li><a href="https://cybernews.com/best-vpn/vpn-usage-by-country/" rel="nofollow noopener" target="_blank">Cybernews — VPN usage by country</a></li></ul></div>
+</main>
+<footer>Ito ay isang purong tool sa panig ng kliyente; lokal na tumatakbo ang bawat tseke sa iyong browser at walang nakolektang data. Ang mga teknikal na tala ay pinagsama-sama mula sa pampublikong materyal ng MDN, BrowserLeaks at Security.org; Binabanggit ng mga numero ng paggamit ng VPN ang Security.org / Surfshark / Cybernews (tingnan ang Mga Pinagmulan). Para sa sanggunian lamang.<br><a rel="author" href="/about-editor/">李航</a> · letsvpnshield.com</footer>
+</div>
+<script>window.LV_I18N={"checking": "Sinusuri...", "na": "Hindi magagamit", "none_detected": "Walang nahanap", "leak_public": "Nalantad ang pampublikong IP sa pamamagitan ng WebRTC", "leak_local": "Lokal/LAN IP lang ang nalantad", "ok_safe": "Walang nakitang WebRTC public-IP leak", "mismatch_tz": "Iba ang timezone ng browser sa IP timezone; ito ay maaaring magbunyag ng iyong tunay na rehiyon", "rerun": "tumakbo ulit", "rtc_public": "pampubliko", "rtc_local": "lokal", "rtc_mdns": "MDNS-nakatago"};</script><script src="/tool.js"></script></body></html>
