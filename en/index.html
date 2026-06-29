@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IP / DNS Leak Test - Check Your Public IP, Location, Timezone and WebRTC Exposure</title>
+<meta name="description" content="Free online IP/DNS leak test: instantly see your current public IP, geolocation and timezone, and detect whether your browser's WebRTC exposes your local or real IP. Runs fully in your browser, nothing is uploaded. After connecting a VPN, use it to verify your real IP is hidden.">
+<meta name="author" content="李航">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://tobithan.github.io/en/">
+<meta property="og:type" content="website"><meta property="og:title" content="IP / DNS Leak Test - Check Your Public IP, Location, Timezone and WebRTC Exposure">
+<meta property="og:description" content="Free online IP/DNS leak test: instantly see your current public IP, geolocation and timezone, and detect whether your browser's WebRTC exposes your local or real IP. Runs fully in your browser, nothing is uploaded. After connecting a VPN, use it to verify your real IP is hidden."><meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://tobithan.github.io/en/"><meta property="og:image" content="https://tobithan.github.io/img/cover_en.png">
+<meta property="og:image:width" content="1120"><meta property="og:image:height" content="746">
+<link rel="alternate" hreflang="zh-Hans" href="https://tobithan.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://tobithan.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://tobithan.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://tobithan.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://tobithan.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://tobithan.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://tobithan.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://tobithan.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://tobithan.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://tobithan.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://tobithan.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://tobithan.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://tobithan.github.io/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "IP / DNS Leak Test and Geolocation Viewer",
+   "url": "https://tobithan.github.io/en/",
+   "applicationCategory": "SecurityApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "en",
+   "description": "Free online IP/DNS leak test: instantly see your current public IP, geolocation and timezone, and detect whether your browser's WebRTC exposes your local or real IP. Runs fully in your browser, nothing is uploaded. After connecting a VPN, use it to verify your real IP is hidden.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "李航",
+    "jobTitle": "Review editor",
+    "url": "https://tobithan.github.io/about-editor/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "en",
+   "url": "https://tobithan.github.io/en/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "After connecting a VPN, can sites still see my real IP? Can DNS leak?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Normally, once a VPN is connected sites see the node IP, not your real IP. But to be honest: an independent review flagged DNS leak risk on LetsVPN and that the IP did not always change after switching servers - that was a single, older community review, not confirmed by the vendor or a second source. If privacy matters to you, the practical move is to run an IP/DNS leak test like this one after connecting and confirm your real IP and DNS are not exposed; if they are, switch node or protocol and verify again."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "After connecting, where does my IP show? Does it really hide my location?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Once connected, your outward IP is that of the node location you chose - pick a Hong Kong node and you show a Hong Kong location; that is how a VPN hides your real location. You can switch region nodes in the client to change your outward IP. Note that an independent review reported the IP did not always change after switching servers and saw DNS leak risk (single, older review, not multi-source confirmed), so after connecting it is wise to verify with an IP test that your location actually changed."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "After connecting, my IP did not change and lookups still show local - did it fail?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, an unchanged IP usually means traffic is not actually going through the VPN. The community has reported that LetsVPN's IP does not always change after switching servers, which is exactly this case. Fixes: reconnect to a different region node, then try another protocol; clear cache and log in again, update to the latest version or reinstall; make sure no other VPN/proxy is taking the traffic. After reconnecting, check your IP again here - it counts as success only when it shows your chosen country. On Android, also make sure the system did not kill it in the background."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is a WebRTC leak, and why can my real IP still leak on a VPN?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "WebRTC is the browser's built-in peer-to-peer API. With just a few lines of JavaScript a page can create an RTCPeerConnection, and the browser then gathers network addresses via ICE; the public IP reflected by a STUN server can be your real IP - even on a VPN - and the page reads it silently with no permission prompt. Since 2020 Chrome/Edge mask the local IP via mDNS, but the public IP can still leak. Use the WebRTC test above to see which addresses your browser currently exposes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does LetsVPN's privacy policy say - is it really no-log or just talk?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Honestly, the available public material has no LetsVPN privacy-policy text or verifiable no-log content, so it cannot be vouched for; that needs the official policy text and a third-party audit. For context, an independent review raised DNS leak concerns (single, older, not multi-source confirmed), which sits at odds with strict no-logging. The practical call: treat it as a region-switch / general-use tool, use an audited service for highly sensitive tasks, and run a leak test yourself after connecting rather than trusting marketing claims."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="stylesheet" href="/style.css"></head>
+<body><div class="wrap"><main>
+<nav class="lvlang">Language: <a href="/">简体中文</a> · <a href="/zh-tw/">繁體中文</a> · <strong>English</strong> · <a href="/ja/">日本語</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/th/">ไทย</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>IP / DNS Leak Test and Geolocation Viewer</h1>
+<p class="lvby"><a rel="author" href="/about-editor/">By 李航</a> · Review editor · Published 2025-04-08 · Updated 2026-06-30</p>
+<figure class="lvpng"><picture><source type="image/webp" srcset="/img/cover_en.webp"><img src="/img/cover_en.png" alt="IP/DNS leak test and geolocation viewer illustration" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e7ecf5"></picture><figcaption>Fig: IP / DNS leak test (public IP, location, timezone, WebRTC exposure)</figcaption></figure>
+<p class="lvlead">A pure client-side tool: right in your browser it reads and shows the public IP you expose to the internet, your geolocation and timezone, plus whether your browser's WebRTC leaks your local or real IP to web pages. Every check runs locally, nothing is uploaded. After connecting a VPN such as LetsVPN, run it again to confirm sites see the node IP, not your real one.</p>
+<h2>Live test results</h2>
+<p class="lvtoolnote">The data below is read locally in your browser; it is not uploaded or stored.</p>
+<div class="lvtool" id="lvtool">
+<div class="lvrow"><span class="lvk">Public IP</span><span class="lvval" id="lv-ip">Checking...</span></div><div class="lvrow"><span class="lvk">Location</span><span class="lvval" id="lv-geo">Checking...</span></div><div class="lvrow"><span class="lvk">ISP</span><span class="lvval" id="lv-isp">Checking...</span></div><div class="lvrow"><span class="lvk">Browser timezone</span><span class="lvval" id="lv-tzb">Checking...</span></div><div class="lvrow"><span class="lvk">IP-based timezone</span><span class="lvval" id="lv-tzi">Checking...</span> <small id="lv-tzhint" class="lvhint"></small></div><div class="lvrow"><span class="lvk">WebRTC exposure</span><span class="lvval" id="lv-webrtc-verdict">Checking...</span></div>
+<div class="lvwebrtc" id="lv-webrtc"></div>
+<button id="lv-rerun" type="button">Run again</button>
+<p class="lvnote">This tool runs entirely in your browser and collects or uploads nothing.</p>
+</div>
+<figure class="lvsvg"><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fig 1: without a VPN the site sees your real IP directly; with a VPN it sees the node IP, but WebRTC may bypass the tunnel and expose your real IP." style="width:100%;height:auto"><rect width="720" height="300" rx="14" fill="#f3f7ff"/><rect x="24" y="34" width="120" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="84" y="60" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">You</text><text x="84" y="80" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#64748b">Browser</text><rect x="560" y="34" width="136" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="628" y="60" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">Website</text><text x="628" y="80" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#e11d48">Real IP</text><line x1="144" y1="62" x2="560" y2="62" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><text x="352" y="26" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#94a3b8">✗ VPN tunnel ✗</text><rect x="24" y="150" width="120" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="84" y="176" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">You</text><rect x="300" y="150" width="120" height="56" rx="10" fill="#e8f0ff" stroke="#1a73e8"/><text x="360" y="182" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#1a73e8">VPN tunnel</text><rect x="560" y="150" width="136" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="628" y="176" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">Website</text><text x="628" y="196" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#16a34a">Node IP</text><line x1="144" y1="178" x2="300" y2="178" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><line x1="420" y1="178" x2="560" y2="178" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><text x="222" y="168" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#16a34a">Node IP</text><path d="M84 206 C84 250 660 250 628 208" fill="none" stroke="#e11d48" stroke-width="2.2" stroke-dasharray="6 5" marker-end="url(#arr)"/><text x="356" y="278" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#e11d48">WebRTC → leak (Real IP)</text><defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#1a73e8"/></marker><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e11d48"/></marker></defs></svg><figcaption>Fig 1: without a VPN the site sees your real IP directly; with a VPN it sees the node IP, but WebRTC may bypass the tunnel and expose your real IP.</figcaption></figure>
+<h2>About your public IP and location</h2>
+<p>Your public IP is your outward address on the internet. Websites and apps can see it and infer your approximate location, ISP and timezone. The location above comes from a geo lookup of your public IP, so it is a city-level estimate, not a street address. If you are on a VPN, it should show the location of the node you picked, not your real city.</p>
+<h2>What is a DNS leak, and why a browser alone cannot fully test it</h2>
+<p>DNS resolves domain names into IPs. If you are on a VPN but DNS queries still go through your local ISP resolver, the sites you visit are exposed to your ISP; that is a DNS leak. To be honest: a true DNS leak test needs a server-side component (your device resolves a unique subdomain and the test sees which resolver asked), which a browser alone cannot fully do. The practical approach is to run a dedicated DNS leak test site once you are connected.</p>
+<h2>What is a WebRTC leak, and how it bypasses a VPN</h2>
+<p>WebRTC is the browser's built-in real-time communication API. A web page can create an RTCPeerConnection in JavaScript; to set up peer-to-peer the browser gathers your network addresses via ICE, including your local LAN IP and the public IP reflected by a STUN server, and the page can read those candidates. That is a WebRTC leak, and it happens silently with no permission prompt. Since 2020 Chrome and Edge use mDNS to mask the local IP behind a random .local hostname, but the public IP can still leak through STUN reflexive candidates even while a VPN is on. The test above shows exactly which addresses your browser currently exposes.</p>
+<figure class="lvsvg"><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fig 2: the layers where your IP/location can leak - the browser (WebRTC, timezone), the system DNS resolver, the VPN tunnel and the ISP." style="width:100%;height:auto"><rect width="720" height="300" rx="14" fill="#0a1629"/><text x="40" y="26" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#9db8e8">Fig 2: the layers where your IP/location can l</text><rect x="40" y="40" width="640" height="52" rx="10" fill="#fff" stroke="#e11d48" stroke-width="1.6"/><text x="60" y="71" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#e11d48">Browser — WebRTC · TZ</text><text x="660" y="71" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#e11d48">leak</text><rect x="54" y="100" width="612" height="52" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="1.6"/><text x="74" y="131" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#f59e0b">DNS</text><text x="646" y="131" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#f59e0b">leak</text><rect x="68" y="160" width="584" height="52" rx="10" fill="#fff" stroke="#16a34a" stroke-width="1.6"/><text x="88" y="191" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#16a34a">VPN tunnel</text><text x="632" y="191" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#16a34a">OK</text><rect x="82" y="220" width="556" height="52" rx="10" fill="#fff" stroke="#64748b" stroke-width="1.6"/><text x="102" y="251" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#64748b">ISP</text></svg><figcaption>Fig 2: the layers where your IP/location can leak - the browser (WebRTC, timezone), the system DNS resolver, the VPN tunnel and the ISP.</figcaption></figure>
+<figure class="lvpng"><picture><source type="image/webp" srcset="/img/board_en.webp"><img src="/img/board_en.png" alt="Illustration of re-verifying with an IP test whether the real IP is hidden on a VPN" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e7ecf5"></picture><figcaption>Fig: re-check on a VPN - sites should see the node IP, not your real IP</figcaption></figure>
+<h2>How to read these results: what you should see on a VPN</h2>
+<p>Ideal state: the public IP and location show your chosen VPN node's location, WebRTC does not expose your real public IP, and the browser timezone matches the node region too. If the public IP is still your real location, or WebRTC exposes your real public IP, traffic is not really going through the VPN or there is a leak; try another node or protocol and re-test. If you have not installed it yet and want a client with steadier connections, head to <a href="https://letsvpnshield.com/download/">the official LetsVPN download page</a>.</p>
+<section id="lv-data2026" class="lvdata"><h2>2026 estimate: VPN usage and the WebRTC leak surface (estimate, not first-party)</h2>
+<p>Items marked ★ cite public statistics; the rest are this site's estimates from public data, none are first-party measurements:</p>
+<ul><li>★ Per Security.org and others, roughly 22-25% of internet users aged 16+ used a VPN regularly across 2022-2025; the market is maturing.</li><li>★ By 2025 there were about 1.75 billion VPN users, around one third of all internet users.</li><li>★ Regional spread is wide: about 55% in Indonesia, 43% in India, and 38% each in Thailand and Malaysia; Southeast Asia is among the highest-adoption regions.</li><li>Mainstream desktop browsers (Chrome / Edge / Firefox / Safari) all enable WebRTC by default; from this we estimate that in 2026 a significant share of VPN users who have not disabled WebRTC remain at risk of public-IP leakage via STUN reflection (estimated range, not measured).</li></ul>
+<p class="lvnote">Basis: ★ items cite public statistics (sources below); the rest are this site's estimates from public data plus the fact that WebRTC is on by default, labelled "estimate, not first-party" and not presented as measured data.</p></section>
+<h2>FAQ</h2>
+<div class="lvfaqs"><details class="lvfaq"><summary>After connecting a VPN, can sites still see my real IP? Can DNS leak?</summary><p>Normally, once a VPN is connected sites see the node IP, not your real IP. But to be honest: an independent review flagged DNS leak risk on LetsVPN and that the IP did not always change after switching servers - that was a single, older community review, not confirmed by the vendor or a second source. If privacy matters to you, the practical move is to run an IP/DNS leak test like this one after connecting and confirm your real IP and DNS are not exposed; if they are, switch node or protocol and verify again.</p></details>
+<details class="lvfaq"><summary>After connecting, where does my IP show? Does it really hide my location?</summary><p>Once connected, your outward IP is that of the node location you chose - pick a Hong Kong node and you show a Hong Kong location; that is how a VPN hides your real location. You can switch region nodes in the client to change your outward IP. Note that an independent review reported the IP did not always change after switching servers and saw DNS leak risk (single, older review, not multi-source confirmed), so after connecting it is wise to verify with an IP test that your location actually changed.</p></details>
+<details class="lvfaq"><summary>After connecting, my IP did not change and lookups still show local - did it fail?</summary><p>Yes, an unchanged IP usually means traffic is not actually going through the VPN. The community has reported that LetsVPN's IP does not always change after switching servers, which is exactly this case. Fixes: reconnect to a different region node, then try another protocol; clear cache and log in again, update to the latest version or reinstall; make sure no other VPN/proxy is taking the traffic. After reconnecting, check your IP again here - it counts as success only when it shows your chosen country. On Android, also make sure the system did not kill it in the background.</p></details>
+<details class="lvfaq"><summary>What is a WebRTC leak, and why can my real IP still leak on a VPN?</summary><p>WebRTC is the browser's built-in peer-to-peer API. With just a few lines of JavaScript a page can create an RTCPeerConnection, and the browser then gathers network addresses via ICE; the public IP reflected by a STUN server can be your real IP - even on a VPN - and the page reads it silently with no permission prompt. Since 2020 Chrome/Edge mask the local IP via mDNS, but the public IP can still leak. Use the WebRTC test above to see which addresses your browser currently exposes.</p></details>
+<details class="lvfaq"><summary>What does LetsVPN's privacy policy say - is it really no-log or just talk?</summary><p>Honestly, the available public material has no LetsVPN privacy-policy text or verifiable no-log content, so it cannot be vouched for; that needs the official policy text and a third-party audit. For context, an independent review raised DNS leak concerns (single, older, not multi-source confirmed), which sits at odds with strict no-logging. The practical call: treat it as a region-switch / general-use tool, use an audited service for highly sensitive tasks, and run a leak test yourself after connecting rather than trusting marketing claims.</p></details>
+</div>
+<div class="related"><h2>Sources</h2><p>Technical notes and data on this page (external links are nofollow):</p><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection" rel="nofollow noopener" target="_blank">MDN — RTCPeerConnection API</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API" rel="nofollow noopener" target="_blank">MDN — WebRTC API</a></li><li><a href="https://browserleaks.com/webrtc" rel="nofollow noopener" target="_blank">BrowserLeaks — WebRTC Leak Test</a></li><li><a href="https://www.security.org/vpn/webrtc-leak/" rel="nofollow noopener" target="_blank">Security.org — WebRTC Leak Guide</a></li><li><a href="https://www.security.org/vpn/statistics/" rel="nofollow noopener" target="_blank">Security.org — VPN Statistics</a></li><li><a href="https://surfshark.com/blog/vpn-users" rel="nofollow noopener" target="_blank">Surfshark — VPN users</a></li><li><a href="https://cybernews.com/best-vpn/vpn-usage-by-country/" rel="nofollow noopener" target="_blank">Cybernews — VPN usage by country</a></li></ul></div>
+</main>
+<footer>This is a pure client-side tool; every check runs locally in your browser and no data is collected. Technical notes are compiled from public material by MDN, BrowserLeaks and Security.org; VPN-usage figures cite Security.org / Surfshark / Cybernews (see Sources). For reference only.<br><a rel="author" href="/about-editor/">李航</a> · letsvpnshield.com</footer>
+</div>
+<script>window.LV_I18N={"checking": "Checking...", "na": "Unavailable", "none_detected": "None found", "leak_public": "Public IP exposed via WebRTC", "leak_local": "Only local/LAN IP exposed", "ok_safe": "No WebRTC public-IP leak found", "mismatch_tz": "Browser timezone differs from IP timezone; this may reveal your real region", "rerun": "Run again", "rtc_public": "public", "rtc_local": "local", "rtc_mdns": "mDNS-hidden"};</script><script src="/tool.js"></script></body></html>
