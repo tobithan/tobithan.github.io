@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="my"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IP / DNS Leak Test - သင်၏ အများသူငှာ IP၊ တည်နေရာ၊ Timezone နှင့် WebRTC Exposure ကို စစ်ဆေးပါ။</title>
+<meta name="description" content="အခမဲ့အွန်လိုင်း IP/DNS ပေါက်ကြားမှုစမ်းသပ်မှု- သင်၏လက်ရှိအများပြည်သူပိုင် IP၊ ပထဝီဝင်တည်နေရာနှင့် အချိန်ဇုန်ကို ချက်ချင်းကြည့်ရှုပြီး သင့်ဘရောက်ဆာ၏ WebRTC သည် သင့်ဒေသခံ သို့မဟုတ် စစ်မှန်သော IP ကို ဖော်ထုတ်ခြင်းရှိမရှိ စစ်ဆေးပါ။ သင့်ဘရောက်ဆာတွင် အပြည့်အဝအလုပ်လုပ်သည်၊ မည်သည့်အရာကိုမျှ အပ်လုဒ်မလုပ်ပါ။ VPN တစ်ခုကို ချိတ်ဆက်ပြီးနောက်၊ သင်၏ IP အစစ်အမှန်ကို ဝှက်ထားကြောင်း အတည်ပြုရန် ၎င်းကို အသုံးပြုပါ။">
+<meta name="author" content="李航">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://tobithan.github.io/my/">
+<meta property="og:type" content="website"><meta property="og:title" content="IP / DNS Leak Test - သင်၏ အများသူငှာ IP၊ တည်နေရာ၊ Timezone နှင့် WebRTC Exposure ကို စစ်ဆေးပါ။">
+<meta property="og:description" content="အခမဲ့အွန်လိုင်း IP/DNS ပေါက်ကြားမှုစမ်းသပ်မှု- သင်၏လက်ရှိအများပြည်သူပိုင် IP၊ ပထဝီဝင်တည်နေရာနှင့် အချိန်ဇုန်ကို ချက်ချင်းကြည့်ရှုပြီး သင့်ဘရောက်ဆာ၏ WebRTC သည် သင့်ဒေသခံ သို့မဟုတ် စစ်မှန်သော IP ကို ဖော်ထုတ်ခြင်းရှိမရှိ စစ်ဆေးပါ။ သင့်ဘရောက်ဆာတွင် အပြည့်အဝအလုပ်လုပ်သည်၊ မည်သည့်အရာကိုမျှ အပ်လုဒ်မလုပ်ပါ။ VPN တစ်ခုကို ချိတ်ဆက်ပြီးနောက်၊ သင်၏ IP အစစ်အမှန်ကို ဝှက်ထားကြောင်း အတည်ပြုရန် ၎င်းကို အသုံးပြုပါ။"><meta property="og:locale" content="my_MM">
+<meta property="og:url" content="https://tobithan.github.io/my/"><meta property="og:image" content="https://tobithan.github.io/img/cover_my.png">
+<meta property="og:image:width" content="1120"><meta property="og:image:height" content="746">
+<link rel="alternate" hreflang="zh-Hans" href="https://tobithan.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://tobithan.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://tobithan.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://tobithan.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://tobithan.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://tobithan.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://tobithan.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://tobithan.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://tobithan.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://tobithan.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://tobithan.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://tobithan.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://tobithan.github.io/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "IP / DNS Leak Test နှင့် Geolocation Viewer",
+   "url": "https://tobithan.github.io/my/",
+   "applicationCategory": "SecurityApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "my",
+   "description": "အခမဲ့အွန်လိုင်း IP/DNS ပေါက်ကြားမှုစမ်းသပ်မှု- သင်၏လက်ရှိအများပြည်သူပိုင် IP၊ ပထဝီဝင်တည်နေရာနှင့် အချိန်ဇုန်ကို ချက်ချင်းကြည့်ရှုပြီး သင့်ဘရောက်ဆာ၏ WebRTC သည် သင့်ဒေသခံ သို့မဟုတ် စစ်မှန်သော IP ကို ဖော်ထုတ်ခြင်းရှိမရှိ စစ်ဆေးပါ။ သင့်ဘရောက်ဆာတွင် အပြည့်အဝအလုပ်လုပ်သည်၊ မည်သည့်အရာကိုမျှ အပ်လုဒ်မလုပ်ပါ။ VPN တစ်ခုကို ချိတ်ဆက်ပြီးနောက်၊ သင်၏ IP အစစ်အမှန်ကို ဝှက်ထားကြောင်း အတည်ပြုရန် ၎င်းကို အသုံးပြုပါ။",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "李航",
+    "jobTitle": "သုံးသပ်ချက် တည်းဖြတ်သူ",
+    "url": "https://tobithan.github.io/about-editor/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "my",
+   "url": "https://tobithan.github.io/my/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "VPN တစ်ခုကို ချိတ်ဆက်ပြီးနောက်၊ ဝဘ်ဆိုက်များသည် ကျွန်ုပ်၏ IP အစစ်အမှန်ကို မြင်နိုင်ဆဲဖြစ်သည်။ DNS ပေါက်ကြားနိုင်ပါသလား။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ပုံမှန်အားဖြင့်၊ VPN တစ်ခုကို ချိတ်ဆက်လိုက်သည်နှင့် ဝဘ်ဆိုက်များသည် သင်၏ IP အစစ်မဟုတ်သော node IP ကို ​​တွေ့ရမည်ဖြစ်သည်။ သို့သော် ရိုးရိုးသားသားပြောရလျှင်- လွတ်လပ်သောပြန်လည်သုံးသပ်မှုတစ်ခုသည် LetsVPN တွင် DNS ပေါက်ကြားမှုအန္တရာယ်ကို အလံပြထားပြီး ဆာဗာများကိုပြောင်းပြီးနောက် IP သည် အမြဲတမ်းပြောင်းလဲခြင်းမရှိကြောင်း - ၎င်းသည် ရောင်းချသူ သို့မဟုတ် ဒုတိယအရင်းအမြစ်မှ အတည်ပြုထားခြင်းမဟုတ်သော တစ်ခုတည်းသော၊ အဟောင်းအသိုင်းအဝိုင်းပြန်လည်သုံးသပ်ခြင်းတစ်ခုဖြစ်သည်။ သင့်အတွက် ကိုယ်ရေးကိုယ်တာ အရေးကြီးပါက၊ လက်တွေ့ကျသော လုပ်ဆောင်ချက်သည် သင်၏ IP နှင့် DNS အစစ်အမှန်ကို ချိတ်ဆက်ပြီး ချိတ်ဆက်ပြီးပါက ၎င်းကဲ့သို့ ပေါက်ကြားမှုစမ်းသပ်မှုကို လုပ်ဆောင်ရန် လက်တွေ့လုပ်ဆောင်ရန်ဖြစ်သည်။ ၎င်းတို့ဖြစ်ပါက node သို့မဟုတ် protocol ကိုပြောင်းပြီး ထပ်မံစစ်ဆေးပါ။"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ချိတ်ဆက်ပြီးနောက်၊ ကျွန်ုပ်၏ IP သည် မည်သည့်နေရာတွင် ပြသသနည်း။ ကျွန်ုပ်၏တည်နေရာကို အမှန်တကယ် ဝှက်ထားပါသလား။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ချိတ်ဆက်ပြီးသည်နှင့်၊ သင်၏အပြင်ဘက် IP သည် သင်ရွေးချယ်ထားသော node ၏တည်နေရာဖြစ်သည် - Hong Kong node ကိုရွေးချယ်ပြီး Hong Kong တည်နေရာကိုပြသပါ။ VPN သည် သင့်တည်နေရာအမှန်ကို ဝှက်ထားပုံဖြစ်သည်။ သင်၏အပြင်ဘက် IP ကိုပြောင်းလဲရန် ကလိုင်းယင့်ရှိ ဒေသဆုံမှတ်များကို ပြောင်းနိုင်သည်။ အမှီအခိုကင်းသောပြန်လည်သုံးသပ်မှုတစ်ခုမှတင်ပြသည်မှာ IP သည် ဆာဗာများကိုပြောင်းပြီးနောက် အမြဲတမ်းမပြောင်းလဲဘဲ DNS ပေါက်ကြားမှုအန္တရာယ် (တစ်ခုတည်း၊ အဟောင်းပြန်လည်သုံးသပ်ခြင်း၊ ရင်းမြစ်ပေါင်းများစွာကို အတည်ပြုထားခြင်းမဟုတ်) ထို့ကြောင့် ချိတ်ဆက်ပြီးနောက် သင်၏တည်နေရာအမှန်တကယ်ပြောင်းလဲသွားကြောင်း IP စမ်းသပ်မှုဖြင့် စစ်ဆေးရန် ဉာဏ်ကောင်းပါသည်။"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ချိတ်ဆက်ပြီးနောက်တွင်၊ ကျွန်ုပ်၏ IP သည် မပြောင်းလဲဘဲ ရှာဖွေမှုများသည် local ကိုပြသနေဆဲဖြစ်သည် - ၎င်းသည် မအောင်မြင်ခဲ့ပါ။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ဟုတ်ပါသည်၊ မပြောင်းလဲသော IP သည် အများအားဖြင့် လမ်းကြောင်းသည် VPN မှတဆင့် အမှန်တကယ်သွားနေခြင်းမဟုတ်ဟု ဆိုလိုပါသည်။ LetsVPN ၏ IP သည် ဆာဗာများကို ပြောင်းပြီးနောက် အမြဲတမ်း ပြောင်းလဲခြင်းမရှိကြောင်း အသိုင်းအဝိုင်းမှ အစီရင်ခံတင်ပြသည်မှာ ဤကိစ္စသည် အတိအကျပင်ဖြစ်သည်။ ပြုပြင်မှုများ- မတူညီသော ဒေသ node တစ်ခုသို့ ပြန်လည်ချိတ်ဆက်ပါ၊ ထို့နောက် အခြားသော ပရိုတိုကောကို စမ်းကြည့်ပါ။ ကက်ရှ်ကိုရှင်းပြီး ထပ်မံဝင်ရောက်ပါ၊ နောက်ဆုံးဗားရှင်းသို့ အပ်ဒိတ်လုပ်ပါ သို့မဟုတ် ပြန်လည်ထည့်သွင်းပါ။ အခြား VPN/proxy သည် အသွားအလာမရှိကြောင်း သေချာပါစေ။ ပြန်လည်ချိတ်ဆက်ပြီးနောက်၊ ဤနေရာတွင် သင့် IP ကို ​​ထပ်မံစစ်ဆေးပါ - သင့်ရွေးချယ်ထားသောနိုင်ငံကို ပြသသည့်အခါတွင် ၎င်းသည် အောင်မြင်မှုအဖြစ် မှတ်ယူသည်။ Android တွင်၊ စနစ်သည် ၎င်းကို နောက်ခံတွင် မသတ်ကြောင်း သေချာပါစေ။"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "WebRTC ပေါက်ကြားမှုဆိုသည်မှာ ဘာလဲ၊ ကျွန်ုပ်၏ IP အစစ်အမှန်သည် VPN တစ်ခုပေါ်တွင် အဘယ်ကြောင့် ပေါက်ကြားနိုင်သနည်း။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "WebRTC သည် ဘရောက်ဆာ၏ peer-to-peer API ဖြစ်သည်။ JavaScrIPt လိုင်းအနည်းငယ်ဖြင့် စာမျက်နှာတစ်ခုသည် RTCPeerConnection တစ်ခုကို ဖန်တီးနိုင်ပြီး၊ ထို့နောက် ဘရောက်ဆာသည် ICE မှတစ်ဆင့် ကွန်ရက်လိပ်စာများကို စုဆောင်းသည်။ STUN ဆာဗာမှ ထင်ဟပ်သည့် အများသူငှာ IP သည် သင်၏ IP အစစ်အမှန်ဖြစ်နိုင်သည် - VPN တွင်ပင် - ခွင့်ပြုချက်မရရှိဘဲ စာမျက်နှာမှ ၎င်းကို တိတ်တဆိတ် ဖတ်နေပါသည်။ 2020 ခုနှစ်မှစ၍ Chrome/Edge သည် MDNS မှတစ်ဆင့် ဒေသတွင်း IP ကို ​​ဖုံးကွယ်ထားသော်လည်း အများသူငှာ IP သည် ပေါက်ကြားနိုင်ဆဲဖြစ်သည်။ သင့်ဘရောက်ဆာ လက်ရှိထုတ်နေသည့် လိပ်စာများကို ကြည့်ရန် အထက်ဖော်ပြပါ WebRTC စမ်းသပ်မှုကို အသုံးပြုပါ။"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "LetsVPN ၏ ကိုယ်ရေးကိုယ်တာ မူဝါဒက ဘာပြောသနည်း - ၎င်းသည် အမှန်တကယ် မှတ်တမ်းမရှိခြင်း သို့မဟုတ် စကားပြောရုံသာ ဖြစ်သည်။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ရိုးရိုးသားသားပြောရလျှင်၊ ရရှိနိုင်သော အများသူငှာ ပစ္စည်းများတွင် LetsVPN လျှို့ဝှက်ရေးမူဝါဒ စာသား သို့မဟုတ် အတည်ပြုနိုင်သော မှတ်တမ်းမရှိသော အကြောင်းအရာများ မပါရှိသောကြောင့် ၎င်းကို လက်မှတ်မထိုးနိုင်ပါ။ ၎င်းသည် တရားဝင်မူဝါဒစာသားနှင့် ပြင်ပအဖွဲ့အစည်းစာရင်းစစ် လိုအပ်သည်။ အကြောင်းအရာအတွက်၊ သီးခြားသုံးသပ်ချက်တစ်ခုသည် တင်းကျပ်စွာ မှတ်တမ်းမတင်ခြင်း (တစ်ခုတည်း၊ အဟောင်း၊ အရင်းအနှီးများစွာဖြင့် အတည်ပြုထားခြင်းမဟုတ်) ကို သီးခြားပြန်လည်သုံးသပ်ခြင်းသည် DNS ပေါက်ကြားမှုဆိုင်ရာ စိုးရိမ်မှုများကို ထုတ်ဖော်ခဲ့သည်။ လက်တွေ့ကျသောခေါ်ဆိုမှု- ၎င်းကို ဒေသပြောင်း/အထွေထွေ-အသုံးပြုမှုကိရိယာအဖြစ် သဘောထားပါ၊ အလွန်အထိခိုက်မခံသောအလုပ်များအတွက် စာရင်းစစ်ဝန်ဆောင်မှုကိုအသုံးပြုကာ စျေးကွက်ရှာဖွေရေးတောင်းဆိုချက်များကို ယုံကြည်ရမည့်အစား ချိတ်ဆက်ပြီးနောက် ပေါက်ကြားမှုစမ်းသပ်မှုကို သင်ကိုယ်တိုင်လုပ်ဆောင်ပါ။"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="stylesheet" href="/style.css"></head>
+<body><div class="wrap"><main>
+<nav class="lvlang">ဘာသာစကား: <a href="/">简体中文</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/th/">ไทย</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <strong>မြန်မာ</strong></nav>
+<h1>IP / DNS Leak Test နှင့် Geolocation Viewer</h1>
+<p class="lvby"><a rel="author" href="/about-editor/">အားဖြင့် 李航</a> · သုံးသပ်ချက် တည်းဖြတ်သူ · ထုတ်ဝေခဲ့သည်။ 2025-04-08 · မွမ်းမံထားသည်။ 2026-06-30</p>
+<figure class="lvpng"><picture><source type="image/webp" srcset="/img/cover_my.webp"><img src="/img/cover_my.png" alt="IP/DNS ယိုစိမ့်စမ်းသပ်မှုနှင့် ပထဝီဝင်တည်နေရာကြည့်ရှုသူ ပုံဥပမာ" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e7ecf5"></picture><figcaption>ပုံ- IP / DNS ယိုစိမ့်စမ်းသပ်မှု (အများပြည်သူ IP၊ တည်နေရာ၊ အချိန်ဇုန်၊ WebRTC ထိတွေ့မှု)</figcaption></figure>
+<p class="lvlead">သန့်ရှင်းသော client-side tool တစ်ခု- သင့်ဘရောက်ဆာတွင် ၎င်းသည် သင်အင်တာနက်သို့ပြသသည့် အများသူငှာ IP ကိုဖတ်ပြီး ပြပေးသည်၊ သင်၏နေရာဒေသနှင့် အချိန်ဇုန်အပြင် သင့်ဘရောက်ဆာ၏ WebRTC သည် သင့်ဒေသခံ သို့မဟုတ် အစစ်အမှန် IP ကို ဝဘ်စာမျက်နှာများသို့ ပေါက်ကြားစေသည်ဖြစ်စေ ပြသသည်။ စစ်ဆေးမှုတိုင်းသည် စက်တွင်းတွင် လုပ်ဆောင်သည်၊ မည်သည့်အရာကိုမျှ အပ်လုဒ်မလုပ်ပါ။ LetsVPN ကဲ့သို့သော VPN တစ်ခုကို ချိတ်ဆက်ပြီးနောက်၊ သင်၏အစစ်အမှန်မဟုတ်သော ဆိုက်များမှ node IP ကိုတွေ့ကြောင်း အတည်ပြုရန် ၎င်းကို ထပ်မံလုပ်ဆောင်ပါ။</p>
+<h2>တိုက်ရိုက်စမ်းသပ်မှုရလဒ်များ</h2>
+<p class="lvtoolnote">အောက်ဖော်ပြပါဒေတာကို သင့်ဘရောက်ဆာတွင် စက်တွင်းဖြင့်ဖတ်ပါသည်။ အပ်လုဒ်လုပ်ထားခြင်း သို့မဟုတ် သိမ်းဆည်းထားခြင်းမရှိပါ။</p>
+<div class="lvtool" id="lvtool">
+<div class="lvrow"><span class="lvk">အများသူငှာ IP</span><span class="lvval" id="lv-ip">စစ်ဆေးနေသည်...</span></div><div class="lvrow"><span class="lvk">တည်နေရာ</span><span class="lvval" id="lv-geo">စစ်ဆေးနေသည်...</span></div><div class="lvrow"><span class="lvk">ISP</span><span class="lvval" id="lv-isp">စစ်ဆေးနေသည်...</span></div><div class="lvrow"><span class="lvk">ဘရောက်ဆာ အချိန်ဇုန်</span><span class="lvval" id="lv-tzb">စစ်ဆေးနေသည်...</span></div><div class="lvrow"><span class="lvk">IP အခြေခံ အချိန်ဇုန်</span><span class="lvval" id="lv-tzi">စစ်ဆေးနေသည်...</span> <small id="lv-tzhint" class="lvhint"></small></div><div class="lvrow"><span class="lvk">WebRTC ထိတွေ့မှု</span><span class="lvval" id="lv-webrtc-verdict">စစ်ဆေးနေသည်...</span></div>
+<div class="lvwebrtc" id="lv-webrtc"></div>
+<button id="lv-rerun" type="button">ပြေးပြန်တယ်။</button>
+<p class="lvnote">ဤကိရိယာသည် သင့်ဘရောက်ဆာတွင် လုံးဝလည်ပတ်နေပြီး မည်သည့်အရာကိုမျှ စုဆောင်းခြင်း သို့မဟုတ် အပ်လုဒ်မလုပ်ပါ။</p>
+</div>
+<figure class="lvsvg"><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ပုံ 1- VPN မပါဘဲ site သည် သင်၏ တကယ့် IP ကို တိုက်ရိုက်မြင်သည်။ VPN တစ်ခုဖြင့် ၎င်းသည် node IP ကိုမြင်ရသော်လည်း WebRTC သည် ဥမင်လိုဏ်ခေါင်းကို ကျော်ဖြတ်ကာ သင်၏ IP အစစ်အမှန်ကို ဖော်ထုတ်နိုင်သည်။" style="width:100%;height:auto"><rect width="720" height="300" rx="14" fill="#f3f7ff"/><rect x="24" y="34" width="120" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="84" y="60" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">မင်း</text><text x="84" y="80" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#64748b">ဘရောက်ဆာ</text><rect x="560" y="34" width="136" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="628" y="60" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">ဝဘ်ဆိုဒ်</text><text x="628" y="80" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#e11d48">IP အစစ်အမှန်</text><line x1="144" y1="62" x2="560" y2="62" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><text x="352" y="26" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#94a3b8">✗ VPN လှိုင်ခေါင်း ✗</text><rect x="24" y="150" width="120" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="84" y="176" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">မင်း</text><rect x="300" y="150" width="120" height="56" rx="10" fill="#e8f0ff" stroke="#1a73e8"/><text x="360" y="182" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#1a73e8">VPN လှိုင်ခေါင်း</text><rect x="560" y="150" width="136" height="56" rx="10" fill="#fff" stroke="#cdddff"/><text x="628" y="176" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" fill="#0f213f">ဝဘ်ဆိုဒ်</text><text x="628" y="196" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#16a34a">Node IP</text><line x1="144" y1="178" x2="300" y2="178" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><line x1="420" y1="178" x2="560" y2="178" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#ar)"/><text x="222" y="168" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" fill="#16a34a">Node IP</text><path d="M84 206 C84 250 660 250 628 208" fill="none" stroke="#e11d48" stroke-width="2.2" stroke-dasharray="6 5" marker-end="url(#arr)"/><text x="356" y="278" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#e11d48">WebRTC → ယိုစိမ့်ခြင်း။ (IP အစစ်အမှန်)</text><defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#1a73e8"/></marker><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e11d48"/></marker></defs></svg><figcaption>ပုံ 1- VPN မပါဘဲ site သည် သင်၏ တကယ့် IP ကို တိုက်ရိုက်မြင်သည်။ VPN တစ်ခုဖြင့် ၎င်းသည် node IP ကိုမြင်ရသော်လည်း WebRTC သည် ဥမင်လိုဏ်ခေါင်းကို ကျော်ဖြတ်ကာ သင်၏ IP အစစ်အမှန်ကို ဖော်ထုတ်နိုင်သည်။</figcaption></figure>
+<h2>သင်၏ အများသူငှာ IP နှင့် တည်နေရာအကြောင်း</h2>
+<p>သင်၏ အများသူငှာ IP သည် အင်တာနက်ပေါ်ရှိ သင်၏ အပြင်ဘက်လိပ်စာဖြစ်သည်။ ဝဘ်ဆိုက်များနှင့် အက်ပ်များက ၎င်းကို မြင်နိုင်ပြီး သင်၏ ခန့်မှန်းခြေတည်နေရာ၊ ISP နှင့် အချိန်ဇုန်တို့ကို တွက်ဆနိုင်သည်။ အထက်ဖော်ပြပါတည်နေရာသည် သင်၏ အများသူငှာ IP ၏ ပထဝီဝင်ရှာဖွေမှုမှ ဆင်းသက်လာသောကြောင့် ၎င်းသည် လမ်းလိပ်စာမဟုတ်ဘဲ မြို့အဆင့် ခန့်မှန်းချက်ဖြစ်သည်။ အကယ်၍ သင်သည် VPN ပေါ်တွင်ရှိနေပါက၊ ၎င်းသည် သင်ရွေးချယ်ထားသော node ၏တည်နေရာကို ပြသသင့်သည်၊ သင်၏မြို့အစစ်မဟုတ်ပါ။</p>
+<h2>DNS ပေါက်ကြားမှုဆိုတာ ဘာလဲ၊ ဘရောက်ဆာတစ်ခုတည်းက ဘာကြောင့် အပြည့်အဝ မစမ်းသပ်နိုင်တာလဲ။</h2>
+<p>DNS သည် ဒိုမိန်းအမည်များကို IP များအဖြစ် ဖြေရှင်းပေးသည်။ အကယ်၍ သင်သည် VPN ကိုအသုံးပြုနေသော်လည်း DNS စုံစမ်းမေးမြန်းမှုများသည် သင်၏ဒေသခံ ISP ဖြေရှင်းသူမှတစ်ဆင့် ဆက်လက်ရှိနေပါက၊ သင်သွားရောက်ကြည့်ရှုသည့်ဆိုက်များသည် သင်၏ ISP နှင့် ထိတွေ့နေပါသည်။ ၎င်းသည် DNS ပေါက်ကြားမှုဖြစ်သည်။ ရိုးရိုးသားသားပြောရလျှင်- စစ်မှန်သော DNS ပေါက်ကြားမှုစမ်းသပ်မှုတွင် ဆာဗာဘက်ခြမ်း အစိတ်အပိုင်းတစ်ခု လိုအပ်သည် (သင့်စက်ပစ္စည်းသည် ထူးခြားသော ဒိုမိန်းခွဲတစ်ခုကို ဖြေရှင်းပေးပြီး မည်သည့်ဖြေရှင်းသူအား မေးမြန်းထားသည်ကို တွေ့ရသည်)၊ အဆိုပါဘရောက်ဆာတစ်ခုတည်းက အပြည့်အဝလုပ်ဆောင်၍မရပါ။ လက်တွေ့ကျသောချဉ်းကပ်မှုမှာ သင်ချိတ်ဆက်ပြီးသည်နှင့် သီးသန့် DNS ပေါက်ကြားမှုစမ်းသပ်ဆိုက်ကို လုပ်ဆောင်ရန်ဖြစ်သည်။</p>
+<h2>WebRTC ပေါက်ကြားမှုဟူသည် အဘယ်နည်း၊ ၎င်းသည် VPN ကို မည်သို့ကျော်ဖြတ်မည်နည်း။</h2>
+<p>WebRTC သည် ဘရောက်ဆာ၏ built-in အချိန်နှင့်တပြေးညီ ဆက်သွယ်ရေး API ဖြစ်သည်။ ဝဘ်စာမျက်နှာတစ်ခုသည် JavaScrIPt တွင် RTCPeerConnection ကိုဖန်တီးနိုင်သည်။ peer-to-peer ကို စနစ်ထည့်သွင်းရန် ဘရောက်ဆာသည် သင်၏ ဒေသတွင်း LAN IP နှင့် STUN ဆာဗာမှ ထင်ဟပ်သော အများသူငှာ IP အပါအဝင် ICE မှတစ်ဆင့် သင်၏ကွန်ရက်လိပ်စာများကို စုစည်းပေးကာ စာမျက်နှာသည် ထိုကိုယ်စားလှယ်လောင်းများကို ဖတ်နိုင်သည်။ ၎င်းသည် WebRTC ပေါက်ကြားမှုဖြစ်ပြီး ခွင့်ပြုချက်မပြဘဲ တိတ်တဆိတ်ဖြစ်သွားသည်။ 2020 ခုနှစ်မှစ၍ Chrome နှင့် Edge သည် ကျပန်း .local hostname နောက်ကွယ်ရှိ local IP ကိုဖုံးကွယ်ရန် MDNS ကိုအသုံးပြုသော်လည်း VPN ကိုဖွင့်ထားစဉ်တွင်ပင် STUN reflexive ကိုယ်စားလှယ်လောင်းများမှတစ်ဆင့် အများသူငှာ IP သည် ပေါက်ကြားနိုင်ဆဲဖြစ်သည်။ အထက်ဖော်ပြပါ စမ်းသပ်မှုတွင် သင့်ဘရောက်ဆာကို လက်ရှိထုတ်နေသည့် လိပ်စာအတိအကျကို ပြသသည်။</p>
+<figure class="lvsvg"><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ပုံ 2- သင်၏ IP/တည်နေရာ ပေါက်ကြားနိုင်သည့် အလွှာများ - ဘရောက်ဆာ (WebRTC၊ အချိန်ဇုန်)၊ စနစ် DNS ဖြေရှင်းသူ၊ VPN ဥမင်လိုဏ်ခေါင်း နှင့် ISP။" style="width:100%;height:auto"><rect width="720" height="300" rx="14" fill="#0a1629"/><text x="40" y="26" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" fill="#9db8e8">ပုံ 2- သင်၏ IP/တည်နေရာ ပေါက်ကြားနိုင်သည့် အလွှ</text><rect x="40" y="40" width="640" height="52" rx="10" fill="#fff" stroke="#e11d48" stroke-width="1.6"/><text x="60" y="71" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#e11d48">ဘရောက်ဆာ — WebRTC · TZ</text><text x="660" y="71" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#e11d48">ယိုစိမ့်ခြင်း။</text><rect x="54" y="100" width="612" height="52" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="1.6"/><text x="74" y="131" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#f59e0b">DNS</text><text x="646" y="131" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#f59e0b">ယိုစိမ့်ခြင်း။</text><rect x="68" y="160" width="584" height="52" rx="10" fill="#fff" stroke="#16a34a" stroke-width="1.6"/><text x="88" y="191" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#16a34a">VPN လှိုင်ခေါင်း</text><text x="632" y="191" text-anchor="end" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#16a34a">OK</text><rect x="82" y="220" width="556" height="52" rx="10" fill="#fff" stroke="#64748b" stroke-width="1.6"/><text x="102" y="251" text-anchor="start" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#64748b">ISP</text></svg><figcaption>ပုံ 2- သင်၏ IP/တည်နေရာ ပေါက်ကြားနိုင်သည့် အလွှာများ - ဘရောက်ဆာ (WebRTC၊ အချိန်ဇုန်)၊ စနစ် DNS ဖြေရှင်းသူ၊ VPN ဥမင်လိုဏ်ခေါင်း နှင့် ISP။</figcaption></figure>
+<figure class="lvpng"><picture><source type="image/webp" srcset="/img/board_my.webp"><img src="/img/board_my.png" alt="VPN ပေါ်တွင် IP အစစ်အမှန်ကို ဝှက်ထားခြင်းရှိမရှိ IP စမ်းသပ်မှုဖြင့် ပြန်လည်အတည်ပြုခြင်း၏ သရုပ်ဖော်ပုံ" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #e7ecf5"></picture><figcaption>ပုံ- VPN ကို ပြန်လည်စစ်ဆေးပါ - ဝဘ်ဆိုက်များသည် သင့် IP အစစ်မဟုတ်ဘဲ node IP ကို မြင်ရပါမည်။</figcaption></figure>
+<h2>ဤရလဒ်များကိုဖတ်နည်း- VPN တွင်သင်မြင်သင့်သောအရာ</h2>
+<p>စံပြအခြေအနေ- အများသူငှာ IP နှင့် တည်နေရာသည် သင်ရွေးချယ်ထားသော VPN node ၏တည်နေရာကိုပြသသည်၊ WebRTC သည် သင်၏အစစ်အမှန်အများပြည်သူ IP ကိုမဖော်ပြဘဲ၊ ဘရောင်ဇာအချိန်ဇုန်သည် node ဒေသနှင့်လည်းကိုက်ညီပါသည်။ အကယ်၍ အများသူငှာ IP သည် သင့်တည်နေရာအစစ်အမှန်ဖြစ်နေသေးပါက သို့မဟုတ် WebRTC သည် သင်၏အစစ်အမှန်အများပြည်သူပိုင် IP ကို ​​ဖော်ထုတ်ပါက၊ အသွားအလာများသည် VPN မှတဆင့် အမှန်တကယ်သွားနေခြင်းမဟုတ်ပါ သို့မဟုတ် ယိုစိမ့်မှုရှိနေပါသည်။ အခြား node သို့မဟုတ် ပရိုတိုကောကို စမ်းကြည့်ပြီး ပြန်လည်စမ်းသပ်ပါ။ ၎င်းကို မထည့်သွင်းရသေးဘဲ ပိုမိုတည်ငြိမ်သောချိတ်ဆက်မှုရှိသော client ကိုလိုချင်ပါက <a href="https://letsvpnshield.com/download/">တရားဝင် LetsVPN ဒေါင်းလုဒ်စာမျက်နှာ</a> သို့သွားပါ။</p>
+<section id="lv-data2026" class="lvdata"><h2>2026 ခန့်မှန်းချက်- VPN အသုံးပြုမှုနှင့် WebRTC ပေါက်ကြားမှုမျက်နှာပြင် (ခန့်မှန်းချက်၊ ပထမပါတီမဟုတ်)</h2>
+<p>★ အမှတ်အသားပြုထားသော အရာများကို ကိုးကား၍ အများသူငှာ စာရင်းအင်းများ၊ ကျန်အရာများသည် အများသူငှာဒေတာမှ ဤဆိုက်၏ ခန့်မှန်းချက်ဖြစ်ပြီး၊ တစ်ခုမှ ပထမပါတီတိုင်းတာခြင်းမဟုတ်ပါ။</p>
+<ul><li>★ Security.org နှင့် အခြားနိုင်ငံများတွင် အသက် 16 နှစ်အထက် အင်တာနက်အသုံးပြုသူ 22-25% သည် 2022-2025 တစ်လျှောက် VPN ကို ပုံမှန်အသုံးပြုခဲ့သည်။ စျေးကွက်ကြီးထွားလာသည်။</li><li>★ 2025 တွင် အင်တာနက်အသုံးပြုသူအားလုံး၏ သုံးပုံတစ်ပုံခန့်သည် VPN အသုံးပြုသူ 1.75 ဘီလီယံခန့်ရှိသည်။</li><li>★ ဒေသတွင်းပျံ့နှံ့မှုသည် ကျယ်ပြန့်သည်- အင်ဒိုနီးရှားတွင် 55% ခန့်၊ အိန္ဒိယတွင် 43% နှင့် ထိုင်းနှင့် မလေးရှားတို့တွင် 38%၊ အရှေ့တောင်အာရှသည် မွေးစားသူ အများဆုံးဒေသများထဲမှ တစ်ခုဖြစ်သည်။</li><li>ပင်မဒက်စ်တော့ဘရောက်ဆာများ (Chrome/Edge/Firefox/Safari) အားလုံးကို ပုံမှန်အားဖြင့် WebRTC ကို ဖွင့်ပေးသည်။ ဤအချက်မှနေ၍ 2026 ခုနှစ်တွင် WebRTC ကို မပိတ်ထားရသေးသော VPN အသုံးပြုသူများ၏ သိသာထင်ရှားသော မျှဝေမှုမှာ STUN ရောင်ပြန်ဟပ်မှုမှတစ်ဆင့် အများသူငှာ-IP ယိုစိမ့်မှုအန္တရာယ်ရှိနေနိုင်သည်ဟု ကျွန်ုပ်တို့ ခန့်မှန်းထားပါသည်။</li></ul>
+<p class="lvnote">အခြေခံ- ★ အကြောင်းအရာများသည် အများသူငှာ စာရင်းအင်းများ (အောက်ပါအရင်းအမြစ်များ) ကိုကိုးကားသည်။ ကျန်အရာများသည် အများသူငှာဒေတာမှနေ၍ ဤဆိုက်၏ခန့်မှန်းချက်များနှင့် WebRTC ကို ပုံသေဖွင့်ထားသောကြောင့် "ခန့်မှန်း၊ ပထမပါတီမဟုတ်" ဟုတံဆိပ်တပ်ထားပြီး တိုင်းတာသည့်ဒေတာအဖြစ် မတင်ပြခြင်းဖြစ်ပါသည်။</p></section>
+<h2>FAQ</h2>
+<div class="lvfaqs"><details class="lvfaq"><summary>VPN တစ်ခုကို ချိတ်ဆက်ပြီးနောက်၊ ဝဘ်ဆိုက်များသည် ကျွန်ုပ်၏ IP အစစ်အမှန်ကို မြင်နိုင်ဆဲဖြစ်သည်။ DNS ပေါက်ကြားနိုင်ပါသလား။</summary><p>ပုံမှန်အားဖြင့်၊ VPN တစ်ခုကို ချိတ်ဆက်လိုက်သည်နှင့် ဝဘ်ဆိုက်များသည် သင်၏ IP အစစ်မဟုတ်သော node IP ကို ​​တွေ့ရမည်ဖြစ်သည်။ သို့သော် ရိုးရိုးသားသားပြောရလျှင်- လွတ်လပ်သောပြန်လည်သုံးသပ်မှုတစ်ခုသည် LetsVPN တွင် DNS ပေါက်ကြားမှုအန္တရာယ်ကို အလံပြထားပြီး ဆာဗာများကိုပြောင်းပြီးနောက် IP သည် အမြဲတမ်းပြောင်းလဲခြင်းမရှိကြောင်း - ၎င်းသည် ရောင်းချသူ သို့မဟုတ် ဒုတိယအရင်းအမြစ်မှ အတည်ပြုထားခြင်းမဟုတ်သော တစ်ခုတည်းသော၊ အဟောင်းအသိုင်းအဝိုင်းပြန်လည်သုံးသပ်ခြင်းတစ်ခုဖြစ်သည်။ သင့်အတွက် ကိုယ်ရေးကိုယ်တာ အရေးကြီးပါက၊ လက်တွေ့ကျသော လုပ်ဆောင်ချက်သည် သင်၏ IP နှင့် DNS အစစ်အမှန်ကို ချိတ်ဆက်ပြီး ချိတ်ဆက်ပြီးပါက ၎င်းကဲ့သို့ ပေါက်ကြားမှုစမ်းသပ်မှုကို လုပ်ဆောင်ရန် လက်တွေ့လုပ်ဆောင်ရန်ဖြစ်သည်။ ၎င်းတို့ဖြစ်ပါက node သို့မဟုတ် protocol ကိုပြောင်းပြီး ထပ်မံစစ်ဆေးပါ။</p></details>
+<details class="lvfaq"><summary>ချိတ်ဆက်ပြီးနောက်၊ ကျွန်ုပ်၏ IP သည် မည်သည့်နေရာတွင် ပြသသနည်း။ ကျွန်ုပ်၏တည်နေရာကို အမှန်တကယ် ဝှက်ထားပါသလား။</summary><p>ချိတ်ဆက်ပြီးသည်နှင့်၊ သင်၏အပြင်ဘက် IP သည် သင်ရွေးချယ်ထားသော node ၏တည်နေရာဖြစ်သည် - Hong Kong node ကိုရွေးချယ်ပြီး Hong Kong တည်နေရာကိုပြသပါ။ VPN သည် သင့်တည်နေရာအမှန်ကို ဝှက်ထားပုံဖြစ်သည်။ သင်၏အပြင်ဘက် IP ကိုပြောင်းလဲရန် ကလိုင်းယင့်ရှိ ဒေသဆုံမှတ်များကို ပြောင်းနိုင်သည်။ အမှီအခိုကင်းသောပြန်လည်သုံးသပ်မှုတစ်ခုမှတင်ပြသည်မှာ IP သည် ဆာဗာများကိုပြောင်းပြီးနောက် အမြဲတမ်းမပြောင်းလဲဘဲ DNS ပေါက်ကြားမှုအန္တရာယ် (တစ်ခုတည်း၊ အဟောင်းပြန်လည်သုံးသပ်ခြင်း၊ ရင်းမြစ်ပေါင်းများစွာကို အတည်ပြုထားခြင်းမဟုတ်) ထို့ကြောင့် ချိတ်ဆက်ပြီးနောက် သင်၏တည်နေရာအမှန်တကယ်ပြောင်းလဲသွားကြောင်း IP စမ်းသပ်မှုဖြင့် စစ်ဆေးရန် ဉာဏ်ကောင်းပါသည်။</p></details>
+<details class="lvfaq"><summary>ချိတ်ဆက်ပြီးနောက်တွင်၊ ကျွန်ုပ်၏ IP သည် မပြောင်းလဲဘဲ ရှာဖွေမှုများသည် local ကိုပြသနေဆဲဖြစ်သည် - ၎င်းသည် မအောင်မြင်ခဲ့ပါ။</summary><p>ဟုတ်ပါသည်၊ မပြောင်းလဲသော IP သည် အများအားဖြင့် လမ်းကြောင်းသည် VPN မှတဆင့် အမှန်တကယ်သွားနေခြင်းမဟုတ်ဟု ဆိုလိုပါသည်။ LetsVPN ၏ IP သည် ဆာဗာများကို ပြောင်းပြီးနောက် အမြဲတမ်း ပြောင်းလဲခြင်းမရှိကြောင်း အသိုင်းအဝိုင်းမှ အစီရင်ခံတင်ပြသည်မှာ ဤကိစ္စသည် အတိအကျပင်ဖြစ်သည်။ ပြုပြင်မှုများ- မတူညီသော ဒေသ node တစ်ခုသို့ ပြန်လည်ချိတ်ဆက်ပါ၊ ထို့နောက် အခြားသော ပရိုတိုကောကို စမ်းကြည့်ပါ။ ကက်ရှ်ကိုရှင်းပြီး ထပ်မံဝင်ရောက်ပါ၊ နောက်ဆုံးဗားရှင်းသို့ အပ်ဒိတ်လုပ်ပါ သို့မဟုတ် ပြန်လည်ထည့်သွင်းပါ။ အခြား VPN/proxy သည် အသွားအလာမရှိကြောင်း သေချာပါစေ။ ပြန်လည်ချိတ်ဆက်ပြီးနောက်၊ ဤနေရာတွင် သင့် IP ကို ​​ထပ်မံစစ်ဆေးပါ - သင့်ရွေးချယ်ထားသောနိုင်ငံကို ပြသသည့်အခါတွင် ၎င်းသည် အောင်မြင်မှုအဖြစ် မှတ်ယူသည်။ Android တွင်၊ စနစ်သည် ၎င်းကို နောက်ခံတွင် မသတ်ကြောင်း သေချာပါစေ။</p></details>
+<details class="lvfaq"><summary>WebRTC ပေါက်ကြားမှုဆိုသည်မှာ ဘာလဲ၊ ကျွန်ုပ်၏ IP အစစ်အမှန်သည် VPN တစ်ခုပေါ်တွင် အဘယ်ကြောင့် ပေါက်ကြားနိုင်သနည်း။</summary><p>WebRTC သည် ဘရောက်ဆာ၏ peer-to-peer API ဖြစ်သည်။ JavaScrIPt လိုင်းအနည်းငယ်ဖြင့် စာမျက်နှာတစ်ခုသည် RTCPeerConnection တစ်ခုကို ဖန်တီးနိုင်ပြီး၊ ထို့နောက် ဘရောက်ဆာသည် ICE မှတစ်ဆင့် ကွန်ရက်လိပ်စာများကို စုဆောင်းသည်။ STUN ဆာဗာမှ ထင်ဟပ်သည့် အများသူငှာ IP သည် သင်၏ IP အစစ်အမှန်ဖြစ်နိုင်သည် - VPN တွင်ပင် - ခွင့်ပြုချက်မရရှိဘဲ စာမျက်နှာမှ ၎င်းကို တိတ်တဆိတ် ဖတ်နေပါသည်။ 2020 ခုနှစ်မှစ၍ Chrome/Edge သည် MDNS မှတစ်ဆင့် ဒေသတွင်း IP ကို ​​ဖုံးကွယ်ထားသော်လည်း အများသူငှာ IP သည် ပေါက်ကြားနိုင်ဆဲဖြစ်သည်။ သင့်ဘရောက်ဆာ လက်ရှိထုတ်နေသည့် လိပ်စာများကို ကြည့်ရန် အထက်ဖော်ပြပါ WebRTC စမ်းသပ်မှုကို အသုံးပြုပါ။</p></details>
+<details class="lvfaq"><summary>LetsVPN ၏ ကိုယ်ရေးကိုယ်တာ မူဝါဒက ဘာပြောသနည်း - ၎င်းသည် အမှန်တကယ် မှတ်တမ်းမရှိခြင်း သို့မဟုတ် စကားပြောရုံသာ ဖြစ်သည်။</summary><p>ရိုးရိုးသားသားပြောရလျှင်၊ ရရှိနိုင်သော အများသူငှာ ပစ္စည်းများတွင် LetsVPN လျှို့ဝှက်ရေးမူဝါဒ စာသား သို့မဟုတ် အတည်ပြုနိုင်သော မှတ်တမ်းမရှိသော အကြောင်းအရာများ မပါရှိသောကြောင့် ၎င်းကို လက်မှတ်မထိုးနိုင်ပါ။ ၎င်းသည် တရားဝင်မူဝါဒစာသားနှင့် ပြင်ပအဖွဲ့အစည်းစာရင်းစစ် လိုအပ်သည်။ အကြောင်းအရာအတွက်၊ သီးခြားသုံးသပ်ချက်တစ်ခုသည် တင်းကျပ်စွာ မှတ်တမ်းမတင်ခြင်း (တစ်ခုတည်း၊ အဟောင်း၊ အရင်းအနှီးများစွာဖြင့် အတည်ပြုထားခြင်းမဟုတ်) ကို သီးခြားပြန်လည်သုံးသပ်ခြင်းသည် DNS ပေါက်ကြားမှုဆိုင်ရာ စိုးရိမ်မှုများကို ထုတ်ဖော်ခဲ့သည်။ လက်တွေ့ကျသောခေါ်ဆိုမှု- ၎င်းကို ဒေသပြောင်း/အထွေထွေ-အသုံးပြုမှုကိရိယာအဖြစ် သဘောထားပါ၊ အလွန်အထိခိုက်မခံသောအလုပ်များအတွက် စာရင်းစစ်ဝန်ဆောင်မှုကိုအသုံးပြုကာ စျေးကွက်ရှာဖွေရေးတောင်းဆိုချက်များကို ယုံကြည်ရမည့်အစား ချိတ်ဆက်ပြီးနောက် ပေါက်ကြားမှုစမ်းသပ်မှုကို သင်ကိုယ်တိုင်လုပ်ဆောင်ပါ။</p></details>
+</div>
+<div class="related"><h2>အရင်းအမြစ်များ</h2><p>ဤစာမျက်နှာရှိ နည်းပညာမှတ်စုများနှင့် ဒေတာများ (ပြင်ပလင့်ခ်များသည် nofollow ဖြစ်သည်)</p><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection" rel="nofollow noopener" target="_blank">MDN — RTCPeerConnection API</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API" rel="nofollow noopener" target="_blank">MDN — WebRTC API</a></li><li><a href="https://browserleaks.com/webrtc" rel="nofollow noopener" target="_blank">BrowserLeaks — WebRTC Leak Test</a></li><li><a href="https://www.security.org/vpn/webrtc-leak/" rel="nofollow noopener" target="_blank">Security.org — WebRTC Leak Guide</a></li><li><a href="https://www.security.org/vpn/statistics/" rel="nofollow noopener" target="_blank">Security.org — VPN Statistics</a></li><li><a href="https://surfshark.com/blog/vpn-users" rel="nofollow noopener" target="_blank">Surfshark — VPN users</a></li><li><a href="https://cybernews.com/best-vpn/vpn-usage-by-country/" rel="nofollow noopener" target="_blank">Cybernews — VPN usage by country</a></li></ul></div>
+</main>
+<footer>၎င်းသည် သန့်ရှင်းသော client-side tool တစ်ခုဖြစ်သည်။ စစ်ဆေးမှုတိုင်းသည် သင့်ဘရောက်ဆာတွင် စက်တွင်းအလုပ်လုပ်ပြီး မည်သည့်ဒေတာကိုမျှ စုဆောင်းထားခြင်းမရှိပါ။ နည်းပညာမှတ်စုများကို MDN၊ BrowserLeaks နှင့် Security.org တို့မှ အများသူငှာအရာဝတ္ထုများမှ စုစည်းထားပါသည်။ VPN အသုံးပြုမှုကိန်းဂဏန်းများသည် Security.org / Surfshark / Cybernews (အရင်းအမြစ်များကိုကြည့်ပါ) ကို ကိုးကားသည်။ အကိုးအကားအတွက်သာ။<br><a rel="author" href="/about-editor/">李航</a> · letsvpnshield.com</footer>
+</div>
+<script>window.LV_I18N={"checking": "စစ်ဆေးနေသည်...", "na": "မရနိုင်ပါ။", "none_detected": "မတွေ့ပါ။", "leak_public": "WebRTC မှတစ်ဆင့် အများသူငှာ IP ကို ဖော်ထုတ်ထားသည်။", "leak_local": "စက်တွင်း/LAN IP ကိုသာ ဖော်ထုတ်ထားသည်။", "ok_safe": "WebRTC အများသူငှာ IP ပေါက်ကြားမှု မတွေ့ပါ။", "mismatch_tz": "ဘရောင်ဇာအချိန်ဇုန်သည် IP အချိန်ဇုန်နှင့် ကွဲပြားသည်။ ဒါက မင်းရဲ့ဒေသအစစ်အမှန်ကို ဖော်ပြနိုင်တယ်။", "rerun": "ပြေးပြန်တယ်။", "rtc_public": "အများသူငှာ", "rtc_local": "ပြည်တွင်း", "rtc_mdns": "MDNS-ဝှက်ထားသည်။"};</script><script src="/tool.js"></script></body></html>
